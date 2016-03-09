@@ -10,6 +10,11 @@ gem 'rack-cors'
 gem 'grape-swagger'
 gem 'mime-types'
 gem 'nokogiri'
+gem 'dotenv'
+
+group :development, :test do
+  gem 'pry'
+end
 
 group :development do
   gem 'rake'
