@@ -1,0 +1,83 @@
+require 'rubygems'
+require 'bundler'
+
+begin
+  Bundler.setup(:default, :development)
+rescue Bundler::BundlerError => e
+  $stderr.puts e.message
+  $stderr.puts "Run `bundle install` to install missing gems"
+  exit e.status_code
+end
+
+require 'rake'
+
+require 'rspec/core'
+require 'rspec/core/rake_task'
+
+RSpec::Core::RakeTask.new(:spec) do |spec|
+  # do not run integration tests, doesn't work on TravisCI
+  spec.pattern = FileList['spec/api/*_spec.rb']
+end
+
+task :environment do
+  ENV["RACK_ENV"] ||= 'development'
+  require File.expand_path("../config/environment", __FILE__)
+end
+
+desc "Print out all defined routes"
+task routes: :environment do
+  headers = ['Version', 'Verb', 'URI Pattern']
+  routes = Haiku::API.routes
+  version_width, verb_width, path_width = [
+    (routes.map { |r| r.route_version.to_s.length }+['Version'.length]).max,
+    routes.map { |r| r.route_method.to_s.length }.max,
+    routes.map { |r| r.route_path.to_s.length }.max,
+  ]
+
+  route_vals = lambda { |r| [r.route_version || 'n/a', r.route_method, r.route_path].map(&:to_s) }
+
+  print_line = lambda do |vals|
+    version, verb, path, descr = vals
+    puts "#{version.ljust(version_width)} #{verb.ljust(verb_width)} #{path.ljust(path_width)}"
+  end
+
+  print_line.call(headers)
+  routes.each do |route|
+    print_line.call(route_vals.call(route))
+  end
+end
+
+desc "Start a Pry console"
+task console: :environment do
+  Pry.start
+end
+
+# via http://stackoverflow.com/q/4008028/5539
+desc "Prints out an approximate list of your Rack middleware stack"
+task middleware: :environment do
+  apps = Rack::Builder.parse_file('config.ru')
+  app = apps.first
+
+  r = [app]
+
+  while ((next_app = r.last.instance_variable_get(:@app) || r.last.instance_variable_get(:@target)) != nil)
+    r << next_app
+  end
+
+  puts r.map{|e| e.instance_variable_defined?(:@app) ? e.class : e }.join("\n")
+end
+
+task :update_swagger_ui do
+  `npm update swagger-ui`
+  `rm -rf public/doc/*`
+  `cp -r node_modules/swagger-ui/dist/* public/doc`
+  content = File.read('public/doc/index.html')
+  content.gsub!('"http://petstore.swagger.wordnik.com/api/api-docs"', 'window.location.origin + "/api/v2/core/swagger_doc"')
+  File.write('public/doc/index.html', content)
+end
+
+require 'rubocop/rake_task'
+RuboCop::RakeTask.new
+
+
+task default: [:rubocop, :spec]

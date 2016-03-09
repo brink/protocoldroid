@@ -1,0 +1,87 @@
+source 'http://rubygems.org'
+
+gem 'rack', '~> 1.5.2'
+gem 'racksh'
+gem 'grape', '~> 0.10.1' # path: '/Users/reynard/workspace/external-projects/grape' # , github: 'intridea/grape'
+gem 'grape-entity' # , github: 'intridea/grape-entity'
+gem 'grape-swagger'
+#gem 'hashie_rails' # This is for allowing mass assignment on ActiveRecord (https://github.com/intridea/grape/issues/404)
+#gem 'will_paginate'
+gem 'json'
+gem 'newrelic_rpm'
+gem 'newrelic-grape'
+gem 'rack-cors' # maybe do not need this
+gem 'nokogiri'
+gem 'activerecord', '~> 4.1',  require: 'active_record'
+# gem 'activerecord-deprecated_finders', require: 'active_record/deprecated_finders'
+gem 'actionmailer', require: 'action_mailer'
+gem 'mysql2', '~> 0.3.18'
+
+gem 'unicorn'
+gem 'sidekiq'
+gem 'paranoia', '~> 2.0'
+gem 'dotenv'
+#gem 'elasticsearch'
+gem 'redis'
+gem 'syslog-logger'
+gem 'remote_ip_proxy_scrubber'
+gem 'awesome_print'
+
+# TODO: can we move all capistrano gem to development only?
+gem 'capistrano'
+gem 'capistrano-bundler'
+gem 'capistrano-rvm'
+gem 'capistrano3-unicorn'
+gem 'capistrano-sidekiq', github: 'seuros/capistrano-sidekiq'
+gem 'capistrano-upload', require: false
+
+# supporting model requirement (not actually required for anything but just so including haiku_files does not break for now)
+gem 'aws-s3', github: 'reynardmh/aws-s3' # NOTE: This is what's causing the Digest::Digest warning
+
+gem 'rack-oauth2'
+gem 'haiku-oauth2', git: 'git@bitbucket.org:haikulearning/haiku-oauth2.git'
+gem 'haiku-api-support', git: 'git@bitbucket.org:haikulearning/haiku-api-support.git'
+# gem 'haiku-oauth2',      path: '/Users/reynard/workspace/haiku-oauth2'
+# gem 'haiku-api-support', path: '/Users/reynard/workspace/haiku-api-support'
+
+group :development do
+  gem 'rake'
+  gem 'guard'
+  gem 'guard-bundler'
+  gem 'guard-rack'
+  gem 'guard-rspec'
+  gem 'guard-rubocop'
+  gem 'rubocop'
+
+  gem 'rb-inotify', require: false
+  gem 'rb-fsevent', require: false
+  gem 'rb-fchange', require: false
+
+  gem 'powder'
+  gem 'hipchat'
+
+  gem 'shotgun'
+  gem 'sinatra'
+
+  gem 'highline'
+end
+
+group :development, :test do
+  gem 'pry'
+  gem 'fabrication'
+  gem 'ffaker'
+  # gem 'debase'
+  # gem 'ruby-debug-ide'
+  gem 'spork'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'fuubar'
+  gem 'should_not'
+  gem 'rspec'
+  gem 'rack-test', '0.6.2'
+  # gem 'capybara'
+  # gem 'selenium-webdriver'
+  gem 'simplecov', require: false
+end

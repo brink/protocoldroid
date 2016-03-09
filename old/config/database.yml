@@ -1,0 +1,71 @@
+development: &dev_defaults
+  adapter: mysql2
+  host: localhost
+  encoding: utf8
+  socket: /tmp/mysql_sandbox19369.sock
+  database: haiku_dev
+  pool: 5
+  username: <%= ENV['MYSQL_HAIKU_USERNAME'] %>
+  password: <%= ENV['MYSQL_HAIKU_PASSWORD'] %>
+
+staging:
+  <<: *dev_defaults
+  database: haiku_staging_core
+  username: <%= ENV['MYSQL_HAIKU_USERNAME'] %>
+  password: <%= ENV['MYSQL_HAIKU_PASSWORD'] %>
+
+staging_release: &staging_defaults
+  adapter: mysql2
+  host: localhost
+  socket: /tmp/mysql_sandbox19369.sock
+  database: haiku_staging_dev
+  username: <%= ENV['MYSQL_HAIKU_USERNAME'] %>
+  password: <%= ENV['MYSQL_HAIKU_PASSWORD'] %>
+  encoding: utf8
+
+staging_trunk:
+  # NOTE: If you've loaded the product DB, look a few lines down for code to uncomment
+  <<: *staging_defaults
+  master_database:
+    <<: *staging_defaults
+    database: haiku_staging_trunk
+  slave_database:
+    <<: *staging_defaults
+    database: haiku_staging_trunk
+    socket: /tmp/mysql_sandbox19370.sock
+
+staging_alpha:
+  <<: *staging_defaults
+  database: haiku_staging_mwk #staging_alpha
+
+staging_core:
+  <<: *staging_defaults
+  database: haiku_staging_core
+
+staging_core_lms:
+  <<: *staging_defaults
+  database: haiku_staging_core
+
+staging_mwk:
+  <<: *staging_defaults
+  database: haiku_staging_mwk2
+
+staging_oatmeal:
+  <<: *staging_defaults
+  database: haiku_staging_agd
+
+staging_rmh:
+  <<: *staging_defaults
+  database: haiku_staging_rmh
+
+test:
+  <<: *dev_defaults
+  database: haiku_test
+
+production:
+  adapter: mysql2
+  host: 192.168.100.250
+  database: haiku_prod
+  username: <%= ENV['MYSQL_HAIKU_USERNAME'] %>
+  password: <%= ENV['MYSQL_HAIKU_PASSWORD'] %>
+  encoding: utf8
