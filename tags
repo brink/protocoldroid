@@ -8,8 +8,12 @@ API	api/entities.rb	/^    class API < Grape::API$/;"	c	class:HaikuBot.Entities
 API	app/api.rb	/^  class API < Grape::API$/;"	c	class:HaikuBot
 ApiLogger	lib/api_logger.rb	/^module ApiLogger$/;"	m
 App	app/haiku_app.rb	/^  class App$/;"	c	class:HaikuBot
+ApplicationBot	app/poro/application_bot.rb	/^    class ApplicationBot$/;"	c	class:HaikuBot.ProtocolDroid
+AssignmentsBot	app/poro/application_bot.rb	/^    class AssignmentsBot < ApplicationBot; end$/;"	c	class:HaikuBot.ProtocolDroid
 ContentType	api/content_type.rb	/^  class ContentType < Grape::API$/;"	c	class:HaikuBot
+EchoBot	app/poro/application_bot.rb	/^    class EchoBot < ApplicationBot$/;"	c	class:HaikuBot.ProtocolDroid
 Entities	api/entities.rb	/^  module Entities$/;"	m	class:HaikuBot
+ErrorLogBot	app/poro/application_bot.rb	/^    class ErrorLogBot < ApplicationBot$/;"	c	class:HaikuBot.ProtocolDroid
 GetJson	api/get_json.rb	/^  class GetJson < Grape::API$/;"	c	class:HaikuBot
 HaikuBot	api/content_type.rb	/^module HaikuBot$/;"	m
 HaikuBot	api/entities.rb	/^module HaikuBot$/;"	m
@@ -25,14 +29,24 @@ HaikuBot	api/wrap_response.rb	/^module HaikuBot$/;"	m
 HaikuBot	api/wrap_response_decorator.rb	/^module HaikuBot$/;"	m
 HaikuBot	app/api.rb	/^module HaikuBot$/;"	m
 HaikuBot	app/haiku_app.rb	/^module HaikuBot$/;"	m
+HaikuBot	app/poro/application_bot.rb	/^module HaikuBot$/;"	m
+HaikuBot	app/poro/message_transport.rb	/^module HaikuBot$/;"	m
+HaikuBot	app/poro/protocol_droid.rb	/^module HaikuBot$/;"	m
 HaikuBot	old/config/application.rb	/^module HaikuBot$/;"	m
 HeaderVersioning	api/header_versioning.rb	/^  class HeaderVersioning < Grape::API$/;"	c	class:HaikuBot
+HipChatTransport	app/poro/message_transport.rb	/^    class HipChatTransport < MessageTransport; end$/;"	c	class:HaikuBot.ProtocolDroid
+MessageTransport	app/poro/message_transport.rb	/^    class MessageTransport$/;"	c	class:HaikuBot.ProtocolDroid
 PathVersioning	api/path_versioning.rb	/^  class PathVersioning < Grape::API$/;"	c	class:HaikuBot
 Ping	api/ping.rb	/^  class Ping < Grape::API$/;"	c	class:HaikuBot
+PoemBot	app/poro/application_bot.rb	/^    class PoemBot < ApplicationBot$/;"	c	class:HaikuBot.ProtocolDroid
 PostJson	api/post_json.rb	/^  class PostJson < Grape::API$/;"	c	class:HaikuBot
 PostPut	api/post_put.rb	/^  class PostPut < Grape::API$/;"	c	class:HaikuBot
+ProtocolDroid	app/poro/application_bot.rb	/^  class ProtocolDroid$/;"	c	class:HaikuBot
+ProtocolDroid	app/poro/message_transport.rb	/^  class ProtocolDroid$/;"	c	class:HaikuBot
+ProtocolDroid	app/poro/protocol_droid.rb	/^  class ProtocolDroid$/;"	c	class:HaikuBot
 RescueFrom	api/rescue_from.rb	/^  class RescueFrom < Grape::API$/;"	c	class:HaikuBot
 SMS	api/sms.rb	/^  class SMS < Grape::API$/;"	c	class:HaikuBot
+SMSTransport	app/poro/message_transport.rb	/^    class SMSTransport < MessageTransport$/;"	c	class:HaikuBot.ProtocolDroid
 Tool	api/entities.rb	/^    class Tool < Grape::Entity$/;"	c	class:HaikuBot.Entities
 WrapResponse	api/wrap_response.rb	/^  class WrapResponse < Grape::API$/;"	c	class:HaikuBot
 WrapResponseDecorator	api/wrap_response_decorator.rb	/^  class WrapResponseDecorator$/;"	c	class:HaikuBot
@@ -51,7 +65,20 @@ app	spec/api/sms_spec.rb	/^  def app$/;"	f
 app	spec/api/wrap_response_spec.rb	/^  def app$/;"	f
 call	api/wrap_response_decorator.rb	/^    def call(env)$/;"	f	class:HaikuBot.WrapResponseDecorator
 call	app/haiku_app.rb	/^    def call(env)$/;"	f	class:HaikuBot.App.instance
+construct_message	app/poro/application_bot.rb	/^      def construct_message$/;"	f	class:HaikuBot.ProtocolDroid.ApplicationBot
+construct_message	app/poro/application_bot.rb	/^      def construct_message$/;"	f	class:HaikuBot.ProtocolDroid.EchoBot
+generate_message_provider	app/poro/protocol_droid.rb	/^    def self.generate_message_provider(message)$/;"	F	class:HaikuBot.ProtocolDroid
+generate_transport	app/poro/message_transport.rb	/^      def self.generate_transport(message)$/;"	F	class:HaikuBot.ProtocolDroid.MessageTransport
+generate_transport	app/poro/protocol_droid.rb	/^    def self.generate_transport(message, message_provider)$/;"	F	class:HaikuBot.ProtocolDroid
 initialize	api/wrap_response_decorator.rb	/^    def initialize(app)$/;"	f	class:HaikuBot.WrapResponseDecorator
 initialize	app/haiku_app.rb	/^    def initialize$/;"	f	class:HaikuBot.App
+initialize	app/poro/application_bot.rb	/^      def initialize(message)$/;"	f	class:HaikuBot.ProtocolDroid.ApplicationBot
 instance	app/haiku_app.rb	/^    def self.instance$/;"	F	class:HaikuBot.App
 log_request	lib/api_logger.rb	/^  def log_request$/;"	f	class:ApiLogger
+matchers	app/poro/application_bot.rb	/^      def self.matchers$/;"	F	class:HaikuBot.ProtocolDroid.ApplicationBot
+matchers	app/poro/application_bot.rb	/^      def self.matchers$/;"	F	class:HaikuBot.ProtocolDroid.ErrorLogBot
+matchers	app/poro/application_bot.rb	/^      def self.matchers$/;"	F	class:HaikuBot.ProtocolDroid.PoemBot
+resolve_provider_by_keywords	app/poro/application_bot.rb	/^      def self.resolve_provider_by_keywords(message)$/;"	F	class:HaikuBot.ProtocolDroid.ApplicationBot
+send_message_from	app/poro/message_transport.rb	/^      def send_message_from(provider)$/;"	f	class:HaikuBot.ProtocolDroid.SMSTransport
+to_message	app/poro/application_bot.rb	/^      def to_message$/;"	f	class:HaikuBot.ProtocolDroid.ApplicationBot
+understands	app/poro/application_bot.rb	/^      def self.understands(message)$/;"	F	class:HaikuBot.ProtocolDroid.ApplicationBot

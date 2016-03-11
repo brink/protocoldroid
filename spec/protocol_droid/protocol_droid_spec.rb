@@ -25,16 +25,24 @@ describe HaikuBot::ProtocolDroid do
       end
     end
 
-    it 'generates a haiku (poem) provider' do
-      ["give me a poem", "poem", "tell me a haiku", "which haiku is your favorite?", "haiku"].each do |message|
+    describe 'PoemBot' do
+      it 'generates a haiku (poem) provider' do
+        ["give me a poem", "poem", "tell me a haiku", "which haiku is your favorite?", "haiku"].each do |message|
+          provider = HaikuBot::ProtocolDroid.generate_message_provider message
+          expect(provider).to be_kind_of(HaikuBot::ProtocolDroid::PoemBot)
+        end
+      end
+
+    end
+    it 'generates an assignment provider'
+    it 'generates an errorlog provider' do
+      ["logs", "view logs", "show me the last errors"].each do |message|
 
         provider = HaikuBot::ProtocolDroid.generate_message_provider message
-        expect(provider).to be_kind_of(HaikuBot::ProtocolDroid::PoemBot)
+        expect(provider).to be_kind_of(HaikuBot::ProtocolDroid::ErrorLogBot)
       end
-    end
 
-    it 'generates an assignment provider'
-    it 'generates an errorlog provider'
+    end
 
   end
 

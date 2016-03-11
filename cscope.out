@@ -1,4 +1,4 @@
-cscope 15 $HOME/workspace/protocol-droid -q 0000001072 0000092216
+cscope 15 $HOME/workspace/protocol-droid -q 0000001098 0000095822
 	@api/content_type.rb
 
 1 
@@ -1111,40 +1111,50 @@ i
 
 
 48 
-twiml
+mes§ge_´ovid”
  = 
-Twio
+HaikuBÙ
 ::
-TwiML
-::
-Re¥Ú£
+PrÙocŞDroid
 .
-Ãw
- dØ|
-r
-|
+	$g’”©e_mes§ge_´ovid”
+(
+·¿ms
+[:
+Body
+])
 
 49 
-r
+Œª¥Üt
+ = 
+HaikuBÙ
+::
+PrÙocŞDroid
 .
-Mes§ge
- 
-msg
-
-
-50 
-’d
-
+	$g’”©e_Œª¥Üt
+(
+·¿ms
+[:
+Body
+])
 
 51 
-’d
+Œª¥Üt
+.
+£nd_mes§ge_äom
+ 
+mes§ge_´ovid”
 
 
-55 
+52 
 ’d
 
 
 56 
+’d
+
+
+57 
 ’d
 
 
@@ -1758,6 +1768,458 @@ cÚ‹Á
 ’d
 
 
+	@app/poro/application_bot.rb
+
+1 
+moduË
+ 
+HaikuBÙ
+
+
+2 
+şass
+ 
+PrÙocŞDroid
+
+
+3 
+şass
+ 
+AµliÿtiÚBÙ
+
+
+4 
+	g©Œ_acûssÜ
+ :
+šput_mes§ge
+, :
+»¥Úd_w™h
+
+
+6 
+def
+ 
+š™Ÿlize
+(
+mes§ge
+)
+
+7 @
+šput_mes§ge
+ = 
+mes§ge
+
+
+8 @
+»¥Úd_w™h
+ = ''
+
+9 
+’d
+
+
+11 
+def
+ 
+£lf
+.
+m©ch”s
+
+
+13 
+’d
+
+
+15 
+def
+ 
+£lf
+.
+	$und”¡ªds
+(
+mes§ge
+)
+
+16 
+m©ch”s
+.
+ªy
+? {|
+w
+| 
+mes§ge
+.
+šşude
+? 
+	}
+w}
+
+17 
+’d
+
+
+19 
+def
+ 
+£lf
+.
+	$»sŞve_´ovid”_by_keywÜds
+(
+mes§ge
+)
+
+20 
+PÛmBÙ
+.
+und”¡ªds
+ 
+mes§ge
+
+
+21 
+PÛmBÙ
+.
+	$Ãw
+(
+mes§ge
+)
+
+23 
+EchoBÙ
+.
+	$Ãw
+(
+mes§ge
+)
+
+24 
+’d
+
+
+25 
+’d
+
+
+27 
+def
+ 
+to_mes§ge
+
+
+28 
+cÚ¡ruù_mes§ge
+ 
+»scue
+ ''
+
+29 
+’d
+
+
+31 
+def
+ 
+cÚ¡ruù_mes§ge
+
+
+32 @
+»¥Úd_w™h
+
+
+33 
+’d
+
+
+34 
+’d
+
+
+36 
+şass
+ 
+PÛmBÙ
+ < 
+AµliÿtiÚBÙ
+
+
+37 
+def
+ 
+£lf
+.
+m©ch”s
+
+
+39 
+’d
+
+
+40 
+’d
+
+
+42 
+şass
+ 
+EchoBÙ
+ < 
+AµliÿtiÚBÙ
+
+
+43 
+def
+ 
+cÚ¡ruù_mes§ge
+
+
+44 @
+»¥Úd_w™h
+ = 'You said: "' + @
+šput_mes§ge
+ +'" which I do‚ot„ecognize'
+
+45 
+’d
+
+
+47 
+’d
+
+
+48 
+şass
+ 
+E¼ÜLogBÙ
+ < 
+AµliÿtiÚBÙ
+
+
+49 
+def
+ 
+£lf
+.
+m©ch”s
+
+
+51 
+’d
+
+
+52 
+’d
+
+
+54 
+şass
+ 
+Assignm’tsBÙ
+ < 
+AµliÿtiÚBÙ
+; 
+’d
+
+
+56 
+’d
+
+
+57 
+’d
+
+
+	@app/poro/message_transport.rb
+
+1 
+moduË
+ 
+HaikuBÙ
+
+
+2 
+şass
+ 
+PrÙocŞDroid
+
+
+3 
+şass
+ 
+Mes§geT¿n¥Üt
+
+
+4 
+def
+ 
+	g£lf
+.
+	$g’”©e_Œª¥Üt
+(
+mes§ge
+)
+
+5 
+SMST¿n¥Üt
+.
+Ãw
+
+
+6 
+’d
+
+
+8 
+’d
+
+
+10 
+şass
+ 
+SMST¿n¥Üt
+ < 
+Mes§geT¿n¥Üt
+
+
+11 
+def
+ 
+	$£nd_mes§ge_äom
+(
+´ovid”
+)
+
+12 
+twiml
+ = 
+Twio
+::
+TwiML
+::
+Re¥Ú£
+.
+Ãw
+ dØ|
+r
+|
+
+13 
+r
+.
+Mes§ge
+ 
+´ovid”
+.
+to_mes§ge
+
+
+14 
+’d
+
+
+15 
+’d
+
+
+16 
+’d
+
+
+18 
+şass
+ 
+HCh©T¿n¥Üt
+ < 
+Mes§geT¿n¥Üt
+; 
+’d
+
+
+19 
+’d
+
+
+20 
+’d
+
+
+	@app/poro/protocol_droid.rb
+
+1 
+moduË
+ 
+HaikuBÙ
+
+
+2 
+şass
+ 
+PrÙocŞDroid
+
+
+4 
+def
+ 
+	g£lf
+.
+	$g’”©e_Œª¥Üt
+(
+mes§ge
+, 
+mes§ge_´ovid”
+)
+
+5 
+HaikuBÙ
+::
+PrÙocŞDroid
+::
+Mes§geT¿n¥Üt
+.
+	$Ãw
+(:
+sms
+, 
+mes§ge_´ovid”
+)
+
+6 
+’d
+
+
+8 
+def
+ 
+£lf
+.
+	$g’”©e_mes§ge_´ovid”
+(
+mes§ge
+)
+
+9  
+HaikuBÙ
+::
+PrÙocŞDroid
+::
+AµliÿtiÚBÙ
+.
+	$»sŞve_´ovid”_by_keywÜds
+(
+mes§ge
+)
+
+10 
+’d
+
+
+11 
+’d
+
+
+12 
+’d
+
+
 	@config/application.rb
 
 1 
@@ -1826,7 +2288,7 @@ cÚfig
 rb
 ',
 
-14 
+15 
 ´–ßd
 .
 —ch
@@ -1834,11 +2296,17 @@ rb
 dœ
 |
 
-15 
+16 
 Dœ
 [
+Fe
+.
+	`ex·nd_·th
+(
 dœ
-].
+, 
+__FILE__
+)].
 —ch
  { |
 f
@@ -1848,13 +2316,11 @@ f
 	}
 }
 
-16 
-’d
+17 
+	g’d
 
 
-18 
-Dœ
-[
+19 #Dœ[
 Fe
 .
 ex·nd_·th
@@ -1863,24 +2329,18 @@ __FILE__
 )].
 —ch
  dØ|
-	gf
+f
 |
 
-19 
-»quœe
- 
+20 #»quœ
 f
 
 
-20 
-’d
-
-
-22 
+23 
 	g»quœe
  'api'
 
-23 
+24 
 	g»quœe
  'haiku_app'
 
@@ -7673,7 +8133,45 @@ to
 ’d
 
 
+17 
+™
+ 'uses‡n SMSransport' do
+
 18 
+	`ex³ù
+(
+HaikuBÙ
+::
+PrÙocŞDroid
+::
+Mes§geT¿n¥Üt
+.
+ªy_š¡ªû
+).
+to
+ 
+	$be_kšd_of
+(
+HaikuBÙ
+::
+PrÙocŞDroid
+::
+SMST¿n¥Üt
+)
+
+19 
+g‘
+ '/­i/sms', :
+Body
+ => 'h–lo', :
+From
+ => '222'
+
+21 
+’d
+
+
+23 
 ’d
 
 
@@ -8037,6 +8535,216 @@ jsÚ
 ’d
 
 
+	@spec/protocol_droid/protocol_droid_spec.rb
+
+1 
+	g»quœe
+ 'spec_helper'
+
+3 
+desüibe
+ 
+	gHaikuBÙ
+::
+PrÙocŞDroid
+ do
+
+5 
+desüibe
+ 'forhe„ight keywords' do
+
+6 
+™
+ 'resolveshe…rovider based on keywords' do
+
+7 
+msg
+ = "asdfasdf‡sdfasdf‡sdfasdf‡sdfasdf"
+
+8 
+ex³ù
+(
+HaikuBÙ
+::
+PrÙocŞDroid
+::
+AµliÿtiÚBÙ
+).
+to
+ 
+»ûive
+(:
+»sŞve_´ovid”_by_keywÜds
+).
+w™h
+(
+msg
+).
+Úû
+
+
+9 
+HaikuBÙ
+::
+PrÙocŞDroid
+.
+g’”©e_mes§ge_´ovid”
+ 
+msg
+
+
+10 
+’d
+
+
+12 
+desüibe
+ 'EchoBot' do
+
+13 
+™
+ 'generates‡nƒcho…rovider if‚o matching keywords' do
+
+14 
+msg
+ = "asdfasdf‡sdfasdf‡sdfasdf‡sdfasdf"
+
+16 
+´ovid”
+ = 
+HaikuBÙ
+::
+PrÙocŞDroid
+.
+g’”©e_mes§ge_´ovid”
+ 
+msg
+
+
+17 
+ex³ù
+(
+´ovid”
+).
+to
+ 
+	$be_kšd_of
+(
+HaikuBÙ
+::
+PrÙocŞDroid
+::
+EchoBÙ
+)
+
+18 
+’d
+
+
+20 
+™
+ 'responds with "you said <message>"' do
+
+21 
+msg
+ = "asdfasdf‡sdfasdf‡sdfasdf‡sdfasdf"
+
+23 
+´ovid”
+ = 
+HaikuBÙ
+::
+PrÙocŞDroid
+.
+g’”©e_mes§ge_´ovid”
+ 
+msg
+
+
+24 
+	`ex³ù
+(
+´ovid”
+.
+to_mes§ge
+).
+to
+ 
+	`eq
+('You said: "'+ 
+msg
+ + '" which I do‚ot„ecognize')
+
+25 
+’d
+
+
+26 
+’d
+
+
+28 
+™
+ 'generates‡ haiku (poem)…rovider' do
+
+29 ["givm¨pÛm", "pÛm", "‹Î m¨haiku", "which haiku i you¸çvÜ™e?", "haiku"].
+—ch
+ dØ|
+mes§ge
+|
+
+31 
+´ovid”
+ = 
+HaikuBÙ
+::
+PrÙocŞDroid
+.
+g’”©e_mes§ge_´ovid”
+ 
+mes§ge
+
+
+32 
+	`ex³ù
+(
+´ovid”
+).
+to
+ 
+	$be_kšd_of
+(
+HaikuBÙ
+::
+PrÙocŞDroid
+::
+PÛmBÙ
+)
+
+33 
+’d
+
+
+34 
+’d
+
+
+36 
+™
+ 'generates‡n‡ssignment…rovider'
+
+37 
+™
+ 'generates‡nƒrrorlog…rovider'
+
+39 
+’d
+
+
+41 
+’d
+
+
 	@spec/spec_helper.rb
 
 1 
@@ -8149,8 +8857,8 @@ cÚfig
 1
 .
 0
-47
-1120
+51
+1248
 api/content_type.rb
 api/entities.rb
 api/get_json.rb
@@ -8165,6 +8873,9 @@ api/wrap_response.rb
 api/wrap_response_decorator.rb
 app/api.rb
 app/haiku_app.rb
+app/poro/application_bot.rb
+app/poro/message_transport.rb
+app/poro/protocol_droid.rb
 config/application.rb
 config/boot.rb
 config/environment.rb
@@ -8197,4 +8908,5 @@ spec/api/rescue_from_spec.rb
 spec/api/sms_spec.rb
 spec/api/wrap_response_spec.rb
 spec/integration/grape_on_rack_spec.rb
+spec/protocol_droid/protocol_droid_spec.rb
 spec/spec_helper.rb
