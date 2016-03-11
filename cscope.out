@@ -1,0 +1,7730 @@
+cscope 15 $HOME/workspace/protocol-droid -q 0000001028 0000090100
+	@api/content_type.rb
+
+1 
+moduË
+ 
+HaikuBÙ
+
+
+2 
+şass
+ 
+	gCÚ‹ÁTy³
+ < 
+	gG¿³
+::
+API
+
+
+3 
+fÜm©
+ :
+jsÚ
+
+
+4 
+cÚ‹Á_ty³
+ :
+txt
+, 'text/plain'
+
+5 
+	gcÚ‹Á_ty³
+ :
+xml
+, 'application/xml'
+
+6 
+	gcÚ‹Á_ty³
+ :
+jsÚ
+, 'application/json'
+
+8 
+	gdesc
+ 'Returns‡…lainext file.'
+
+9 
+	gg‘
+ 'plain_text' do
+
+10 
+	gcÚ‹Á_ty³
+ 'text/plain'
+
+12 
+’d
+
+
+14 
+	gdesc
+ 'Returns‡„esponse inƒither XML or JSON format.'
+
+15 
+	gg‘
+ 'mixed' do
+
+16 { 
+	gd©a
+: 'A„ed brown fox jumped overhe„oad.' }
+
+17 
+’d
+
+
+18 
+’d
+
+
+19 
+’d
+
+
+	@api/entities.rb
+
+1 
+moduË
+ 
+HaikuBÙ
+
+
+2 
+moduË
+ 
+EÁ™›s
+
+
+3 
+şass
+ 
+	gToŞ
+ < 
+	gG¿³
+::
+EÁ™y
+
+
+4 
+roÙ
+ 'tools', 'tool'
+
+5 
+	gexpo£
+ :
+id
+
+
+6 
+expo£
+ :
+Ëngth
+, 
+	gdocum’tiÚ
+: { 
+ty³
+: :
+¡ršg
+, 
+	gdesc
+: 'length ofheool' }
+
+7 
+expo£
+ :
+weight
+, 
+	gdocum’tiÚ
+: { 
+ty³
+: :
+¡ršg
+, 
+	gdesc
+: 'weight ofheool' }
+
+8 
+expo£
+ :
+foo
+, 
+	gdocum’tiÚ
+: { 
+ty³
+: :
+¡ršg
+, 
+	gdesc
+: 'foo' }, : ->(
+_toŞ
+, 
+	gİtiÚs
+) { options[:foo] } do |_tool, options|
+
+9 
+	gİtiÚs
+[:
+foo
+]
+
+10 
+’d
+
+
+11 
+’d
+
+
+13 
+şass
+ 
+API
+ < 
+G¿³
+::API
+
+14 
+fÜm©
+ :
+jsÚ
+
+
+15 
+cÚ‹Á_ty³
+ :
+xml
+, 'application/xml'
+
+16 
+	gfÜm©‹r
+ :
+xml
+, 
+	g´oc
+ { |
+	gobjeù
+|
+
+17 
+	gobjeù
+[
+objeù
+.
+keys
+.
+fœ¡
+].
+to_xml
+ 
+	groÙ
+: object.keys.first
+
+19 
+desc
+ 'Exposes‡nƒntity'
+
+20 
+Çme¥aû
+ :
+’t™›s
+ do
+
+21 
+desc
+ 'Expo£‡oŞ', 
+	g·¿ms
+: 
+HaikuBÙ
+::
+EÁ™›s
+::
+ToŞ
+.
+docum’tiÚ
+
+
+22 
+g‘
+ ':id' do
+
+23 
+´e£Á
+ 
+O³nSŒuù
+.
+Ãw
+(
+id
+: 
+·¿ms
+[:id], 
+Ëngth
+: 10, 
+weight
+: '20kg'), 
+	gw™h
+: 
+HaikuBÙ
+::
+EÁ™›s
+::
+ToŞ
+, 
+	gfoo
+:…¬ams[:
+foo
+]
+
+24 
+’d
+
+
+25 
+’d
+
+
+26 
+’d
+
+
+27 
+’d
+
+
+28 
+’d
+
+
+	@api/get_json.rb
+
+1 
+moduË
+ 
+HaikuBÙ
+
+
+2 
+şass
+ 
+	gG‘JsÚ
+ < 
+	gG¿³
+::
+API
+
+
+3 
+fÜm©
+ :
+jsÚ
+
+
+4 
+desc
+ 'Flips„eticulated in‡ collection of splines…assed‡s JSON in‡ query string.'
+
+5 
+»sourû
+ :
+»ticuÏ‹d_¥lšes
+ do
+
+6 
+befÜe
+ do
+
+7 
+·¿ms
+.
+—ch_·œ
+ dØ|
+k
+, 
+	gv
+|
+
+8 
+	g·¿ms
+[
+k
+] = 
+JSON
+.
+	$·r£
+(
+v
+è
+»scue
+ v
+
+9 
+’d
+
+
+10 
+’d
+
+
+11 
+·¿ms
+ do
+
+12 
+»quœes
+ :
+¥lšes
+, 
+ty³
+: 
+A¼ay
+ do
+
+13 
+»quœes
+ :
+id
+, 
+ty³
+: 
+IÁeg”
+
+
+14 
+»quœes
+ :
+»ticuÏ‹d
+, 
+ty³
+: 
+BoŞ—n
+
+
+15 
+’d
+
+
+16 
+’d
+
+
+17 
+g‘
+ do
+
+18 
+·¿ms
+[:
+¥lšes
+].
+m­
+ dØ|
+¥lše
+|
+
+19 
+¥lše
+.
+	`m”ge
+(
+»ticuÏ‹d
+: !spline[:reticulated])
+
+20 
+’d
+
+
+21 
+’d
+
+
+22 
+’d
+
+
+23 
+’d
+
+
+24 
+’d
+
+
+	@api/header_versioning.rb
+
+1 
+moduË
+ 
+HaikuBÙ
+
+
+2 
+şass
+ 
+	gH—d”V”siÚšg
+ < 
+	gG¿³
+::
+API
+
+
+3 
+v”siÚ
+ 'v1', 
+	gusšg
+: :
+h—d”
+, 
+	gv’dÜ
+: 'acme', 
+	gfÜm©
+: :
+jsÚ
+, 
+	g¡riù
+: 
+Œue
+
+
+4 
+desc
+ 'Returns‡cme.'
+
+5 
+g‘
+ do
+
+6 { 
+h—d”
+: 'acme' }
+
+7 
+’d
+
+
+8 
+’d
+
+
+9 
+’d
+
+
+	@api/path_versioning.rb
+
+1 
+moduË
+ 
+HaikuBÙ
+
+
+2 
+şass
+ 
+	gP©hV”siÚšg
+ < 
+	gG¿³
+::
+API
+
+
+3 
+v”siÚ
+ 'v’dÜ', 
+	gusšg
+: :
+·th
+, 
+	gv’dÜ
+: 'haiku', 
+	gfÜm©
+: :
+jsÚ
+
+
+4 
+desc
+ 'Returns haiku.'
+
+5 
+g‘
+ do
+
+6 { 
+·th
+: 'haiku' }
+
+7 
+’d
+
+
+8 
+’d
+
+
+9 
+’d
+
+
+	@api/ping.rb
+
+1 
+moduË
+ 
+HaikuBÙ
+
+
+2 
+şass
+ 
+	gPšg
+ < 
+	gG¿³
+::
+API
+
+
+3 
+fÜm©
+ :
+jsÚ
+
+
+4 
+g‘
+ '/ping' do
+
+5 { 
+pšg
+: 'pong' }
+
+6 
+’d
+
+
+7 
+’d
+
+
+8 
+’d
+
+
+	@api/post_json.rb
+
+1 
+moduË
+ 
+HaikuBÙ
+
+
+2 
+şass
+ 
+	gPo¡JsÚ
+ < 
+	gG¿³
+::
+API
+
+
+3 
+fÜm©
+ :
+jsÚ
+
+
+4 
+desc
+ 'Creates‡ splinehat can be„eticulated.'
+
+5 
+»sourû
+ :
+¥lše
+ do
+
+6 
+po¡
+ do
+
+7 { 
+»ticuÏ‹d
+: 
+·¿ms
+[:reticulated] }
+
+8 
+’d
+
+
+9 
+’d
+
+
+10 
+’d
+
+
+11 
+’d
+
+
+	@api/post_put.rb
+
+1 
+moduË
+ 
+HaikuBÙ
+
+
+2 
+şass
+ 
+	gPo¡Put
+ < 
+	gG¿³
+::
+API
+
+
+3 
+ÿ‰r_acûssÜ
+ :
+¿ng
+
+
+5 
+fÜm©
+ :
+jsÚ
+
+
+6 
+desc
+ 'Returns…ong.'
+
+7 
+g‘
+ :
+ršg
+ do
+
+8 { 
+¿ng
+: 
+Po¡Put
+.rang }
+
+9 
+’d
+
+
+10 
+po¡
+ :
+ršg
+ do
+
+11 
+»suÉ
+ = (
+Po¡Put
+.
+¿ng
+ += 1)
+
+12 { 
+¿ng
+: 
+»suÉ
+ }
+
+13 
+’d
+
+
+14 
+·¿ms
+ do
+
+15 
+»quœes
+ :
+couÁ
+, 
+	gty³
+: 
+IÁeg”
+
+
+16 
+’d
+
+
+17 
+put
+ :
+ršg
+ do
+
+18 
+»suÉ
+ = (
+Po¡Put
+.
+¿ng
+ +ğ
+·¿ms
+[:
+couÁ
+].
+to_i
+)
+
+19 { 
+¿ng
+: 
+»suÉ
+ }
+
+20 
+’d
+
+
+21 
+’d
+
+
+22 
+’d
+
+
+24 
+HaikuBÙ
+::
+Po¡Put
+.
+¿ng
+ = 0
+
+	@api/rescue_from.rb
+
+1 
+moduË
+ 
+HaikuBÙ
+
+
+2 
+şass
+ 
+	gRescueFrom
+ < 
+	gG¿³
+::
+API
+
+
+3 
+»scue_äom
+ :
+®l
+ dØ|
+e
+|
+
+4 
+Rack
+::
+Re¥Ú£
+.
+Ãw
+([
+e
+.
+mes§ge
+], 500, 'CÚ‹Á-ty³' => '‹xt/”rÜ').
+fšish
+
+
+5 
+’d
+
+
+6 
+desc
+ 'Raises‡nƒxception.'
+
+7 
+g‘
+ :
+¿i£
+ do
+
+8 
+¿i£
+ 'Unexpectedƒrror.'
+
+9 
+’d
+
+
+10 
+’d
+
+
+11 
+’d
+
+
+	@api/wrap_response.rb
+
+1 
+	g»quœe
+ 'wrap_response_decorator'
+
+3 
+moduË
+ 
+HaikuBÙ
+
+
+4 
+şass
+ 
+	gW¿pRe¥Ú£
+ < 
+	gG¿³
+::
+API
+
+
+5 
+u£
+ 
+W¿pRe¥Ú£DecÜ©Ü
+
+
+6 
+fÜm©
+ :
+jsÚ
+
+
+7 
+Çme¥aû
+ :
+decÜ©ed
+ do
+
+8 
+desc
+ 'Returns…ong.'
+
+9 
+g‘
+ :
+pšg
+ do
+
+10 { 
+pšg
+: 'pong' }
+
+11 
+’d
+
+
+12 
+’d
+
+
+13 
+’d
+
+
+14 
+’d
+
+
+	@api/wrap_response_decorator.rb
+
+1 
+moduË
+ 
+HaikuBÙ
+
+
+2 
+şass
+ 
+W¿pRe¥Ú£DecÜ©Ü
+
+
+3 
+def
+ 
+š™Ÿlize
+(
+­p
+)
+
+4 @
+	g­p
+ = 
+­p
+
+
+5 
+’d
+
+
+7 
+def
+ 
+	$ÿÎ
+(
+’v
+)
+
+8 
+¡©us
+, 
+h—d”s
+, 
+body_´oxy
+ = @
+­p
+.
+	$ÿÎ
+(
+’v
+)
+
+9 
+bod›s
+ = 
+body_´oxy
+.
+body
+.
+m­
+ do |body|
+
+10 { 
+body
+: 
+JSON
+.
+	`·r£
+(body), 
+¡©us
+: stu 
+	}
+}.
+to_jsÚ
+
+
+11 
+’d
+
+
+12 [200, 
+h—d”s
+, 
+bod›s
+]
+
+13 
+’d
+
+
+14 
+’d
+
+
+15 
+	g’d
+
+
+	@app/api.rb
+
+1 
+moduË
+ 
+HaikuBÙ
+
+
+2 
+şass
+ 
+	gAPI
+ < 
+	gG¿³
+::
+API
+
+
+3 
+´efix
+ 'api'
+
+4 
+fÜm©
+ :
+jsÚ
+
+
+5 
+mouÁ
+ ::
+HaikuBÙ
+::
+Pšg
+
+
+6 
+mouÁ
+ ::
+HaikuBÙ
+::
+RescueFrom
+
+
+7 
+mouÁ
+ ::
+HaikuBÙ
+::
+P©hV”siÚšg
+
+
+8 
+mouÁ
+ ::
+HaikuBÙ
+::
+H—d”V”siÚšg
+
+
+9 
+mouÁ
+ ::
+HaikuBÙ
+::
+Po¡Put
+
+
+10 
+mouÁ
+ ::
+HaikuBÙ
+::
+W¿pRe¥Ú£
+
+
+11 
+mouÁ
+ ::
+HaikuBÙ
+::
+Po¡JsÚ
+
+
+12 
+mouÁ
+ ::
+HaikuBÙ
+::
+G‘JsÚ
+
+
+13 
+mouÁ
+ ::
+HaikuBÙ
+::
+CÚ‹ÁTy³
+
+
+14 
+mouÁ
+ ::
+HaikuBÙ
+::
+EÁ™›s
+::
+API
+
+
+15 
+add_swagg”_docum’tiÚ
+ 
+­i_v”siÚ
+: 'v1'
+
+16 
+’d
+
+
+17 
+’d
+
+
+	@app/haiku_app.rb
+
+1 
+moduË
+ 
+HaikuBÙ
+
+
+2 
+şass
+ 
+Aµ
+
+
+3 
+def
+ 
+	gš™Ÿlize
+
+
+4 @
+	gf’ames
+ = ['', '.html', 'index.html', '/index.html']
+
+5 @
+	g¿ck_¡©ic
+ = ::
+Rack
+::
+Stic
+.
+Ãw
+(
+
+6 
+Ïmbda
+ { [404, {}, []] },
+
+7 
+roÙ
+: 
+Fe
+.
+ex·nd_·th
+('../../public', 
+__FILE__
+),
+
+8 
+u¾s
+: ['/']
+
+10 
+’d
+
+
+12 
+def
+ 
+£lf
+.
+š¡ªû
+
+
+13 @
+š¡ªû
+ ||ğ
+Rack
+::
+Bud”
+.
+Ãw
+ do
+
+14 
+u£
+ 
+Rack
+::
+CÜs
+ do
+
+15 
+®low
+ do
+
+16 
+Üigšs
+ '*'
+
+17 
+»sourû
+ '*', 
+	gh—d”s
+: :
+ªy
+, 
+	gm‘hods
+: :
+g‘
+
+
+18 
+’d
+
+
+19 
+’d
+
+
+21 
+run
+ 
+HaikuBÙ
+::
+Aµ
+.
+Ãw
+
+
+22 
+’d
+.
+to_­p
+
+
+23 
+’d
+
+
+25 
+def
+ 
+	$ÿÎ
+(
+’v
+)
+
+27 
+»¥Ú£
+ = 
+HaikuBÙ
+::
+API
+.
+	$ÿÎ
+(
+’v
+)
+
+29 #Check 
+the
+ 
+Aµ
+ 
+wªts
+ 
+us
+ 
+to
+ 
+·ss
+h
+»¥Ú£
+ 
+®Úg
+Ø
+Ùh”s
+
+
+30 
+»¥Ú£
+[1]['X-Cascade'] == 'pass'
+
+31 #¡©iø
+fes
+
+
+32 
+»que¡_·th
+ = 
+’v
+['PATH_INFO']
+
+33 @
+f’ames
+.
+—ch
+ dØ|
+·th
+|
+
+34 
+»¥Ú£
+ = @
+¿ck_¡©ic
+.
+	`ÿÎ
+(
+’v
+.
+	`m”ge
+('PATH_INFO' => 
+»que¡_·th
+ + 
+·th
+))
+
+35  
+»¥Ú£
+ response[0] != 404
+
+36 
+’d
+
+
+37 
+’d
+
+
+39 #S”v
+”rÜ
+ 
+·ges
+ 
+Ü
+ 
+»¥Úd
+ 
+w™h
+ 
+API
+ 
+»¥Ú£
+
+
+40 
+»¥Ú£
+[0]
+
+41 
+wh’
+ 404, 500
+
+42 
+cÚ‹Á
+ = @
+¿ck_¡©ic
+.
+	`ÿÎ
+(
+’v
+.
+	`m”ge
+('PATH_INFO' => "/errors/#{response[0]}.html"))
+
+43 [
+»¥Ú£
+[0], 
+cÚ‹Á
+[1], content[2]]
+
+45 
+»¥Ú£
+
+
+46 
+’d
+
+
+47 
+’d
+
+
+48 
+’d
+
+
+49 
+’d
+
+
+	@config/application.rb
+
+1 
+	g$LOAD_PATH
+.
+unshiá
+(
+Fe
+.
+još
+(Fe.
+dœÇme
+(
+__FILE__
+), '..', 'api'))
+
+2 
+	g$LOAD_PATH
+.
+unshiá
+(
+Fe
+.
+još
+(Fe.
+dœÇme
+(
+__FILE__
+), '..', 'app'))
+
+3 
+	g$LOAD_PATH
+.
+unshiá
+(
+Fe
+.
+	$dœÇme
+(
+__FILE__
+))
+
+5 
+»quœe
+ 'boot'
+
+7 
+BundËr
+.
+»quœe
+ :, 
+ENV
+['RACK_ENV']
+
+9 
+Dœ
+[
+Fe
+.
+	`ex·nd_·th
+('../../­i/*.rb', 
+__FILE__
+)].
+—ch
+ dØ|
+f
+|
+
+10 
+»quœe
+ 
+f
+
+
+11 
+’d
+
+
+13 
+»quœe
+ 'api'
+
+14 
+»quœe
+ 'haiku_app'
+
+	@config/boot.rb
+
+1 
+	g»quœe
+ 'rubygems'
+
+2 
+	g»quœe
+ 'bundler/setup'
+
+	@config/environment.rb
+
+1 
+	gENV
+['RACK_ENV'] ||= 'test'
+
+3 
+»quœe
+ 
+Fe
+.
+ex·nd_·th
+('../­¶iÿtiÚ', 
+__FILE__
+)
+
+	@lib/api_logger.rb
+
+1 
+moduË
+ 
+ApiLogg”
+
+
+3 
+def
+ 
+log_»que¡
+
+
+4 
+uÆess
+ 
+	gHaiku
+.
+	gcÚfig
+.
+	g’v
+.
+	g‹¡
+?
+
+5 
+	gG¿³
+::
+API
+.
+logg”
+.
+šfo
+ "#{request.ip} #{env['REQUEST_METHOD']} #{env['PATH_INFO']}?#{env['QUERY_STRING']} #{env['rack.request.form_hash'] ?ƒnv['rack.request.form_hash'].to_json : ''}"
+
+6 
+’d
+
+
+7 
+’d
+
+
+8 
+’d
+
+
+	@old/config/application.rb
+
+1 
+	g$LOAD_PATH
+.
+unshiá
+(
+Fe
+.
+još
+(Fe.
+dœÇme
+(
+__FILE__
+), '..', 'app'))
+
+2 
+	g$LOAD_PATH
+.
+unshiá
+(
+Fe
+.
+	$dœÇme
+(
+__FILE__
+))
+
+4 
+»quœe
+ 'boot'
+
+6 
+BundËr
+.
+»quœe
+ :, 
+ENV
+['RACK_ENV']
+
+8 
+moduË
+ 
+HaikuBÙ
+
+
+9 
+şass
+ << 
+£lf
+; 
+©Œ_acûssÜ
+ :
+ÿ±u»_exû±iÚs
+; 
+’d
+
+
+10 
+šşude
+ 
+AùiveSuµÜt
+::
+CÚfigu¿bË
+
+
+11 
+’d
+
+
+13 
+Haiku
+.
+ÿ±u»_exû±iÚs
+ = 
+Œue
+ Haiku.ÿ±u»_exû±iÚs.
+n
+?
+
+15 
+Haiku
+.
+cÚfigu»
+ dØ|
+cÚfig
+|
+
+16 
+cÚfig
+.
+roÙ
+ = 
+Fe
+.
+	`ex·nd_·th
+(Fe.
+	`još
+(Fe.
+	`dœÇme
+(
+__FILE__
+), '..'))
+
+17 
+cÚfig
+.
+d©a_dœ
+ = 
+Fe
+.
+	`još
+(cÚfig.
+roÙ
+, 'data')
+
+18 
+cÚfig
+.
+’v
+ = 
+AùiveSuµÜt
+::
+SŒšgInquœ”
+.
+	`Ãw
+(
+ENV
+['RACK_ENV'].
+to_s
+)
+
+19 
+’d
+
+
+21 
+DÙ’v
+.
+lßd
+ 
+Fe
+.
+	`još
+(
+Haiku
+.
+cÚfig
+.
+roÙ
+, ".env")
+
+22 
+dÙ’v_fe
+ = 
+Fe
+.
+	`još
+(
+Haiku
+.
+cÚfig
+.
+roÙ
+, ".env.#{Haiku.config.env}")
+
+23 
+DÙ’v
+.
+	$ov”lßd
+(
+dÙ’v_fe
+è
+Fe
+.
+exi¡
+?(dotenv_file)
+
+24 
+DÙ’v
+.
+	`ov”lßd
+('.’v.cu¡om'è
+Haiku
+.
+cÚfig
+.
+’v
+.
+dev–İm’t
+?
+
+26 
+AùiÚMa”
+::
+Ba£
+.
+v›w_·ths
+ = 
+Fe
+.
+	`još
+(
+Haiku
+.
+cÚfig
+.
+roÙ
+, 'app', 'views')
+
+27 #Mak
+su»
+ 
+th©
+ 
+£ndma
+ "’v–İ£nd”" 
+is
+ 
+£t
+ 
+to
+ 
+a
+ 
+£rv”
+ 
+w™h
+‡ 
+v®id
+ 
+MX
+ 
+»cÜd
+.
+
+28 #Thi 
+wl
+ 
+hİefuÎy
+ 
+h–p
+ 
+us
+ 
+avoid
+ 
+some
+ 
+¥am
+ 
+f‹rs
+. 
+Ask
+ 
+Paul
+/
+M¬cos
+ 
+d‘as
+.
+
+29 
+AùiÚMa”
+::
+Ba£
+.
+£ndma_£‰šgs
+[:
+¬gum’ts
+] ||= ""
+
+30 
+uÆess
+ 
+AùiÚMa”
+::
+Ba£
+.
+£ndma_£‰šgs
+[:
+¬gum’ts
+] =~ /\
+b
+-
+f
+\
+s
+/
+
+31 
+AùiÚMa”
+::
+Ba£
+.
+£ndma_£‰šgs
+[:
+¬gum’ts
+] += " -f #{ENV['NOREPLY_EMAIL']}"
+
+32 
+’d
+
+
+34 
+´–ßd
+ = [
+
+36 #'./
+lib
+ *.
+rb
+',
+
+37 #'./
+­p
+/
+h–³rs
+ *.
+rb
+',
+
+38 #'./
+­p
+/
+mixšs
+ *.
+rb
+',
+
+39 #'./
+­p
+/
+mod–s
+ *.
+rb
+',
+
+40 #'./
+­p
+/
+’t™›s
+ *.
+rb
+',
+
+43 #
+.—ch dØ|dœ|
+
+45 
+Dœ
+[
+dœ
+].
+—ch
+ { |
+f
+| 
+»quœe
+ f 
+	}
+}
+
+46 
+’d
+
+
+49 
+	g»quœe
+ 'hk_bot'
+
+50 
+	g»quœe
+ 'haiku_app'
+
+	@old/config/boot.rb
+
+1 
+	g»quœe
+ 'rubygems'
+
+2 
+	g»quœe
+ 'bundler/setup'
+
+	@old/config/environment.rb
+
+1 #Lßd 
+the
+ 
+Ras
+ 
+­¶iÿtiÚ
+.
+
+2 
+»quœe
+ 
+	gFe
+.
+ex·nd_·th
+('../­¶iÿtiÚ', 
+__FILE__
+)
+
+4 #In™Ÿliz
+the
+ 
+Ras
+ 
+­¶iÿtiÚ
+.
+
+5 
+	gRas
+.
+	g­¶iÿtiÚ
+.
+	gš™Ÿlize
+!
+
+	@old/config/environments/development.rb
+
+1 
+	glogfe
+ = 
+Fe
+.
+İ’
+(Fe.
+još
+(
+Haiku
+.
+cÚfig
+.
+roÙ
+, 'log', 'active_record.log'), 'a')
+
+2 
+	glogfe
+.
+	gsync
+ = 
+Œue
+
+
+3 
+AùiveRecÜd
+::
+Ba£
+.
+logg”
+ = 
+Logg”
+.
+	$Ãw
+(
+logfe
+)
+
+5 #G¿³::
+API
+.
+logg”
+ = 
+AùiveSuµÜt
+::
+TaggedLoggšg
+.
+	`Ãw
+(
+Logg”
+::
+Sy¦og
+.Ãw('haiku_cÜe', Sy¦og::
+LOG_LOCAL1
+))
+
+6 
+G¿³
+::
+API
+.
+logg”
+ = 
+Logg”
+.
+	$Ãw
+(
+STDOUT
+)
+
+8 
+G¿³
+::
+API
+.
+logg”
+.
+Ëv–
+ = ::
+Logg”
+::
+DEBUG
+
+
+10 
+AùiÚMa”
+::
+Ba£
+.
+¿i£_d–iv”y_”rÜs
+ = 
+Œue
+
+
+11 
+AùiÚMa”
+::
+Ba£
+.
+³rfÜm_d–iv”›s
+ = 
+Œue
+
+
+12 
+AùiÚMa”
+::
+Ba£
+.
+d–iv”y_m‘hod
+ = :
+£ndma
+
+
+14 #AùiÚMa”::
+Ba£
+.
+sm_£‰šgs
+ = {
+
+15 #:
+add»ss
+ => 'smtp.gmail.com',
+
+16 #:
+domaš
+ => 'mail.google.com',
+
+17 #:
+pÜt
+ => 587,
+
+18 #:
+u£r_Çme
+ => '',
+
+19 #:
+·sswÜd
+ => '',
+
+20 #:
+auth’tiÿtiÚ
+ => :
+¶aš
+,
+
+21 #:
+’abË_¡¬‰ls_auto
+ => 
+Œue
+
+
+	@old/config/environments/production.rb
+
+1 #Sim¶
+RŞe
+ 
+SyÁax
+
+
+3 #SuµÜt 
+bulk
+-
+addšg
+ 
+ho¡s
+ 
+to
+ 
+rŞes
+, 
+the
+ 
+´im¬y
+
+
+4 #£rv” 
+š
+ 
+—ch
+ 
+group
+ 
+is
+ 
+cÚsid”ed
+ 
+to
+ 
+be
+ 
+the
+ 
+fœ¡
+
+
+5 #uÆes 
+ªy
+ 
+ho¡s
+ 
+have
+ 
+the
+ 
+´im¬y
+ 
+´İ”ty
+ 
+£t
+.
+
+6 #DÚ'ˆdeş¬`rŞ:®l`, it'
+s
+ 
+a
+ 
+m‘a
+ 
+rŞe
+
+
+7 
+	grŞe
+ :
+web
+, 
+	gPRODUCTION_IPS
+.
+¦iû
+(:
+web18
+, :
+web19
+).
+v®ues
+.
+cŞËù
+{|
+ho¡
+| "haikuls@" + host}
+
+8 
+rŞe
+ :
+­p
+, 
+	gPRODUCTION_IPS
+.
+¦iû
+(:
+web18
+, :
+web19
+).
+v®ues
+.
+cŞËù
+{|
+ho¡
+| "haikuls@" + host}
+
+10 
+£t
+ :
+¿s_’v
+, 'production'
+
+11 
+	g£t
+ :
+¿ck_’v
+, 'production'
+
+12 
+	g£t
+ :
+unicÜn_’v
+, 'production'
+
+13 
+	g£t
+ :
+unicÜn_¿ck_’v
+, 'production'
+
+15 #TODO: 
+£t
+ 
+symlšk
+ 
+d©a_·th
+
+
+16 
+	g£t
+ :
+d©a_·th
+, '/glhaiku'
+
+17 
+	g£t
+ :
+d•loy_to
+, '/vhosts/apps/haiku-core'
+
+19 
+	g£t
+ :
+k“p_»Ëa£s
+, 15
+
+20 
+	g£t
+ :
+b¿nch
+, 'master'
+
+22 #Thi 
+is
+ 
+the
+ 
+tmp
+ 
+dœ
+ 
+wh”e
+ 
+ÿpi¡¿no
+ 
+run
+ 
+g™
+-
+ssh
+.
+sh
+ 
+süt
+, 
+by
+  
+™
+ is "/tmp",
+
+23 #howev” 
+some
+ 
+£rv”
+ 
+dÛs
+ 
+nÙ
+ 
+®low
+ 
+executšg
+ 
+süt
+ 
+äom
+ "/tmp"
+
+24 
+	g£t
+ :
+tmp_dœ
+, "/home/haikuls/tmp"
+
+26 
+	grŞe
+ :
+sidekiq
+, 
+	gPRODUCTION_IPS
+.
+¦iû
+(:
+web18
+, :
+web19
+).
+v®ues
+
+
+27 
+£t
+ :
+sidekiq_´oûs£s
+, 4
+
+28 
+	g£t
+ :
+sidekiq_İtiÚs_³r_´oûss
+, [
+
+	@old/config/environments/test.rb
+
+1 
+	gG¿³
+::
+API
+.
+logg”
+ = 
+Logg”
+.
+	$Ãw
+(
+STDOUT
+)
+
+3 
+G¿³
+::
+API
+.
+logg”
+.
+Ëv–
+ = ::
+Logg”
+::
+INFO
+
+
+5 
+AùiÚMa”
+::
+Ba£
+.
+d–iv”y_m‘hod
+ = :
+‹¡
+
+
+6 
+AùiÚMa”
+::
+Ba£
+.
+³rfÜm_d–iv”›s
+ = 
+Œue
+
+
+7 
+AùiÚMa”
+::
+Ba£
+.
+d–iv”›s
+ = []
+
+	@old/config/routes.rb
+
+1 
+	gRas
+.
+	g­¶iÿtiÚ
+.
+	grou‹s
+.
+d¿w
+ do
+
+2 #Th
+´iÜ™y
+ 
+is
+ 
+ba£d
+ 
+upÚ
+ 
+Üd”
+ 
+of
+ 
+ü—tiÚ
+: 
+fœ¡
+ 
+ü—‹d
+ -> 
+highe¡
+…riority.
+
+3 #S“ 
+how
+ 
+®l
+ 
+your
+ 
+rou‹s
+ 
+Ïy
+ 
+out
+ 
+w™h
+ "rake„outes".
+
+5 #You 
+ÿn
+ 
+have
+ 
+the
+ 
+roÙ
+ 
+of
+ 
+your
+ 
+s™e
+ 
+rou‹d
+ 
+w™h
+ "root"
+
+8 #Exam¶
+of
+ 
+»guÏr
+ 
+rou‹
+:
+
+11 #Exam¶
+of
+ 
+Çmed
+ 
+rou‹
+ 
+th©
+ 
+ÿn
+ 
+be
+ 
+švoked
+ 
+w™h
+ 
+purcha£_u¾
+(
+id
+: 
+´oduù
+.id)
+
+12 #g‘ '´oduùs/:id/purcha£' => 'ÿlog#purcha£', 
+as
+: :
+purcha£
+
+
+14 #Exam¶
+»sourû
+ 
+rou‹
+ (
+m­s
+ 
+HTTP
+ 
+v”bs
+ 
+to
+ 
+cÚŒŞËr
+ 
+aùiÚs
+ 
+autom©iÿÎy
+):
+
+15 #»sourû :
+´oduùs
+
+
+17 #Exam¶
+»sourû
+ 
+rou‹
+ 
+w™h
+ 
+İtiÚs
+:
+
+18 #»sourû :
+´oduùs
+ do
+
+29 #Exam¶
+»sourû
+ 
+rou‹
+ 
+w™h
+ 
+sub
+-
+»sourûs
+:
+
+30 #»sourû :
+´oduùs
+ do
+
+31 #»sourû :
+comm’ts
+, :
+§Ës
+
+
+32 #»sourû :
+£Î”
+
+
+35 #Exam¶
+»sourû
+ 
+rou‹
+ 
+w™h
+ 
+mÜe
+ 
+com¶ex
+ 
+sub
+-
+»sourûs
+:
+
+36 #»sourû :
+´oduùs
+ do
+
+37 #»sourû :
+comm’ts
+
+
+38 #»sourû :
+§Ës
+ do
+
+39 #g‘ '»ûÁ', 
+Ú
+: :
+cŞËùiÚ
+
+
+43 #Exam¶
+»sourû
+ 
+rou‹
+ 
+w™h
+ 
+cÚûºs
+:
+
+44 #cÚûº :
+toggËabË
+ do
+
+47 #»sourû :
+po¡s
+, 
+cÚûºs
+: :
+toggËabË
+
+
+48 #»sourû :
+phÙos
+, 
+cÚûºs
+: :
+toggËabË
+
+
+50 #Exam¶
+»sourû
+ 
+rou‹
+ 
+w™hš
+ 
+a
+ 
+Çme¥aû
+:
+
+51 #Çme¥aû :
+admš
+ do
+
+52 ## 
+Dœeùs
+ /
+admš
+/
+´oduùs
+
+
+	@public/errors/404.html
+
+1 <
+	ghtml
+>
+
+2 <
+	gh—d
+>
+
+3 <
+	gt™Ë
+>
+Page
+ 
+NÙ
+ 
+	gFound
+</title>
+
+4 </
+	gh—d
+>
+
+5 <
+	gbody
+>
+
+6 <
+	gh1
+>
+	gOoİs
+...</h1>
+
+7 <
+a
+ 
+	gh»f
+="http://rack.rubyforge.org/">
+
+8 <
+img
+ 
+¤c
+="/images/rack-logo.png">
+
+9 </
+a
+>
+
+10 <
+p
+>
+
+11 
+This
+ 
+·ge
+ 
+could
+ 
+nÙ
+ 
+be
+ 
+found
+.
+
+12 </
+p
+>
+
+13 </
+body
+>
+
+14 </
+html
+>
+
+	@public/errors/500.html
+
+1 <
+	ghtml
+>
+
+2 <
+	gh—d
+>
+
+3 <
+	gt™Ë
+>
+UÃx³ùed
+ 
+	gE¼Ü
+</title>
+
+4 </
+	gh—d
+>
+
+5 <
+	gbody
+>
+
+6 <
+	gh1
+>
+	gOuch
+...</h1>
+
+7 <
+a
+ 
+	gh»f
+="http://rack.rubyforge.org/">
+
+8 <
+img
+ 
+¤c
+="/images/rack-logo.png">
+
+9 </
+a
+>
+
+10 <
+p
+>
+
+11 
+Som‘hšg
+ 
+w’t
+ 
+‹¼ibly
+ 
+wrÚg
+.
+
+12 </
+p
+>
+
+13 </
+body
+>
+
+14 </
+html
+>
+
+	@public/images/index.html
+
+1 
+This
+ 
+fŞd”
+ 
+cÚšs
+ 
+	gimages
+.
+
+	@public/index.html
+
+1 <
+	ghtml
+>
+
+2 <
+	gh—d
+>
+
+3 <
+	gt™Ë
+>
+Rack
+ 
+Pow”s
+ 
+Web
+ 
+	gAPIs
+</title>
+
+4 <
+süt
+ 
+	g¤c
+="/scripts/jquery-1.7.1.min.js"></script>
+
+5 <
+süt
+ 
+¤c
+="/scripts/ring.js"></script>
+
+6 </
+h—d
+>
+
+7 <
+body
+>
+
+8 <
+h1
+>
+Rack
+ 
+Pow”s
+ 
+Web
+ 
+APIs
+</h1>
+
+9 <
+a
+ 
+h»f
+="http://rack.rubyforge.org/">
+
+10 <
+img
+ 
+¤c
+="images/rack-logo.png">
+
+11 </
+a
+>
+
+12 <
+ul
+>
+
+13 <
+li
+><
+a
+ 
+h»f
+="/­i/pšg.jsÚ">
+Pšg
+!</a></li>
+
+14 <
+li
+>
+
+15 <
+div
+>
+
+16 <
+¥ª
+ 
+id
+='ršg_v®ue'>
+ãtchšg
+ 
+ršg
+ 
+v®ue
+ ...</span>
+
+17 <
+¥ª
+ 
+id
+='ršg_aùiÚ' 
+¡yË
+="text-decoration: underline; cursor:…ointer" />
+
+18 </
+div
+>
+
+19 </
+li
+>
+
+20 </
+ul
+>
+
+21 </
+body
+>
+
+22 </
+html
+>
+
+	@public/scripts/jquery-1.7.1.min.js
+
+2 (
+	$funùiÚ
+(
+a
+,
+b
+){
+funùiÚ
+ 
+	`cy
+×){ 
+f
+.
+	`isWšdow
+×)?a:a.
+nodeTy³
+===9?a.
+deçuÉV›w
+||a.
+·»ÁWšdow
+:!1}funùiÚ 
+	`cv
+×){if(!
+ck
+[a]){
+v¬
+ b=
+c
+.
+body
+,
+d
+=
+	`f
+("<"+a+">").
+	`­³ndTo
+(b),
+e
+=d.
+	`css
+("di¥Ïy");d.
+	`»move
+();ifÓ==="nÚe"||e===""){
+ş
+||(ş=c.
+	`ü—‹EËm’t
+("iäame"),ş.
+äameBÜd”
+=ş.
+width
+=ş.
+height
+=0),b.
+	`­³ndChd
+(ş);if(!
+cm
+||!ş.
+ü—‹EËm’t
+)cm=(ş.
+cÚ‹ÁWšdow
+||ş.
+cÚ‹ÁDocum’t
+).
+docum’t
+,cm.
+	`wr™e
+((c.
+com·tMode
+==="CSS1Com·t"?"<!doùy³ html>":"")+"<html><body>"),cm.
+	`şo£
+();d=cm.ü—‹EËm’t×),cm.body.­³ndChd(d),e=f.css(d,"di¥Ïy"),b.
+	`»moveChd
+(ş)}ck[a]ó} ck[a]}funùiÚ 
+	`cu
+×,b){v¬ c={};f.
+	`—ch
+(
+cq
+.
+cÚÿt
+.
+	`­¶y
+([],cq.
+	`¦iû
+(0,b)),
+	`funùiÚ
+(){c[
+this
+]÷}); c}funùiÚ 
+	`ù
+(){
+ü
+=b}funùiÚ 
+	`cs
+(){
+	`£tTimeout
+(
+ù
+,0); cr=f.
+	`now
+()}funùiÚ 
+	`cj
+(){
+Œy
+{ 
+Ãw
+‡.
+	`AùiveXObjeù
+("Miüosoá.XMLHTTP")}
+	`ÿtch
+(b){}}funùiÚ 
+	`ci
+(){Œy{‚ew‡.
+XMLH‰pReque¡
+}ÿtch(b){}}funùiÚ 
+	`cc
+×,c){a.
+d©aF‹r
+&&(c÷.
+	`d©aF‹r
+(c,a.
+d©aTy³
+));v¬ d÷.
+d©aTy³s
+,e={},
+g
+,
+h
+,
+i
+=d.
+Ëngth
+,
+j
+,
+k
+=d[0],
+l
+,
+m
+,
+n
+,
+o
+,
+p
+;g=1;g<i;g++){if(g===1)h 
+š
+‡.
+cÚv”‹rs
+)
+ty³of
+ h=="¡ršg"&&Ó[h.
+	`toLow”Ca£
+()]÷.cÚv”‹rs[h]);l=k,k=d[g];if(k==="*")kö;ifÖ!=="*"&&l!==k){mö+" "+k,nó[m]||e["* "+k];if(!n){p=b;Øšƒ){j=o.
+	`¥l™
+(" ");if(j[0]==ö||j[0]==="*"){pó[j[1]+" "+k];ifÕ){oó[o],o===!0?nõ:p===!0&&Ò=o);}}}}!n&&!p&&f.
+	`”rÜ
+("NØcÚv”siÚ from "+m.
+	`»¶aû
+(" ","Ø")),n!==!0&&(cò?
+	`n
+(c):
+	`p
+(
+	`o
+(c)))}} c}funùiÚ 
+	`cb
+×,c,d){v¬ƒ÷.
+cÚ‹Ás
+,f÷.d©aTy³s,g÷.
+»¥Ú£F›lds
+,h,i,j,k;˜š g)˜š d&&(c[g[i]]=d[i]);f[0]==="*")f.
+	`shiá
+(),h===b&&(h÷.
+mimeTy³
+||c.
+	`g‘Re¥Ú£H—d”
+("cÚ‹Á-ty³"));if(h)˜šƒ)ifÓ[i]&&e[i].
+	`‹¡
+(h)){f.
+	`unshiá
+(i);}if(f[0]š d)j=f[0];{˜š d){if(!f[0]||a.cÚv”‹rs[i+" "+f[0]]){j=i;}k||(k=i)}j=j||k}if(j){j!==f[0]&&f.unshiá(j); d[j]}}funùiÚ 
+	`ÿ
+×,b,c,d){if(f.
+	`isA¼ay
+(b))f.—ch(b,funùiÚ(b,e){c||
+bE
+.‹¡×)?
+	`d
+×,e):ÿ×+"["+Ñy³oàe=="objeù"||f.isA¼ayÓ)?b:"")+"]",e,c,d)});if(!c&&b!=
+nuÎ
+&&ty³oàb=="objeù")v¬ƒ iÀb)ÿ×+"["+e+"]",b[e],c,d);d×,b)}funùiÚ 
+	`b_
+×,c){v¬ d,e,g=f.
+ajaxS‘tšgs
+.
+æ©O±iÚs
+||{};d iÀc)c[d]!==b&&((g[d]?a:e||Ó={}))[d]=c[d]);e&&f.
+	`ex‹nd
+(!0,a,e)}funùiÚ 
+	`b$
+×,c,d,e,f,g){f=f||c.d©aTy³s[0],g=g||{},g[f]=!0;v¬ h÷[f],i=0,j=h?h.Ëngth:0,k÷===
+bT
+,l;;i<j&&(k||!l);i++î=h[i](c,d,e),ty³oàl=="¡ršg"&&(!k||g[l]?l=b:(c.d©aTy³s.unshiáÖ),l=b$×,c,d,e,l,g)));(k||!l)&&!g["*"]&&Ö=b$×,c,d,e,"*",g));†}funùiÚ 
+	`bZ
+×){ funùiÚ(b,c){ty³oàb!="¡ršg"&&(c=b,b="*");if(f.
+	`isFunùiÚ
+(c)){v¬ d=b.toLow”Ca£().¥l™(
+bP
+),e=0,g=d.Ëngth,h,i,j;;e<g;e++)h=d[e],j=/^\+/.‹¡(h),j&&(h=h.
+	`sub¡r
+(1)||"*"),i÷[h]÷[h]||[],i[j?"unshiá":"push"](c)}}}funùiÚ 
+	`bC
+×,b,c){v¬ d=b==="width"?a.
+off£tWidth
+:a.
+off£tHeight
+,e=b==="width"?
+bx
+:
+by
+,g=0,hó.Ëngth;if(d>0){if(c!=="bÜd”");g<h;g++)c||(d-=
+	`·r£Flßt
+(f.css×,"·ddšg"+e[g]))||0),c==="m¬gš"?d+õ¬£Flßt(f.css×,c+e[g]))||0:d-õ¬£Flßt(f.css×,"bÜd”"+e[g]+"Width"))||0; d+"px"}d=
+	`bz
+×,b,b);if(d<0||d=òuÎ)d÷.
+¡yË
+[b]||0;dõ¬£Flßt(d)||0;if(c);g<h;g++)d+õ¬£Flßt(f.css×,"·ddšg"+e[g]))||0,c!=="·ddšg"&&(d+õ¬£Flßt(f.css×,"bÜd”"+e[g]+"Width"))||0),c==="m¬gš"&&(d+õ¬£Flßt(f.css×,c+e[g]))||0); d+"px"}funùiÚ 
+	`bp
+×,b){b.
+¤c
+?f.
+	`ajax
+({
+u¾
+:b.¤c,
+async
+:!1,d©aTy³:"süt"}):f.
+	`glob®Ev®
+((b.
+‹xt
+||b.
+‹xtCÚ‹Á
+||b.
+šÃrHTML
+||"").»¶aû(
+bf
+,"/*$0*/")),b.
+·»ÁNode
+&&b.·»ÁNode.»moveChd(b)}funùiÚ 
+	`bo
+×){v¬ b=c.ü—‹EËm’t("div");
+bh
+.­³ndChd(b),b.šÃrHTML÷.
+ou‹rHTML
+; b.
+fœ¡Chd
+}funùiÚ 
+	`bn
+×){v¬ b=×.
+nodeName
+||"").toLow”Ca£();b==="šput"?
+	`bm
+×):b!=="süt"&&ty³oàa.
+g‘EËm’tsByTagName
+!="undefšed"&&f.
+	`g»p
+×.
+	`g‘EËm’tsByTagName
+("šput"),
+bm
+)}funùiÚ bm×){if×.
+ty³
+==="checkbox"||a.ty³==="¿dio"ï.
+deçuÉChecked
+÷.
+checked
+}funùiÚ 
+	`bl
+×){y³oàa.g‘EËm’tsByTagName!="undefšed"?a.g‘EËm’tsByTagName("*"):ty³oàa.
+qu”yS–eùÜAÎ
+!="undefšed"?a.
+	`qu”yS–eùÜAÎ
+("*"):[]}funùiÚ 
+	`bk
+×,b){v¬ c;if(b.nodeTy³===1){b.
+ş—rA‰ribu‹s
+&&b.
+	`ş—rA‰ribu‹s
+(),b.
+m”geA‰ribu‹s
+&&b.
+	`m”geA‰ribu‹s
+×),c=b.nodeName.toLow”Ca£();if(c==="objeù")b.ou‹rHTML÷.ou‹rHTML;if(c!=="šput"||a.ty³!=="checkbox"&&a.ty³!=="¿dio"){if(c==="İtiÚ")b.
+£Ëùed
+÷.
+deçuÉS–eùed
+;if(c==="šput"||c==="‹x»a")b.
+deçuÉV®ue
+÷.deçuÉV®ue}a.checked&&(b.deçuÉChecked=b.checked÷.checked),b.
+v®ue
+!=÷.v®ue&&(b.v®ue÷.v®ue);b.
+	`»moveA‰ribu‹
+(f.
+ex·ndo
+)}}funùiÚ 
+	`bj
+×,b){if(b.nodeTy³===1&&!!f.
+	`hasD©a
+×)){v¬ c,d,e,g=f.
+	`_d©a
+×),h=f._d©a(b,g),i=g.
+ev’ts
+;if(i){
+d–‘e
+ h.
+hªdË
+,h.ev’ts={};øš i)d=0,e=i[c].Ëngth;d<e;d++)f.
+ev’t
+.
+	`add
+(b,c+(i[c][d].
+Çme¥aû
+?".":"")+i[c][d].Çme¥aû,i[c][d],i[c][d].
+d©a
+)}h.d©a&&(h.d©a=f.ex‹nd({},h.d©a))}}funùiÚ 
+	`bi
+×,b){ f.
+	`nodeName
+×,"bË")?a.g‘EËm’tsByTagName("tbody")[0]||a.­³ndChd×.
+owÃrDocum’t
+.ü—‹EËm’t("tbody")):a}funùiÚ 
+	`U
+×){v¬ b=
+V
+.¥l™("|"),c÷.
+	`ü—‹Docum’tF¿gm’t
+();if(c.ü—‹EËm’t)b.Ëngth)c.ü—‹EËm’t(b.
+	`pİ
+()); c}funùiÚ 
+	`T
+×,b,c){b=b||0;if(f.isFunùiÚ(b)) f.g»p×,funùiÚ×,d){v¬ƒ=!!b.
+	`ÿÎ
+×,d,a);ƒ===c});if(b.nodeTy³) f.g»p×,funùiÚ×,d){‡===b===c});ifÑy³oàb=="¡ršg"){v¬ d=f.g»p×,funùiÚ×){‡.nodeTy³===1});if(
+O
+.‹¡(b)) f.
+	`f‹r
+(b,d,!c);b=f.f‹r(b,d)} f.g»p×,funùiÚ×,d){ f.
+	`šA¼ay
+×,b)>=0===c})}funùiÚ 
+	`S
+×){!a||!a.·»ÁNode||a.·»ÁNode.nodeTy³===11}funùiÚ 
+	`K
+(){!0}funùiÚ 
+	`J
+(){!1}funùiÚ‚×,b,c){v¬ d=b+"deãr",e=b+"queue",g=b+"m¬k",h=f._d©a×,d);h&&(c==="queue"||!f._d©a×,e))&&(c==="m¬k"||!f._d©a×,g))&&£tTimeout(funùiÚ(){!f._d©a×,e)&&!f._d©a×,g)&&(f.
+	`»moveD©a
+×,d,!0),h.
+	`fœe
+())},0)}funùiÚ 
+	`m
+×){v¬ b iÀa){if(b==="d©a"&&f.
+	`isEm±yObjeù
+×[b]));if(b!=="toJSON")!1}!0}funùiÚ 
+	`l
+×,c,d){if(d===b&&a.nodeTy³===1){v¬ƒ="d©a-"+c.»¶aû(k,"-$1").toLow”Ca£();d÷.
+	`g‘A‰ribu‹
+Ó);ifÑy³oàd=="¡ršg"){Œy{d=d==="Œue"?!0:d==="çl£"?!1:d==="nuÎ"?nuÎ:f.
+	`isNum”ic
+(d)?·r£Flßt(d):j.‹¡(d)?f.
+	`·r£JSON
+(d):d}ÿtch(g){}f.
+	`d©a
+×,c,d)}d=b} d}funùiÚ 
+	`h
+×){v¬ b=g[a]={},c,d;a÷.¥l™(/\
+s
++/);c=0,d÷.Ëngth;c<d;c++)b[a[c]]=!0; b}v¬ c÷.docum’t,d÷.
+Çvig©Ü
+,e÷.
+loÿtiÚ
+,f=funùiÚ(){funùiÚ J(){if(!e.
+isR—dy
+){Œy{c.
+docum’tEËm’t
+.
+	`doSüŞl
+("Ëá")}ÿtch×){£tTimeout(
+J
+,1);}e.
+	`»ady
+()}}v¬ƒ=funùiÚ×,b){‚ewƒ.
+â
+.
+	`š™
+×,b,h)},f÷.
+jQu”y
+,g÷.
+$
+,h,i=/^(?:[^#<]*(<[\
+w
+\
+W
+]+>)[^>]*$|#([\w\-]*)$)/,j=/\
+S
+/,k=/^\s+/,l=/\s+$/,m=/^<(\w+)\s*\/?>(?:<\/\1>)?$/,n=/^[\],:{}\s]*$/,o=/\\(?:["\\\/bâ¹]|u[0-9a-fA-F]{4})/g,p=/"[^"\\\n\r]*"|
+Œue
+|
+çl£
+|nuÎ|-?\d+(?:\.\d*)?(?:[
+eE
+][+\-]?\d+)?/g,
+q
+=/(?:^|:|,)(?:\s*\[)+/g,
+r
+=/(
+webk™
+)[ \/]([\w.]+)/,s=/(
+İ”a
+)(?:.*
+v”siÚ
+)?[ \/]([\w.]+)/,
+t
+=/(
+ms›
+è([\w.]+)/,
+u
+=/(
+mozÏ
+)(?:.*? 
+rv
+:([\w.]+))?/,
+v
+=/-([a-
+z
+]|[0-9])/
+ig
+,w=/^-
+ms
+-/,
+x
+=funùiÚ×,b){(b+"").
+	`toUµ”Ca£
+()},
+y
+=d.
+u£rAg’t
+,z,
+A
+,
+B
+,
+C
+=
+Objeù
+.
+´ÙÙy³
+.
+toSŒšg
+,
+D
+=Objeù.´ÙÙy³.
+hasOwnPrİ”ty
+,
+E
+=
+A¼ay
+.´ÙÙy³.
+push
+,
+F
+=A¼ay.´ÙÙy³.
+¦iû
+,
+G
+=
+SŒšg
+.´ÙÙy³.
+Œim
+,
+H
+=A¼ay.´ÙÙy³.
+šdexOf
+,
+I
+={};e.âó.´ÙÙy³={
+cÚ¡ruùÜ
+:e,
+š™
+:funùiÚ×,d,f){v¬ g,h,j,k;if(!a)his;if×.nodeTy³){this.
+cÚ‹xt
+ñhis[0]÷,this.Ëngth=1;his}if×==="body"&&!d&&c.body){this.cÚ‹xt=c,this[0]=c.body,this.
+£ËùÜ
+÷,this.Ëngth=1;his}ifÑy³oàa=="¡ršg"){a.
+	`ch¬At
+(0)!=="<"||a.ch¬At×.Ëngth-1)!==">"||a.Ëngth<3?g=i.
+	`exec
+×):g=[nuÎ,a,nuÎ];if(g&&(g[1]||!d)){if(g[1]){d=d 
+š¡ªûof
+ƒ?d[0]:d,k=d?d.owÃrDocum’t||d:c,j=m.exec×),j?e.
+	`isPÏšObjeù
+(d)?×=[c.ü—‹EËm’t(j[1])],e.â.
+©Œ
+.ÿÎ×,d,!0)):a=[k.ü—‹EËm’t(j[1])]:(jó.
+	`budF¿gm’t
+([g[1]],[k]),a=(j.
+ÿch—bË
+?e.
+	`şÚe
+(j.
+äagm’t
+):j.äagm’t).
+chdNodes
+);ƒ.
+	`m”ge
+Ñhis,a)}h=c.
+	`g‘EËm’tById
+(g[2]);if(h&&h.·»ÁNode){if(h.
+id
+!==g[2]) f.
+	`fšd
+×);this.Ëngth=1,this[0]=h}this.cÚ‹xt=c,this.£ËùÜ÷;his}!d||d.
+jqu”y
+?(d||f).fšd×):this.
+	`cÚ¡ruùÜ
+(d).fšd×)}ifÓ.isFunùiÚ×)) f.»ady×);a.£ËùÜ!==b&&Ñhis.£ËùÜ÷.£ËùÜ,this.cÚ‹xt÷.cÚ‹xt);ƒ.
+	`makeA¼ay
+×,this)},£ËùÜ:"",jqu”y:"1.7.1",Ëngth:0,
+size
+:funùiÚ(){his.Ëngth},
+toA¼ay
+:funùiÚ(){ F.ÿÎÑhis,0)},
+g‘
+:funùiÚ×){‡=òuÎ?this.
+	`toA¼ay
+():a<0?this[this.Ëngth+a]:this[a]},
+pushSck
+:funùiÚ×,b,c){v¬ dñhis.cÚ¡ruùÜ();e.isA¼ay×)?E.­¶y(d,a):e.m”ge(d,a),d.
+´evObjeù
+ñhis,d.cÚ‹xtñhis.cÚ‹xt,b==="fšd"?d.£ËùÜñhis.£ËùÜ+Ñhis.£ËùÜ?" ":"")+c:b&&(d.£ËùÜñhis.£ËùÜ+"."+b+"("+c+")"); d},
+—ch
+:funùiÚ×,b){ƒ.—chÑhis,a,b)},
+»ady
+:funùiÚ×){e.
+	`bšdR—dy
+(),A.add×);his},
+eq
+:funùiÚ×){a=+a;‡===-1?this.¦iû×):this.¦iû×,a+1)},
+fœ¡
+:funùiÚ(){his.
+	`eq
+(0)},
+Ï¡
+:funùiÚ(){his.eq(-1)},¦iû:funùiÚ(){his.
+	`pushSck
+(F.­¶yÑhis,
+¬gum’ts
+),"¦iû",F.ÿÎ×rgum’ts).
+	`još
+(","))},
+m­
+:funùiÚ×){his.pushSckÓ.
+	`m­
+Ñhis,funùiÚ(b,c){‡.ÿÎ(b,c,b)}))},
+’d
+:funùiÚ(){his.´evObjeù||this.cÚ¡ruùÜÒuÎ)},push:E,
+sÜt
+:[].sÜt,
+¥liû
+:[].¥liû},e.â.š™.´ÙÙy³ó.â,e.
+ex‹nd
+ó.â.ex‹nd=funùiÚ(){v¬‡,c,d,f,g,h,i÷rgum’ts[0]||{},j=1,k÷rgum’ts.Ëngth,l=!1;ty³oài=="boŞ—n"&&Ö=i,i÷rgum’ts[1]||{},j=2),ty³oài!="objeù"&&!e.isFunùiÚ(i)&&(i={}),k===j&&(iñhis,--j);;j<k;j++)if(×÷rgum’ts[j])!òuÎ)øš‡){d=i[c],f÷[c];if(i===f);l&&f&&Ó.isPÏšObjeù(f)||(gó.isA¼ay(f)))?(g?(g=!1,h=d&&e.isA¼ay(d)?d:[]):h=d&&e.isPÏšObjeù(d)?d:{},i[c]ó.ex‹ndÖ,h,f)):f!==b&&(i[c]=f)} i},e.ex‹nd({
+noCÚæiù
+:funùiÚ(b){a.$==ó&&×.$=g),b&&a.jQu”y==ó&&×.jQu”y=f);ƒ},isR—dy:!1,
+»adyWa™
+:1,
+hŞdR—dy
+:funùiÚ×){a?e.»adyWa™++:e.»ady(!0)},»ady:funùiÚ×){if×===!0&&!--e.»adyWa™||a!==!0&&!e.isR—dy){if(!c.body) s‘TimeoutÓ.»ady,1);e.isR—dy=!0;if×!==!0&&--e.»adyWa™>0);A.
+	`fœeW™h
+(c,[e]),e.â.
+Œigg”
+&&
+	`e
+(c).
+	`Œigg”
+("»ady").
+	`off
+("»ady")}},
+bšdR—dy
+:funùiÚ(){if(!A){Aó.
+	`C®lbacks
+("Úû memÜy");if(c.
+»adyS‹
+==="com¶‘e") s‘TimeoutÓ.»ady,1);if(c.
+addEv’tLi¡’”
+)c.
+	`addEv’tLi¡’”
+("DOMCÚ‹ÁLßded",B,!1),a.addEv’tLi¡’”("lßd",e.»ady,!1);if(c.
+©chEv’t
+){c.
+	`©chEv’t
+("Ú»ady¡©echªge",B),a.©chEv’t("Úlßd",e.»ady);v¬ b=!1;Œy{b÷.
+äameEËm’t
+=òuÎ}ÿtch(d){}c.docum’tEËm’t.
+doSüŞl
+&&b&&J()}}},
+isFunùiÚ
+:funùiÚ×){ƒ.
+	`ty³
+×)==="funùiÚ"},
+isA¼ay
+:A¼ay.isA¼ay||funùiÚ×){ƒ.ty³×)==="¬¿y"},
+isWšdow
+:funùiÚ×){‡&&ty³oàa=="objeù"&&"£tIÁ”v®"š‡},
+isNum”ic
+:funùiÚ×){!
+	`isNaN
+Õ¬£Flßt×))&&
+	`isFš™e
+×)},ty³:funùiÚ×){‡=òuÎ?
+	`SŒšg
+×):I[C.ÿÎ×)]||"objeù"},
+isPÏšObjeù
+:funùiÚ×){if(!a||e.ty³×)!=="objeù"||a.nodeTy³||e.isWšdow×))!1;Œy{if×.cÚ¡ruùÜ&&!D.ÿÎ×,"cÚ¡ruùÜ")&&!D.ÿÎ×.cÚ¡ruùÜ.´ÙÙy³,"isPrÙÙy³Of"))!1}ÿtch(c){!1}v¬ d;d iÀa); d===b||D.ÿÎ×,d)},
+isEm±yObjeù
+:funùiÚ×){v¬ b iÀa)!1;!0},
+”rÜ
+:funùiÚ×){
+throw
+‚ew 
+	`E¼Ü
+×)},
+·r£JSON
+:funùiÚ(b){ifÑy³oàb!="¡ršg"||!b)‚uÎ;bó.
+	`Œim
+(b);if×.
+JSON
+&&a.JSON.
+·r£
+)‡.JSON.
+	`·r£
+(b);ifÒ.‹¡(b.»¶aû(o,"@").»¶aûÕ,"]").»¶aû(q,"")))Òew 
+	`FunùiÚ
+("»tuº "+b))();e.”rÜ("Inv®id JSON: "+b)},
+·r£XML
+:funùiÚ(c){v¬ d,f;Œy{a.
+DOMP¬£r
+?(fòew DOMP¬£r,d=f.
+	`·r£FromSŒšg
+(c,"‹xt/xml")):(dòew AùiveXObjeù("Miüosoá.XMLDOM"),d.async="çl£",d.
+	`lßdXML
+(c))}ÿtch(g){d=b}(!d||!d.docum’tEËm’t||d.g‘EËm’tsByTagName("·r£»¼Ü").Ëngth)&&e.”rÜ("Inv®id XML: "+c); d},
+noİ
+:funùiÚ(){},
+glob®Ev®
+:funùiÚ(b){b&&j.‹¡(b)&&×.
+execSüt
+||funùiÚ(b){a.
+ev®
+.ÿÎ×,b)})(b)},
+ÿm–Ca£
+:funùiÚ×){‡.»¶aû(w,"ms-").»¶aû(v,x)},nodeName:funùiÚ×,b){‡.nodeName&&a.nodeName.toUµ”Ca£()===b.toUµ”Ca£()},—ch:funùiÚ×,c,d){v¬ f,g=0,h÷.Ëngth,i=h===b||e.isFunùiÚ×);if(d){if(i){àš‡)if(c.­¶y×[f],d)===!1)};g<h;)if(c.­¶y×[g++],d)===!1)}if(i){àš‡)if(c.ÿÎ×[f],f,a[f])===!1)};g<h;)if(c.ÿÎ×[g],g,a[g++])===!1);‡},Œim:G?funùiÚ×){‡=òuÎ?"":G.ÿÎ×)}:funùiÚ×){‡=òuÎ?"":×+"").»¶aû(k,"").»¶aûÖ,"")},
+makeA¼ay
+:funùiÚ×,b){v¬ c=b||[];if×!òuÎ){v¬ dó.ty³×);a.Ëngth=òuÎ||d==="¡ršg"||d==="funùiÚ"||d==="»gexp"||e.isWšdow×)?E.ÿÎ(c,a):e.m”ge(c,a)} c},
+šA¼ay
+:funùiÚ×,b,c){v¬ d;if(b){if(H) H.ÿÎ(b,a,c);d=b.Ëngth,c=c?c<0?
+M©h
+.
+	`max
+(0,d+c):c:0;;c<d;c++)if(øš b&&b[c]==÷) c}-1},
+m”ge
+:funùiÚ×,c){v¬ d÷.Ëngth,e=0;ifÑy³oàc.Ëngth=="numb”")v¬ f=c.Ëngth;e<f;e++ï[d++]=c[e];c[e]!==bï[d++]=c[e++];a.Ëngth=d;‡},
+g»p
+:funùiÚ×,b,c){v¬ d=[],e;c=!!c;v¬ f=0,g÷.Ëngth;f<g;f++ë=!!
+	`b
+×[f],f),c!=ó&&d.
+	`push
+×[f]); d},m­:funùiÚ×,c,d){v¬ f,g,h=[],i=0,j÷.Ëngth,k÷ in¡ªûoàe||j!==b&&ty³oàj=="numb”"&&(j>0&&a[0]&&a[j-1]||j===0||e.isA¼ay×));if(k);i<j;i++)f=
+	`c
+×[i],i,d),f!òuÎ&&(h[h.Ëngth]=f);g iÀa)f=c×[g],g,d),f!òuÎ&&(h[h.Ëngth]=f); h.cÚÿt.­¶y([],h)},
+guid
+:1,
+´oxy
+:funùiÚ×,c){ifÑy³oàc=="¡ršg"){v¬ d÷[c];c÷,a=d}if(!e.isFunùiÚ×)) b;v¬ f=F.ÿÎ×rgum’ts,2),g=funùiÚ(){‡.­¶y(c,f.
+	`cÚÿt
+(F.ÿÎ×rgum’ts)))};g.guid÷.guid÷.guid||g.guid||e.guid++; g},
+acûss
+:funùiÚ×,c,d,f,g,h){v¬ i÷.Ëngth;ifÑy³oàc=="objeù"){v¬ j iÀcë.
+	`acûss
+×,j,c[j],f,g,d);‡}if(d!==b){f=!h&&f&&e.isFunùiÚ(d);v¬ k=0;k<i;k++)
+	`g
+×[k],c,f?d.ÿÎ×[k],k,g×[k],c)):d,h);‡} i?g×[0],c):b},
+now
+:funùiÚ(){Òew 
+D©e
+).
+	`g‘Time
+()},
+uaM©ch
+:funùiÚ×){a÷.toLow”Ca£();v¬ bô.exec×)||s.exec×)||t.exec×)||a.
+	`šdexOf
+("com·tibË")<0&&u.exec×)||[];{
+brow£r
+:b[1]||"",v”siÚ:b[2]||"0"}},
+sub
+:funùiÚ(){funùiÚ 
+	`a
+(b,c){‚ew‡.â.š™(b,c)}e.ex‹nd(!0,a,this),a.
+su³rşass
+ñhis,a.â÷.´ÙÙy³=
+	`this
+(),a.â.cÚ¡ruùÜ÷,a.subñhis.sub,a.â.š™=funùiÚ(d,f){f&&àš¡ªûoàe&&!(àš¡ªûoàa)&&(f÷(f));ƒ.â.š™.ÿÎÑhis,d,f,b)},a.â.š™.´ÙÙy³÷.â;v¬ b÷(c);‡},brow£r:{}}),e.—ch("BoŞ—ÀNumb” SŒšg FunùiÚ A¼ay D©RegEx°Objeù".¥l™(" "),funùiÚ×,b){I["[objeù "+b+"]"]=b.toLow”Ca£()}),zó.
+	`uaM©ch
+(y),z.brow£r&&Ó.brow£r[z.brow£r]=!0,e.brow£r.v”siÚ=z.v”siÚ),e.brow£r.webk™&&Ó.brow£r.
+§çri
+=!0),j.‹¡("Â ")&&(k=/^[\s\
+xA0
+]+/,l=/[\s\xA0]+$/),hó(c),c.addEv’tLi¡’”?B=funùiÚ(){c.
+	`»moveEv’tLi¡’”
+("DOMCÚ‹ÁLßded",B,!1),e.»ady()}:c.©chEv’t&&(B=funùiÚ(){c.»adyS‹==="com¶‘e"&&(c.
+	`d‘achEv’t
+("Ú»ady¡©echªge",B),e.»ady())});ƒ}(),g={};f.
+C®lbacks
+=funùiÚ×){a÷?g[a]||h×):{};v¬ c=[],d=[],e,i,j,k,l,m=funùiÚ(b){v¬ d,e,g,h,i;d=0,e=b.Ëngth;d<e;d++)g=b[d],h=f.ty³(g),h==="¬¿y"?m(g):h==="funùiÚ"&&(!a.
+unique
+||!o.
+	`has
+(g))&&c.push(g)},n=funùiÚ(b,f){f=f||[],e=!a.
+memÜy
+||[b,f],i=!0,l=j||0,j=0,k=c.Ëngth;;c&&l<k;l++)if(c[l].­¶y(b,f)===!1&&a.
+¡İOnF®£
+){e=!0;}i=!1,c&&×.
+Úû
+?e===!0?o.
+	`di§bË
+():c=[]:d&&d.Ëngth&&Ó=d.shiá(),o.fœeW™hÓ[0],e[1])))},o={
+add
+:funùiÚ(){if(c){v¬‡=c.Ëngth;m×rgum’ts),i?k=c.Ëngth:e&&e!==!0&&(j÷,nÓ[0],e[1]))}his},
+»move
+:funùiÚ(){if(c){v¬ b÷rgum’ts,d=0,e=b.Ëngth;;d<e;d++)v¬ f=0;f<c.Ëngth;f++)if(b[d]===c[f]){i&&f<=k&&(k--,f<ö&&l--),c.
+	`¥liû
+(f--,1);if×.unique)}}his},
+has
+:funùiÚ×){if(c){v¬ b=0,d=c.Ëngth;;b<d;b++)if×===c[b])!0}!1},
+em±y
+:funùiÚ(){c=[];his},
+di§bË
+:funùiÚ(){c=dó=b;his},
+di§bËd
+:funùiÚ(){!c},
+lock
+:funùiÚ(){d=b,(!e||e===!0)&&o.di§bË();his},
+locked
+:funùiÚ(){!d},
+fœeW™h
+:funùiÚ(b,c){d&&(i?a.Úû||d.push([b,c]):(!a.Úû||!e)&&n(b,c));his},
+fœe
+:funùiÚ(){o.fœeW™hÑhis,¬gum’ts);his},
+fœed
+:funùiÚ(){!!e}}; o};v¬ i=[].¦iû;f.ex‹nd({
+Deã¼ed
+:funùiÚ×){v¬ b=f.C®lbacks("Úû memÜy"),c=f.C®lbacks("Úû memÜy"),d=f.C®lbacks("memÜy"),e="³ndšg",g={
+»sŞve
+:b,
+»jeù
+:c,
+nÙify
+:d},h={
+dÚe
+:b.add,
+ç
+:c.add,
+´og»ss
+:d.add,
+¡©e
+:funùiÚ(){ƒ},
+isResŞved
+:b.fœed,
+isRejeùed
+:c.fœed,
+th’
+:funùiÚ×,b,c){i.
+	`dÚe
+×).
+	`ç
+(b).
+	`´og»ss
+(c);his},
+®ways
+:funùiÚ(){i.dÚe.­¶y(i,¬gum’ts).ç.­¶y(i,¬gum’ts);his},
+pe
+:funùiÚ×,b,c){ f.
+	`Deã¼ed
+(funùiÚ(d){f.—ch({dÚe:[a,"»sŞve"],ç:[b,"»jeù"],´og»ss:[c,"nÙify"]},funùiÚ×,b){v¬ c=b[0],e=b[1],g;f.isFunùiÚ(c)?i[a](funùiÚ(){g=c.­¶yÑhis,¬gum’ts),g&&f.isFunùiÚ(g.
+´omi£
+)?g.
+	`´omi£
+().
+	`th’
+(d.»sŞve,d.»jeù,d.nÙify):d[e+"W™h"]Ñhis===i?d:this,[g])}):i[a](d[e])})}).´omi£()},´omi£:funùiÚ×){if×=òuÎï=h;v¬ b iÀhï[b]=h[b];‡}},i=h.´omi£({}),j;j iÀg)i[j]=g[j].fœe,i[j+"W™h"]=g[j].fœeW™h;i.dÚe(funùiÚ(){e="»sŞved"},c.di§bË,d.lock).ç(funùiÚ(){e="»jeùed"},b.di§bË,d.lock),a&&a.ÿÎ(i,i); i},
+wh’
+:funùiÚ×){funùiÚ m×){ funùiÚ(b){e[a]÷rgum’ts.Ëngth>1?i.ÿÎ×rgum’ts,0):b,j.
+	`nÙifyW™h
+(k,e)}}funùiÚ†×){ funùiÚ(c){b[a]÷rgum’ts.Ëngth>1?i.ÿÎ×rgum’ts,0):c,--g||j.
+	`»sŞveW™h
+(j,b)}}v¬ b=i.ÿÎ×rgum’ts,0),c=0,d=b.Ëngth,e=
+	`A¼ay
+(d),g=d,h=d,j=d<=1&&a&&f.isFunùiÚ×.´omi£)?a:f.Deã¼ed(),k=j.´omi£();if(d>1){;c<d;c++)b[c]&&b[c].´omi£&&f.isFunùiÚ(b[c].´omi£)?b[c].´omi£().th’Ö(c),j.»jeù,m(c)):--g;g||j.»sŞveW™h(j,b)}j!=÷&&j.»sŞveW™h(j,d?[a]:[]); k}}),f.
+suµÜt
+=funùiÚ(){v¬ b,d,e,g,h,i,j,k,l,m,n,o,p,q=c.ü—‹EËm’t("div"),r=c.docum’tEËm’t;q.
+	`£tA‰ribu‹
+("şassName","t"),q.šÃrHTML=" <lšk/><bË></bË><¨h»f='/a' styË='tİ:1px;æßt:Ëá;İac™y:.55;'>a</a><špuˆty³='checkbox'/>",d=q.g‘EËm’tsByTagName("*"),e=q.g‘EËm’tsByTagName("a")[0];if(!d||!d.Ëngth||!e){};g=c.ü—‹EËm’t("£Ëù"),h=g.­³ndChd(c.ü—‹EËm’t("İtiÚ")),i=q.g‘EËm’tsByTagName("šput")[0],b={
+ËadšgWh™e¥aû
+:q.fœ¡Chd.nodeTy³===3,
+tbody
+:!q.g‘EËm’tsByTagName("tbody").Ëngth,
+htmlS”Ÿlize
+:!!q.g‘EËm’tsByTagName("lšk").Ëngth,¡yË:/
+tİ
+/.‹¡Ó.g‘A‰ribu‹("¡yË")),
+h»fNÜm®ized
+:e.g‘A‰ribu‹("h»f")==="/a",
+İac™y
+:/^0.55/.‹¡Ó.¡yË.İac™y),
+cssFlßt
+:!!e.¡yË.cssFlßt,
+checkOn
+:i.v®ue==="Ú",
+İtS–eùed
+:h.£Ëùed,
+g‘S‘A‰ribu‹
+:q.
+şassName
+!=="t",
+’ùy³
+:!!c.ü—‹EËm’t("fÜm").’ùy³,
+html5ClÚe
+:c.ü—‹EËm’t("Çv").
+	`şÚeNode
+(!0).ou‹rHTML!=="<:Çv></:Çv>",
+subm™BubbËs
+:!0,
+chªgeBubbËs
+:!0,
+focusšBubbËs
+:!1,
+d–‘eEx·ndo
+:!0,
+noClÚeEv’t
+:!0,
+šlšeBlockN“dsLayout
+:!1,
+shrškW¿pBlocks
+:!1,
+»lŸbËM¬gšRight
+:!0},i.checked=!0,b.
+noClÚeChecked
+=i.şÚeNode(!0).checked,g.di§bËd=!0,b.
+İtDi§bËd
+=!h.di§bËd;Œy{d–‘q.
+‹¡
+}ÿtch(s){b.d–‘eEx·ndo=!1}!q.addEv’tLi¡’”&&q.©chEv’t&&q.
+fœeEv’t
+&&(q.©chEv’t("Úşick",funùiÚ(){b.noClÚeEv’t=!1}),q.şÚeNode(!0).
+	`fœeEv’t
+("Úşick")),i=c.ü—‹EËm’t("šput"),i.v®ue="t",i.£tA‰ribu‹("ty³","¿dio"),b.
+¿dioV®ue
+=i.v®ue==="t",i.£tA‰ribu‹("checked","checked"),q.­³ndChd(i),k=c.ü—‹Docum’tF¿gm’t(),k.­³ndChd(q.
+Ï¡Chd
+),b.
+checkClÚe
+=k.şÚeNode(!0).şÚeNode(!0).Ï¡Chd.checked,b.
+­³ndChecked
+=i.checked,k.»moveChd(i),k.­³ndChd(q),q.šÃrHTML="",a.
+g‘Compu‹dStyË
+&&(j=c.ü—‹EËm’t("div"),j.¡yË.width="0",j.¡yË.
+m¬gšRight
+="0",q.¡yË.width="2px",q.­³ndChd(j),b.»lŸbËM¬gšRight=(
+	`·r£IÁ
+(×.
+	`g‘Compu‹dStyË
+(j,nuÎ)||{m¬gšRight:0}).m¬gšRight,10)||0)===0);if(q.©chEv’t)Øš{
+subm™
+:1,
+chªge
+:1,
+focusš
+:1}ê="Ú"+o,pò iÀq,p||(q.£tA‰ribu‹Ò,"»tuº;"),pñy³oàq[n]=="funùiÚ"),b[o+"BubbËs"]õ;k.»moveChd(q),k=g=h=j=q=iòuÎ,f(funùiÚ(){v¬‡,d,e,g,h,i,j,k,m,n,o,r=c.g‘EËm’tsByTagName("body")[0];!r||(j=1,k="pos™iÚ:absŞu‹;tİ:0;Ëá:0;width:1px;height:1px;m¬gš:0;",m="visib™y:hidd’;bÜd”:0;",n="¡yË='"+k+"bÜd”:5px sŞid #000;·ddšg:0;'",o="<div "+n+"><div></div></div>"+"<bË "+n+" c–Íaddšg='0' c–l¥acšg='0'>"+"<Œ><td></td></Œ></bË>",a=c.ü—‹EËm’t("div"),a.¡yË.
+cssText
+=m+"width:0;height:0;pos™iÚ:¡©ic;tİ:0;m¬gš-tİ:"+j+"px",r.
+	`š£¹BefÜe
+×,r.fœ¡Chd),q=c.ü—‹EËm’t("div"),a.­³ndChd(q),q.šÃrHTML="<bË><Œ><td styË='·ddšg:0;bÜd”:0;di¥Ïy:nÚe'></td><td>t</td></Œ></bË>",l=q.g‘EËm’tsByTagName("td"),pö[0].off£tHeight===0,l[0].¡yË.
+di¥Ïy
+="",l[1].¡yË.di¥Ïy="nÚe",b.
+»lŸbËHidd’Off£ts
+õ&&l[0].off£tHeight===0,q.šÃrHTML="",q.¡yË.width=q.¡yË.
+·ddšgLeá
+="1px",f.
+boxMod–
+=b.boxMod–=q.off£tWidth===2,ty³oàq.¡yË.
+zoom
+!="undefšed"&&(q.¡yË.di¥Ïy="šlše",q.¡yË.zoom=1,b.šlšeBlockN“dsLayout=q.off£tWidth===2,q.¡yË.di¥Ïy="",q.šÃrHTML="<div styË='width:4px;'></div>",b.shrškW¿pBlocks=q.off£tWidth!==2),q.¡yË.cssText=k+m,q.šÃrHTML=o,d=q.fœ¡Chd,e=d.fœ¡Chd,h=d.
+ÃxtSiblšg
+.fœ¡Chd.fœ¡Chd,i={
+dÛsNÙAddBÜd”
+:e.
+off£tTİ
+!==5,
+dÛsAddBÜd”FÜTabËAndC–ls
+:h.off£tTİ===5},e.¡yË.
+pos™iÚ
+="fixed",e.¡yË.tİ="20px",i.
+fixedPos™iÚ
+ó.off£tTİ===20||e.off£tTİ===15,e.¡yË.pos™iÚó.¡yË.tİ="",d.¡yË.
+ov”æow
+="hidd’",d.¡yË.pos™iÚ="»Ïtive",i.
+subŒaùsBÜd”FÜOv”æowNÙVisibË
+ó.off£tTİ===-5,i.
+dÛsNÙInşudeM¬gšInBodyOff£t
+ô.off£tTİ!==j,r.»moveChd×),q÷òuÎ,f.ex‹nd(b,i))}); b}();v¬ j=/^(?:\{.*\}|\[.*\])$/,k=/([A-
+Z
+])/g;f.ex‹nd({
+ÿche
+:{},
+uuid
+:0,ex·ndo:"jQu”y"+(f.â.jqu”y+M©h.
+	`¿ndom
+()).»¶aû(/\D/g,""),
+noD©a
+:{
+embed
+:!0,
+objeù
+:"şsid:D27CDB6E-AE6D-11cf-96B8-444553540000",
+­¶‘
+:!0},
+hasD©a
+:funùiÚ×){a÷.nodeTy³?f.ÿche[a[f.ex·ndo]]:a[f.ex·ndo];!!a&&!m×)},d©a:funùiÚ×,c,d,e){if(!!f.
+	`acû±D©a
+×)){v¬ g,h,i,j=f.ex·ndo,kñy³oàc=="¡ršg",l÷.nodeTy³,mö?f.ÿche:a,nö?a[j]:a[j]&&j,o=c==="ev’ts";if((!n||!m[n]||!o&&!e&&!m[n].d©a)&&k&&d===b);n||Ö?a[j]ò=++f.uuid:n=j),m[n]||(m[n]={},l||(m[n].
+toJSON
+=f.noİ));ifÑy³oàc=="objeù"||ty³oàc=="funùiÚ"ë?m[n]=f.ex‹nd(m[n],c):m[n].d©a=f.ex‹nd(m[n].d©a,c);g=h=m[n],e||(h.d©a||(h.d©a={}),h=h.d©a),d!==b&&(h[f.
+	`ÿm–Ca£
+(c)]=d);if(o&&!h[c]) g.ev’ts;k?(i=h[c],i=òuÎ&&(i=h[f.ÿm–Ca£(c)])):i=h; i}},
+»moveD©a
+:funùiÚ×,b,c){if(!!f.acû±D©a×)){v¬ d,e,g,h=f.ex·ndo,i÷.nodeTy³,j=i?f.ÿche:a,k=i?a[h]:h;if(!j[k]);if(b){d=c?j[k]:j[k].d©a;if(d){f.isA¼ay(b)||(b iÀd?b=[b]:(b=f.ÿm–Ca£(b),b iÀd?b=[b]:b=b.¥l™(" ")));e=0,g=b.Ëngth;e<g;e++)d–‘d[b[e]];if(!(c?m:f.isEm±yObjeù)(d))}}if(!c){d–‘j[k].d©a;if(!m(j[k]))}f.suµÜt.d–‘eEx·ndo||!j.
+£tIÁ”v®
+?d–‘j[k]:j[k]òuÎ,i&&(f.suµÜt.d–‘eEx·ndo?d–‘a[h]:a.
+»moveA‰ribu‹
+?a.»moveA‰ribu‹(h):a[h]òuÎ)}},
+_d©a
+:funùiÚ×,b,c){ f.d©a×,b,c,!0)},
+acû±D©a
+:funùiÚ×){if×.nodeName){v¬ b=f.noD©a[a.nodeName.toLow”Ca£()];if(b) b!==!0&&a.g‘A‰ribu‹("şassid")===b}!0}}),f.â.ex‹nd({d©a:funùiÚ×,c){v¬ d,e,g,hòuÎ;ifÑy³oàa=="undefšed"){ifÑhis.Ëngth){h=f.d©aÑhis[0]);ifÑhis[0].nodeTy³===1&&!f._d©aÑhis[0],"·r£dA‰rs")){eñhis[0].
+©Œibu‹s
+;v¬ i=0,jó.Ëngth;i<j;i++)gó[i].
+Çme
+,g.šdexOf("d©a-")===0&&(g=f.ÿm–Ca£(g.
+	`sub¡ršg
+(5)),lÑhis[0],g,h[g]));f._d©aÑhis[0],"·r£dA‰rs",!0)}} h}ifÑy³oàa=="objeù")his.—ch(funùiÚ(){f.d©aÑhis,a)});d÷.¥l™("."),d[1]=d[1]?"."+d[1]:"";if(c===b){hñhis.
+	`Œigg”HªdËr
+("g‘D©a"+d[1]+"!",[d[0]]),h===b&&this.Ëngth&&(h=f.d©aÑhis[0],a),höÑhis[0],a,h)); h===b&&d[1]?this.d©a(d[0]):h}his.—ch(funùiÚ(){v¬ b=fÑhis),e=[d[0],c];b.Œigg”HªdËr("£tD©a"+d[1]+"!",e),f.d©aÑhis,a,c),b.Œigg”HªdËr("chªgeD©a"+d[1]+"!",e)})},»moveD©a:funùiÚ×){his.—ch(funùiÚ(){f.»moveD©aÑhis,a)})}}),f.ex‹nd({
+_m¬k
+:funùiÚ×,b){a&&(b=(b||"fx")+"m¬k",f._d©a×,b,(f._d©a×,b)||0)+1))},
+_unm¬k
+:funùiÚ×,b,c){a!==!0&&(c=b,b÷,a=!1);if(b){c=c||"fx";v¬ d=c+"m¬k",e÷?0:(f._d©a(b,d)||1)-1;e?f._d©a(b,d,e):(f.»moveD©a(b,d,!0),n(b,c,"m¬k"))}},
+queue
+:funùiÚ×,b,c){v¬ d;if×){b=(b||"fx")+"queue",d=f._d©a×,b),c&&(!d||f.isA¼ay(c)?d=f._d©a×,b,f.makeA¼ay(c)):d.push(c)); d||[]}},
+dequeue
+:funùiÚ×,b){b=b||"fx";v¬ c=f.
+	`queue
+×,b),d=c.shiá(),e={};d==="š´og»ss"&&(d=c.shiá()),d&&(b==="fx"&&c.unshiá("š´og»ss"),f._d©a×,b+".run",e),d.ÿÎ×,funùiÚ(){f.
+	`dequeue
+×,b)},e)),c.Ëngth||(f.»moveD©a×,b+"queu"+b+".run",!0),n×,b,"queue"))}}),f.â.ex‹nd({queue:funùiÚ×,c){ty³oàa!="¡ršg"&&(c÷,a="fx");if(c===b) f.queueÑhis[0],a);his.—ch(funùiÚ(){v¬ b=f.queueÑhis,a,c);a==="fx"&&b[0]!=="š´og»ss"&&f.dequeueÑhis,a)})},dequeue:funùiÚ×){his.—ch(funùiÚ(){f.dequeueÑhis,a)})},
+d–ay
+:funùiÚ×,b){a=f.
+fx
+?f.fx.
+¥“ds
+[a]||a:a,b=b||"fx";his.queue(b,funùiÚ(b,c){v¬ d=£tTimeout(b,a);c.
+¡İ
+=funùiÚ(){
+	`ş—rTimeout
+(d)}})},
+ş—rQueue
+:funùiÚ×){his.queue×||"fx",[])},´omi£:funùiÚ×,c){funùiÚ m(){--h||d.»sŞveW™hÓ,[e])}ty³oàa!="¡ršg"&&(c÷,a=b),a÷||"fx";v¬ d=f.Deã¼ed(),eñhis,gó.Ëngth,h=1,i÷+"deãr",j÷+"queue",k÷+"m¬k",l;g--)ifÖ=f.d©aÓ[g],i,b,!0)||(f.d©aÓ[g],j,b,!0)||f.d©aÓ[g],k,b,!0))&&f.d©aÓ[g],i,f.C®lbacks("Úû memÜy"),!0))h++,l.add(m);m(); d.´omi£()}});v¬ o=/[\n\t\r]/g,p=/\s+/,q=/\r/g,r=/^(?:
+bu‰Ú
+|
+šput
+)$/i,s=/^(?:bu‰Ú|šput|objeù|
+£Ëù
+|
+‹x»a
+)$/i,t=/^a(?:
+»a
+)?$/i,u=/^(?:
+autofocus
+|
+autİÏy
+|async|checked|
+cÚŒŞs
+|
+deãr
+|di§bËd|
+hidd’
+|
+loİ
+|
+muÉË
+|
+İ’
+|
+»adÚly
+|
+»quœed
+|
+scİed
+|£Ëùed)$/i,v=f.suµÜt.g‘S‘A‰ribu‹,w,x,y;f.â.ex‹nd({©Œ:funùiÚ×,b){ f.acûssÑhis,a,b,!0,f.©Œ)},
+»moveA‰r
+:funùiÚ×){his.—ch(funùiÚ(){f.
+	`»moveA‰r
+Ñhis,a)})},
+´İ
+:funùiÚ×,b){ f.acûssÑhis,a,b,!0,f.´İ)},
+»movePrİ
+:funùiÚ×){a=f.
+´İFix
+[a]||a;his.—ch(funùiÚ(){Œy{this[a]=b,d–‘this[a]}ÿtch(c){}})},
+addCÏss
+:funùiÚ×){v¬ b,c,d,e,g,h,i;if(f.isFunùiÚ×))his.—ch(funùiÚ(b){fÑhis).
+	`addCÏss
+×.ÿÎÑhis,b,this.şassName))});if×&&ty³oàa=="¡ršg"){b÷.¥l™Õ);c=0,dñhis.Ëngth;c<d;c++){eñhis[c];ifÓ.nodeTy³===1)if(!e.şassName&&b.Ëngth===1ë.şassName÷;{g=" "+e.şassName+" ";h=0,i=b.Ëngth;h<i;h++)~g.šdexOf(" "+b[h]+" ")||(g+=b[h]+" ");e.şassName=f.Œim(g)}}}his},
+»moveCÏss
+:funùiÚ×){v¬ c,d,e,g,h,i,j;if(f.isFunùiÚ×))his.—ch(funùiÚ(b){fÑhis).
+	`»moveCÏss
+×.ÿÎÑhis,b,this.şassName))});if×&&ty³oàa=="¡ršg"||a===b){c=×||"").¥l™Õ);d=0,eñhis.Ëngth;d<e;d++){gñhis[d];if(g.nodeTy³===1&&g.şassName)if×){h=(" "+g.şassName+" ").»¶aû(o," ");i=0,j=c.Ëngth;i<j;i++)h=h.»¶aû(" "+c[i]+" "," ");g.şassName=f.Œim(h)}g.şassName=""}}his},
+toggËCÏss
+:funùiÚ×,b){v¬ cñy³oàa,dñy³oàb=="boŞ—n";if(f.isFunùiÚ×))his.—ch(funùiÚ(c){fÑhis).
+	`toggËCÏss
+×.ÿÎÑhis,c,this.şassName,b),b)});his.—ch(funùiÚ(){if(c==="¡ršg"){v¬ƒ,g=0,h=fÑhis),i=b,j÷.¥l™Õ);e=j[g++])i=d?i:!h.
+	`hasCÏss
+Ó),h[i?"addCÏss":"»moveCÏss"]Ó)}if(c==="undefšed"||c==="boŞ—n"éhis.şassName&&f._d©aÑhis,"__şassName__",this.şassName),this.şassNameñhis.şassName||a===!1?"":f._d©aÑhis,"__şassName__")||""})},
+hasCÏss
+:funùiÚ×){v¬ b=" "+a+" ",c=0,dñhis.Ëngth;;c<d;c++)ifÑhis[c].nodeTy³===1&&(" "+this[c].şassName+" ").»¶aû(o," ").šdexOf(b)>-1)!0;!1},
+v®
+:funùiÚ×){v¬ c,d,e,gñhis[0];{if(!!¬gum’ts.Ëngth){e=f.isFunùiÚ×);his.—ch(funùiÚ(d){v¬ g=fÑhis),h;ifÑhis.nodeTy³===1){e?h÷.ÿÎÑhis,d,g.
+	`v®
+()):h÷,h=òuÎ?h="":ty³oàh=="numb”"?h+="":f.isA¼ay(h)&&(h=f.m­(h,funùiÚ×){‡=òuÎ?"":a+""})),c=f.
+v®Hooks
+[this.nodeName.toLow”Ca£()]||f.v®Hooks[this.ty³];if(!c||!("£t"š c)||c.
+	`£t
+Ñhis,h,"v®ue")===béhis.v®ue=h}})}if(g){c=f.v®Hooks[g.nodeName.toLow”Ca£()]||f.v®Hooks[g.ty³];if(c&&"g‘"š c&&(d=c.
+	`g‘
+(g,"v®ue"))!==b) d;d=g.v®ue;y³oàd=="¡ršg"?d.»¶aû(q,""):d=òuÎ?"":d}}}}),f.ex‹nd({v®Hooks:{
+İtiÚ
+:{g‘:funùiÚ×){v¬ b÷.©Œibu‹s.v®ue;!b||b.
+¥ecif›d
+?a.v®ue:a.‹xt}},£Ëù:{g‘:funùiÚ×){v¬ b,c,d,e,g÷.
+£ËùedIndex
+,h=[],i÷.
+İtiÚs
+,j÷.ty³==="£Ëù-Úe";if(g<0)‚uÎ;c=j?g:0,d=j?g+1:i.Ëngth;;c<d;c++){e=i[c];ifÓ.£Ëùed&&(f.suµÜt.İtDi§bËd?!e.di§bËd:e.g‘A‰ribu‹("di§bËd")==òuÎ)&&(!e.·»ÁNode.di§bËd||!f.nodeNameÓ.·»ÁNode,"İtgroup"))){b=fÓ).v®();if(j) b;h.push(b)}}if(j&&!h.Ëngth&&i.Ëngth) f(i[g]).v®(); h},
+£t
+:funùiÚ×,b){v¬ c=f.makeA¼ay(b);f×).fšd("İtiÚ").—ch(funùiÚ(){this.£Ëùed=f.šA¼ay(fÑhis).v®(),c)>=0}),c.Ëngth||×.£ËùedIndex=-1); c}}},
+©ŒFn
+:{v®:!0,
+css
+:!0,
+html
+:!0,‹xt:!0,d©a:!0,width:!0,height:!0,
+off£t
+:!0},©Œ:funùiÚ×,c,d,e){v¬ g,h,i,j÷.nodeTy³;if(!!a&&j!==3&&j!==8&&j!==2){ifÓ&&øš f.©ŒFn) f×)[c](d);ifÑy³oàa.
+g‘A‰ribu‹
+=="undefšed") f.
+	`´İ
+×,c,d);i=j!==1||!f.
+	`isXMLDoc
+×),i&&(c=c.toLow”Ca£(),h=f.
+©ŒHooks
+[c]||(u.‹¡(c)?x:w));if(d!==b){if(d==òuÎ){f.»moveA‰r×,c);}if(h&&"£t"š h&&i&&(g=h.£t×,d,c))!==b) g;a.£tA‰ribu‹(c,""+d); d}if(h&&"g‘"š h&&i&&(g=h.g‘×,c))!=òuÎ) g;g÷.g‘A‰ribu‹(c); g==òuÎ?b:g}},»moveA‰r:funùiÚ×,b){v¬ c,d,e,g,h=0;if(b&&a.nodeTy³===1){d=b.toLow”Ca£().¥l™Õ),g=d.Ëngth;;h<g;h++ë=d[h],e&&(c=f.´İFix[e]||e,f.
+	`©Œ
+×,e,""),a.»moveA‰ribu‹(v?e:c),u.‹¡Ó)&&øš‡&&×[c]=!1))}},©ŒHooks:{ty³:{£t:funùiÚ×,b){ifÔ.‹¡×.nodeName)&&a.·»ÁNode)f.”rÜ("ty³…rİ”ty cª'ˆbchªged");if(!f.suµÜt.¿dioV®ue&&b==="¿dio"&&f.nodeName×,"šput")){v¬ c÷.v®ue;a.£tA‰ribu‹("ty³",b),c&&×.v®ue=c); b}}},v®ue:{g‘:funùiÚ×,b){if(w&&f.nodeName×,"bu‰Ú")) w.g‘×,b); b iÀa?a.v®ue:nuÎ},£t:funùiÚ×,b,c){if(w&&f.nodeName×,"bu‰Ú")) w.£t×,b,c);a.v®ue=b}}},´İFix:{
+bšdex
+:"bIndex",»adÚly:"»adOÆy","fÜ":"htmlFÜ","şass":"şassName",
+maxËngth
+:"maxL’gth",
+ûÎ¥acšg
+:"ûÎS·cšg",
+ûÎ·ddšg
+:"ûÎPaddšg",
+row¥ª
+:"rowS·n",
+cŞ¥ª
+:"cŞS·n",
+u£m­
+:"u£M­",
+äamebÜd”
+:"äameBÜd”",
+cÚ‹Áed™abË
+:"cÚ‹ÁEd™abË"},´İ:funùiÚ×,c,d){v¬ƒ,g,h,i÷.nodeTy³;if(!!a&&i!==3&&i!==8&&i!==2){h=i!==1||!f.isXMLDoc×),h&&(c=f.´İFix[c]||c,g=f.
+´İHooks
+[c]); d!==b?g&&"£t"š g&&Ó=g.£t×,d,c))!==b?e:a[c]=d:g&&"g‘"š g&&Ó=g.g‘×,c))!=òuÎ?e:a[c]}},´İHooks:{
+bIndex
+:{g‘:funùiÚ×){v¬ c÷.
+	`g‘A‰ribu‹Node
+("bšdex"); c&&c.¥ecif›d?·r£IÁ(c.v®ue,10):s.‹¡×.nodeName)||t.‹¡×.nodeName)&&a.
+h»f
+?0:b}}}}),f.©ŒHooks.bšdex=f.´İHooks.bIndex,x={g‘:funùiÚ×,c){v¬ d,e=f.´İ×,c);ƒ===!0||ty³oàe!="boŞ—n"&&(d÷.g‘A‰ribu‹Node(c))&&d.
+nodeV®ue
+!==!1?c.toLow”Ca£():b},£t:funùiÚ×,b,c){v¬ d;b===!1?f.»moveA‰r×,c):(d=f.´İFix[c]||c,d iÀa&&×[d]=!0),a.£tA‰ribu‹(c,c.toLow”Ca£())); c}},v||(y={Çme:!0,id:!0},w=f.v®Hooks.bu‰Ú={g‘:funùiÚ×,c){v¬ d;d÷.g‘A‰ribu‹Node(c); d&&(y[c]?d.nodeV®ue!=="":d.¥ecif›d)?d.nodeV®ue:b},£t:funùiÚ×,b,d){v¬ƒ÷.g‘A‰ribu‹Node(d);e||Ó=c.
+	`ü—‹A‰ribu‹
+(d),a.
+	`£tA‰ribu‹Node
+Ó));ƒ.nodeV®ue=b+""}},f.©ŒHooks.bšdex.£t=w.£t,f.—ch(["width","height"],funùiÚ×,b){f.©ŒHooks[b]=f.ex‹nd(f.©ŒHooks[b],{£t:funùiÚ×,c){if(c===""){a.£tA‰ribu‹(b,"auto"); c}}})}),f.©ŒHooks.cÚ‹Áed™abË={g‘:w.g‘,£t:funùiÚ×,b,c){b===""&&(b="çl£"),w.£t×,b,c)}}),f.suµÜt.h»fNÜm®ized||f.—ch(["h»f","¤c","width","height"],funùiÚ×,c){f.©ŒHooks[c]=f.ex‹nd(f.©ŒHooks[c],{g‘:funùiÚ×){v¬ d÷.g‘A‰ribu‹(c,2); d==òuÎ?b:d}})}),f.suµÜt.¡yË||(f.©ŒHooks.¡yË={g‘:funùiÚ×){‡.¡yË.cssText.toLow”Ca£()||b},£t:funùiÚ×,b){‡.¡yË.cssText=""+b}}),f.suµÜt.İtS–eùed||(f.´İHooks.£Ëùed=f.ex‹nd(f.´İHooks.£Ëùed,{g‘:funùiÚ×){v¬ b÷.·»ÁNode;b&&(b.£ËùedIndex,b.·»ÁNode&&b.·»ÁNode.£ËùedIndex);‚uÎ}})),f.suµÜt.’ùy³||(f.´İFix.’ùy³="’codšg"),f.suµÜt.checkOn||f.—ch(["¿dio","checkbox"],funùiÚ(){f.v®Hooks[this]={g‘:funùiÚ×){‡.g‘A‰ribu‹("v®ue")==òuÎ?"Ú":a.v®ue}}}),f.—ch(["¿dio","checkbox"],funùiÚ(){f.v®Hooks[this]=f.ex‹nd(f.v®Hooks[this],{£t:funùiÚ×,b){if(f.isA¼ay(b))‡.checked=f.šA¼ay(f×).v®(),b)>=0}})});v¬ z=/^(?:‹x»a|šput|£Ëù)$/i,A=/^([^\.]*)?(?:\.(.+))?$/,B=/\
+	`bhov”
+(\.\S+)?\b/,C=/^
+key
+/,D=/^(?:
+mou£
+|
+cÚ‹xtm’u
+)|
+şick
+/,E=/^(?:
+focusšfocus
+|
+focusoutblur
+)$/,F=/^(\w*)(?:#([\w\-]+))?(?:\.([\w\-]+))?$/,G=funùiÚ×){v¬ b=F.exec×);b&&(b[1]=(b[1]||"").toLow”Ca£(),b[3]=b[3]&&Ãw 
+	`RegExp
+("(?:^|\\s)"+b[3]+"(?:\\s|$)")); b},H=funùiÚ×,b){v¬ c÷.©Œibu‹s||{};(!b[1]||a.nodeName.toLow”Ca£()===b[1])&&(!b[2]||(c.id||{}).v®ue===b[2])&&(!b[3]||b[3].‹¡((c["şass"]||{}).v®ue))},I=funùiÚ×){ f.ev’t.
+¥ecŸl
+.
+hov”
+?a:a.replace(B,"mouseenter$1 mouseleave$1")};
+
+3 
+f
+.
+ev’t
+={
+add
+:
+	`funùiÚ
+(
+a
+,
+c
+,
+d
+,
+e
+,
+g
+){
+v¬
+ 
+h
+,
+i
+,
+j
+,
+k
+,
+l
+,
+m
+,
+n
+,
+o
+,
+p
+,
+q
+,
+r
+,
+s
+;if(!×.
+nodeTy³
+===3||a.nodeTy³===8||!c||!d||!(h=f.
+	`_d©a
+×)))){d.
+hªdËr
+&&Õ=d,dõ.hªdËr),d.
+guid
+||(d.guid=f.guid++),j=h.
+ev’ts
+,j||(h.ev’ts=j={}),i=h.
+hªdË
+,i||(h.hªdË=i=funùiÚ×){ 
+ty³of
+ f!="undefšed"&&(!a||f.ev’t.
+Œigg”ed
+!=÷.
+ty³
+)?f.ev’t.
+di¥©ch
+.
+	`­¶y
+(i.
+–em
+,
+¬gum’ts
+):
+b
+},i.–em÷),c=f.
+	`Œim
+(
+	`I
+(c)).
+	`¥l™
+(" ");k=0;k<c.
+Ëngth
+;k++){l=
+A
+.
+	`exec
+(c[k])||[],mö[1],n=Ö[2]||"").¥l™(".").
+	`sÜt
+(),s=f.ev’t.
+¥ecŸl
+[m]||{},m=(g?s.
+d–eg©eTy³
+:s.
+bšdTy³
+)||m,s=f.ev’t.¥ecŸl[m]||{},o=f.
+	`ex‹nd
+({ty³:m,
+ÜigTy³
+:l[1],
+d©a
+:e,hªdËr:d,guid:d.guid,
+£ËùÜ
+:g,
+quick
+:
+	`G
+(g),
+Çme¥aû
+:n.
+	`još
+(".")},p),r=j[m];if(!r){r=j[m]=[],r.
+d–eg©eCouÁ
+=0;if(!s.
+£tup
+||s.£tup.
+	`ÿÎ
+×,e,n,i)===!1ï.
+addEv’tLi¡’”
+?a.
+	`addEv’tLi¡’”
+(m,i,!1):a.
+©chEv’t
+&&a.
+	`©chEv’t
+("Ú"+m,i)}s.add&&(s.add.ÿÎ×,o),o.hªdËr.guid||(o.hªdËr.guid=d.guid)),g?r.
+	`¥liû
+Ô.d–eg©eCouÁ++,0,o):r.
+	`push
+(o),f.ev’t.
+glob®
+[m]=!0}a=
+nuÎ
+}},glob®:{},
+»move
+:funùiÚ×,b,c,d,e){v¬ g=f.
+	`hasD©a
+×)&&f._d©a×),h,i,j,k,l,m,n,o,p,q,r,s;if(!!g&&!!(o=g.ev’ts)){b=f.Œim(I(b||"")).¥l™(" ");h=0;h<b.Ëngth;h++){i=A.exec(b[h])||[],j=k=i[1],l=i[2];if(!j){j 
+š
+ o)f.ev’t.
+	`»move
+×,j+b[h],c,d,!0);}p=f.ev’t.¥ecŸl[j]||{},j=(d?p.d–eg©eTy³:p.bšdTy³)||j,r=o[j]||[],mô.Ëngth,lö?
+Ãw
+ 
+	`RegExp
+("(^|\\.)"+l.¥l™(".").sÜt().još("\\.(?:.*\\.)?")+"(\\.|$)"):nuÎ;n=0;n<r.Ëngth;n++)sô[n],Ó||k===s.ÜigTy³)&&(!c||c.guid===s.guid)&&(!l||l.
+	`‹¡
+(s.Çme¥aû))&&(!d||d===s.£ËùÜ||d==="**"&&s.£ËùÜ)&&Ô.¥liûÒ--,1),s.£ËùÜ&&r.d–eg©eCouÁ--,p.»move&&p.»move.ÿÎ×,s));r.Ëngth===0&&m!=ô.Ëngth&&((!p.
+‹¬down
+||p.‹¬down.ÿÎ×,l)===!1)&&f.
+	`»moveEv’t
+×,j,g.hªdË),
+d–‘e
+ o[j])}f.
+	`isEm±yObjeù
+(o)&&(q=g.hªdË,q&&(q.–emòuÎ),f.
+	`»moveD©a
+×,["ev’ts","hªdË"],!0))}},
+cu¡omEv’t
+:{
+g‘D©a
+:!0,
+£tD©a
+:!0,
+chªgeD©a
+:!0},
+Œigg”
+:funùiÚ(c,d,e,g){if(!e||e.nodeTy³!==3&&e.nodeTy³!==8){v¬ h=c.ty³||c,i=[],j,k,l,m,n,o,p,q,r,s;if(
+E
+.‹¡(h+f.ev’t.Œigg”ed));h.
+	`šdexOf
+("!")>=0&&(h=h.
+	`¦iû
+(0,-1),k=!0),h.šdexOf(".")>=0&&(i=h.¥l™("."),h=i.
+	`shiá
+(),i.sÜt());if((!e||f.ev’t.cu¡omEv’t[h])&&!f.ev’t.glob®[h]);cñy³oàc=="objeù"?c[f.
+ex·ndo
+]?c:Ãw f.
+	`Ev’t
+(h,c):Ãw f.Ev’t(h),c.ty³=h,c.
+isTrigg”
+=!0,c.
+exşusive
+=k,c.Çme¥aû=i.još("."),c.
+Çme¥aû_»
+=c.Çme¥aû?Ãw RegExp("(^|\\.)"+i.još("\\.(?:.*\\.)?")+"(\\.|$)"):nuÎ,o=h.šdexOf(":")<0?"Ú"+h:"";if(!e){j=f.
+ÿche
+;Èš j)j[l].ev’ts&&j[l].ev’ts[h]&&f.ev’t.
+	`Œigg”
+(c,d,j[l].hªdË.–em,!0);}c.
+»suÉ
+=b,c.
+rg‘
+||(c.rg‘ó),d=d!òuÎ?f.
+	`makeA¼ay
+(d):[],d.
+	`unshiá
+(c),p=f.ev’t.¥ecŸl[h]||{};ifÕ.Œigg”&&p.Œigg”.­¶yÓ,d)===!1);r=[[e,p.bšdTy³||h]];if(!g&&!p.
+noBubbË
+&&!f.
+	`isWšdow
+Ó)){sõ.d–eg©eTy³||h,m=E.‹¡(s+h)?e:e.
+·»ÁNode
+,nòuÎ;;m;m=m.·»ÁNodeì.push([m,s]),n=m;n&&n==ó.
+owÃrDocum’t
+&&r.push([n.
+deçuÉV›w
+||n.
+·»ÁWšdow
+||a,s])}l=0;l<r.Ëngth&&!c.
+	`isPrİag©iÚStİ³d
+();l++)mô[l][0],c.ty³ô[l][1],q=(f._d©a(m,"ev’ts")||{})[c.ty³]&&f._d©a(m,"hªdË"),q&&q.­¶y(m,d),q=o&&m[o],q&&f.
+	`acû±D©a
+(m)&&q.­¶y(m,d)===!1&&c.
+	`´ev’tDeçuÉ
+();c.ty³=h,!g&&!c.
+	`isDeçuÉP»v’‹d
+()&&(!p.
+_deçuÉ
+||p._deçuÉ.­¶yÓ.owÃrDocum’t,d)===!1)&&(h!=="şick"||!f.
+	`nodeName
+Ó,"a"))&&f.acû±D©aÓ)&&o&&e[h]&&(h!=="focus"&&h!=="blur"||c.rg‘.
+off£tWidth
+!==0)&&!f.isWšdowÓ)&&Òó[o],n&&Ó[o]òuÎ),f.ev’t.Œigg”ed=h,e[h](),f.ev’t.Œigg”ed=b,n&&Ó[o]ò)); c.»suÉ}},di¥©ch:funùiÚ(c){c=f.ev’t.
+	`fix
+(c||a.ev’t);v¬ d=(f._d©a(
+this
+,"ev’ts")||{})[c.ty³]||[],e=d.d–eg©eCouÁ,g=[].
+¦iû
+.ÿÎ×rgum’ts,0),h=!c.exşusive&&!c.Çme¥aû,i=[],j,k,l,m,n,o,p,q,r,s,
+t
+;g[0]=c,c.
+d–eg©eT¬g‘
+ñhis;ifÓ&&!c.rg‘.
+di§bËd
+&&(!c.
+bu‰Ú
+||c.ty³!=="şick")){m=
+	`f
+Ñhis),m.
+cÚ‹xt
+ñhis.owÃrDocum’t||this;l=c.rg‘;l!ñhis;lö.·»ÁNode||this){o={},q=[],m[0]ö;j=0;j<e;j++ì=d[j],sô.£ËùÜ,o[s]===b&&(o[s]ô.quick?
+	`H
+Ö,r.quick):m.
+	`is
+(s)),o[s]&&q.pushÔ);q.Ëngth&&i.push({–em:l,
+m©ches
+:q})}}d.Ëngth>e&&i.push({–em:this,m©ches:d.¦iûÓ)});j=0;j<i.Ëngth&&!c.isPrİag©iÚStİ³d();j++){p=i[j],c.
+cu¼’tT¬g‘
+õ.–em;k=0;k<p.m©ches.Ëngth&&!c.
+	`isImmedŸ‹Prİag©iÚStİ³d
+();k++){rõ.m©ches[k];if(h||!c.Çme¥aû&&!r.Çme¥aû||c.Çme¥aû_»&&c.Çme¥aû_».‹¡Ô.Çme¥aû))c.d©aô.d©a,c.
+hªdËObj
+ô,n=((f.ev’t.¥ecŸl[r.ÜigTy³]||{}).hªdË||r.hªdËr).­¶yÕ.–em,g),n!==b&&(c.»suÉò,n===!1&&(c.´ev’tDeçuÉ(),c.
+	`¡İPrİag©iÚ
+()))}} c.»suÉ},
+´İs
+:"©ŒChªg©ŒNam»Ï‹dNod¤cEËm’ˆ®tKey bubbË ÿnûÏbË cŒlKey cu¼’tT¬g‘ƒv’tPha£ m‘aKey„–©edT¬g‘ shiáKey¬g‘imeSm°v›w which".¥l™(" "),
+fixHooks
+:{},
+keyHooks
+:{´İs:"ch¬ ch¬Codkey keyCode".¥l™(" "),
+f‹r
+:funùiÚ×,b){a.
+which
+=òuÎ&&×.which=b.
+ch¬Code
+!òuÎ?b.ch¬Code:b.
+keyCode
+);‡}},
+mou£Hooks
+:{´İs:"bu‰Ú bu‰Ú ş›ÁX cl›ÁY fromEËm’ˆoff£tX off£tY…ageX…ageY sü“nX sü“nYoEËm’t".¥l™(" "),f‹r:funùiÚ×,d){v¬ƒ,f,g,h=d.bu‰Ú,i=d.
+äomEËm’t
+;a.
+·geX
+=òuÎ&&d.
+ş›ÁX
+!òuÎ&&Ó÷.rg‘.owÃrDocum’t||c,fó.
+docum’tEËm’t
+,gó.
+body
+,a.·geX=d.ş›ÁX+(f&&f.
+süŞlLeá
+||g&&g.süŞlLeá||0)-(f&&f.
+ş›ÁLeá
+||g&&g.ş›ÁLeá||0),a.
+·geY
+=d.
+ş›ÁY
++(f&&f.
+süŞlTİ
+||g&&g.süŞlTİ||0)-(f&&f.
+ş›ÁTİ
+||g&&g.ş›ÁTİ||0)),!a.
+»Ï‹dT¬g‘
+&&i&&×.»Ï‹dT¬g‘=i==÷.rg‘?d.
+toEËm’t
+:i),!a.which&&h!==b&&×.which=h&1?1:h&2?3:h&4?2:0);‡}},
+fix
+:funùiÚ×){if×[f.ex·ndo])‡;v¬ d,e,g÷,h=f.ev’t.fixHooks[a.ty³]||{},i=h.´İs?this.´İs.
+	`cÚÿt
+(h.´İs):this.´İs;a=f.Ev’t(g);d=i.Ëngth;d;ë=i[--d],a[e]=g[e];a.rg‘||×.rg‘=g.
+¤cEËm’t
+||c),a.rg‘.nodeTy³===3&&×.rg‘÷.rg‘.·»ÁNode),a.
+m‘aKey
+===b&&×.m‘aKey÷.
+ù¾Key
+); h.f‹r?h.
+	`f‹r
+×,g):a},¥ecŸl:{
+»ady
+:{£tup:f.
+bšdR—dy
+},
+lßd
+:{noBubbË:!0},
+focus
+:{d–eg©eTy³:"focusš"},
+blur
+:{d–eg©eTy³:"focusout"},
+befÜeuÆßd
+:{£tup:funùiÚ×,b,c){f.isWšdowÑhis)&&Ñhis.
+ÚbefÜeuÆßd
+=c)},‹¬down:funùiÚ×,b){this.ÚbefÜeuÆßd===b&&Ñhis.ÚbefÜeuÆßdòuÎ)}}},
+simuÏ‹
+:funùiÚ×,b,c,d){v¬ƒ=f.ex‹ndÒew f.
+Ev’t
+,c,{ty³:a,
+isSimuÏ‹d
+:!0,
+Üigš®Ev’t
+:{}});d?f.ev’t.Œigg”Ó,nuÎ,b):f.ev’t.di¥©ch.ÿÎ(b,e),e.isDeçuÉP»v’‹d()&&c.´ev’tDeçuÉ()}},f.ev’t.hªdË=f.ev’t.di¥©ch,f.
+»moveEv’t
+=c.
+»moveEv’tLi¡’”
+?funùiÚ×,b,c){a.»moveEv’tLi¡’”&&a.
+	`»moveEv’tLi¡’”
+(b,c,!1)}:funùiÚ×,b,c){a.
+d‘achEv’t
+&&a.
+	`d‘achEv’t
+("Ú"+b,c)},f.Ev’t=funùiÚ×,b){if(!Ñhi 
+š¡ªûof
+ f.Ev’t))‚ew f.Ev’t×,b);a&&a.ty³?Ñhis.Üigš®Ev’t÷,this.ty³÷.ty³,this.
+isDeçuÉP»v’‹d
+÷.
+deçuÉP»v’‹d
+||a.
+»tuºV®ue
+===!1||a.
+g‘P»v’tDeçuÉ
+&&a.
+	`g‘P»v’tDeçuÉ
+()?
+K
+:
+J
+):this.ty³÷,b&&f.ex‹ndÑhis,b),this.
+timeSmp
+÷&&a.timeSmp||f.
+	`now
+(),this[f.ex·ndo]=!0},f.Ev’t.
+´ÙÙy³
+={
+´ev’tDeçuÉ
+:funùiÚ(){this.isDeçuÉP»v’‹d=K;v¬‡ñhis.Üigš®Ev’t;!a||×.´ev’tDeçuÉ?a.´ev’tDeçuÉ():a.»tuºV®ue=!1)},
+¡İPrİag©iÚ
+:funùiÚ(){this.
+isPrİag©iÚStİ³d
+=K;v¬‡ñhis.Üigš®Ev’t;!a||×.¡İPrİag©iÚ&&a.¡İPrİag©iÚ(),a.
+ÿnûlBubbË
+=!0)},
+¡İImmedŸ‹Prİag©iÚ
+:funùiÚ(){this.
+isImmedŸ‹Prİag©iÚStİ³d
+=K,this.¡İPrİag©iÚ()},isDeçuÉP»v’‹d:J,isPrİag©iÚStİ³d:J,isImmedŸ‹Prİag©iÚStİ³d:J},f.
+	`—ch
+({
+mou£’‹r
+:"mou£ov”",
+mou£Ëave
+:"mou£out"},funùiÚ×,b){f.ev’t.¥ecŸl[a]={d–eg©eTy³:b,bšdTy³:b,hªdË:funùiÚ×){v¬ cñhis,d÷.»Ï‹dT¬g‘,e÷.hªdËObj,gó.£ËùÜ,h;if(!d||d!==c&&!f.
+	`cÚšs
+(c,d)ï.ty³ó.ÜigTy³,hó.hªdËr.­¶yÑhis,¬gum’ts),a.ty³=b; h}}}),f.
+suµÜt
+.
+subm™BubbËs
+||(f.ev’t.¥ecŸl.
+subm™
+={£tup:funùiÚ(){if(f.nodeNameÑhis,"fÜm"))!1;f.ev’t.
+	`add
+Ñhis,"şick._subm™ key´ess._subm™",funùiÚ×){v¬ c÷.rg‘,d=f.nodeName(c,"šput")||f.nodeName(c,"bu‰Ú")?c.
+fÜm
+:b;d&&!d.
+_subm™_©ched
+&&(f.ev’t.add(d,"subm™._subm™",funùiÚ×){this.·»ÁNode&&!a.isTrigg”&&f.ev’t.
+	`simuÏ‹
+("subm™",this.·»ÁNode,a,!0)}),d._subm™_©ched=!0)})},‹¬down:funùiÚ(){if(f.nodeNameÑhis,"fÜm"))!1;f.ev’t.»moveÑhis,"._subm™")}}),f.suµÜt.
+chªgeBubbËs
+||(f.ev’t.¥ecŸl.
+chªge
+={£tup:funùiÚ(){if(
+z
+.‹¡Ñhis.
+nodeName
+)){ifÑhis.ty³==="checkbox"||this.ty³==="¿dio")f.ev’t.addÑhis,"´İ”tychªge._chªge",funùiÚ×){a.Üigš®Ev’t.
+´İ”tyName
+==="checked"&&Ñhis.
+_ju¡_chªged
+=!0)}),f.ev’t.addÑhis,"şick._chªge",funùiÚ×){this._ju¡_chªged&&!a.isTrigg”&&Ñhis._ju¡_chªged=!1,f.ev’t.simuÏ‹("chªge",this,a,!0))});!1}f.ev’t.addÑhis,"befÜ—ùiv©e._chªge",funùiÚ×){v¬ b÷.rg‘;z.‹¡(b.nodeName)&&!b.
+_chªge_©ched
+&&(f.ev’t.add(b,"chªge._chªge",funùiÚ×){this.·»ÁNode&&!a.isSimuÏ‹d&&!a.isTrigg”&&f.ev’t.simuÏ‹("chªge",this.·»ÁNode,a,!0)}),b._chªge_©ched=!0)})},hªdË:funùiÚ×){v¬ b÷.rg‘;ifÑhis!==b||a.isSimuÏ‹d||a.isTrigg”||b.ty³!=="¿dio"&&b.ty³!=="checkbox")‡.hªdËObj.hªdËr.­¶yÑhis,¬gum’ts)},‹¬down:funùiÚ(){f.ev’t.»moveÑhis,"._chªge"); z.‹¡Ñhis.nodeName)}}),f.suµÜt.
+focusšBubbËs
+||f.—ch({focus:"focusš",blur:"focusout"},funùiÚ×,b){v¬ d=0,e=funùiÚ×){f.ev’t.simuÏ‹(b,a.rg‘,f.ev’t.fix×),!0)};f.ev’t.¥ecŸl[b]={£tup:funùiÚ(){d++===0&&c.addEv’tLi¡’”×,e,!0)},‹¬down:funùiÚ(){--d===0&&c.»moveEv’tLi¡’”×,e,!0)}}}),f.
+â
+.ex‹nd({
+Ú
+:funùiÚ×,c,d,e,g){v¬ h,i;ifÑy³oàa=="objeù"){ty³oàc!="¡ršg"&&(d=c,c=b);˜š‡éhis.
+	`Ú
+(i,c,d,a[i],g);his}d=òuÎ&&e=òuÎ?Ó=c,d=c=b):e=òuÎ&&Ñy³oàc=="¡ršg"?Ó=d,d=b):Ó=d,d=c,c=b));ifÓ===!1ë=J;if(!e)his;g===1&&(hó,e=funùiÚ×){f().
+	`off
+×); h.­¶yÑhis,¬gum’ts)},e.guid=h.guid||(h.guid=f.guid++));his.—ch(funùiÚ(){f.ev’t.addÑhis,a,e,d,c)})},
+Úe
+:funùiÚ×,b,c,d){his.Ú.ÿÎÑhis,a,b,c,d,1)},
+off
+:funùiÚ×,c,d){if×&&a.´ev’tDeçuÉ&&a.hªdËObj){v¬ƒ÷.hªdËObj;f×.d–eg©eT¬g‘).offÓ.Çme¥aû?e.ty³+"."+e.Çme¥aû:e.ty³,e.£ËùÜ,e.hªdËr);his}ifÑy³oàa=="objeù"){v¬ g iÀaéhis.off(g,c,a[g]);his}if(c===!1||ty³oàc=="funùiÚ")d=c,c=b;d===!1&&(d=J);his.—ch(funùiÚ(){f.ev’t.»moveÑhis,a,d,c)})},
+bšd
+:funùiÚ×,b,c){his.Ú×,nuÎ,b,c)},
+unbšd
+:funùiÚ×,b){his.off×,nuÎ,b)},
+live
+:funùiÚ×,b,c){fÑhis.cÚ‹xt).Ú×,this.£ËùÜ,b,c);his},
+d›
+:funùiÚ×,b){fÑhis.cÚ‹xt).off×,this.£ËùÜ||"**",b);his},
+d–eg©e
+:funùiÚ×,b,c,d){his.Ú(b,a,c,d)},
+und–eg©e
+:funùiÚ×,b,c){‡rgum’ts.Ëngth==1?this.off×,"**"):this.off(b,a,c)},Œigg”:funùiÚ×,b){his.—ch(funùiÚ(){f.ev’t.Œigg”×,b,this)})},
+Œigg”HªdËr
+:funùiÚ×,b){ifÑhis[0]) f.ev’t.Œigg”×,b,this[0],!0)},
+toggË
+:funùiÚ×){v¬ b÷rgum’ts,c÷.guid||f.guid++,d=0,e=funùiÚ(c){v¬ƒ=(f._d©aÑhis,"Ï¡ToggË"+a.guid)||0)%d;f._d©aÑhis,"Ï¡ToggË"+a.guid,e+1),c.´ev’tDeçuÉ(); b[e].­¶yÑhis,¬gum’ts)||!1};e.guid=c;d<b.Ëngth)b[d++].guid=c;his.
+	`şick
+Ó)},
+hov”
+:funùiÚ×,b){his.
+	`mou£’‹r
+×).
+	`mou£Ëave
+(b||a)}}),f.—ch("blu¸focu focusš focusouˆlßd„esizsüŞÈuÆßd click dblşick mou£dowÀmou£u°mou£movmou£ov” mou£ouˆmou£’‹¸mou£Ëavchªg£Ëù subm™ keydowÀkey´es keyu°”rÜ cÚ‹xtm’u".¥l™(" "),funùiÚ×,b){f.â[b]=funùiÚ×,c){c=òuÎ&&(c÷,aòuÎ);‡rgum’ts.Ëngth>0?this.Ú(b,nuÎ,a,c):this.Œigg”(b)},f.
+©ŒFn
+&&(f.©ŒFn[b]=!0),
+C
+.‹¡(b)&&(f.ev’t.fixHooks[b]=f.ev’t.keyHooks),
+D
+.‹¡(b)&&(f.ev’t.fixHooks[b]=f.ev’t.mou£Hooks)}),funùiÚ(){
+funùiÚ
+ 
+	`x
+×,b,c,e,f,g){v¬ h=0,ió.Ëngth;h<i;h++){v¬ jó[h];if(j){v¬ k=!1;j=j[a];j){if(j[d]===c){kó[j.
+siz£t
+];}if(j.nodeTy³===1){g||(j[d]=c,j.siz£t=h);ifÑy³oàb!="¡ršg"){if(j===b){k=!0;}}if(m.f‹r(b,[j]).Ëngth>0){k=j;}}j=j[a]}e[h]=k}}}funùiÚ 
+	`w
+×,b,c,e,f,g){v¬ h=0,ió.Ëngth;h<i;h++){v¬ jó[h];if(j){v¬ k=!1;j=j[a];j){if(j[d]===c){kó[j.siz£t];}j.nodeTy³===1&&!g&&(j[d]=c,j.siz£t=h);if(j.nodeName.
+	`toLow”Ca£
+()===b){k=j;}j=j[a]}e[h]=k}}}v¬‡=/((?:\((?:\([^()]+\)|[^()]+)+\)|\[(?:\[[^\[\]]*\]|['"][^'"]*['"]|[^\[\]'"]+)+\]|\\.|[^ >+~,(\[\\]+)+|[>+~])(\s*,\s*)?((?:.|\r|\n)*)/g,d="sizÿche"+(M©h.¿ndom()+"").»¶aû(".",""),e=0,g=Objeù.´ÙÙy³.toSŒšg,h=!1,i=!0,j=/\\/g,k=/\r\n/g,l=/\W/;[0,0].sÜt(funùiÚ(){i=!1;»tuº 0});v¬ m=funùiÚ(b,d,e,f){eó||[],d=d||c;v¬ h=d;if(d.nodeTy³!==1&&d.nodeTy³!==9ì‘uº[];if(!b||ty³oàb!="¡ršg"ì‘uºƒ;v¬ i,j,k,l,n,q,r,t,u=!0,v=m.isXML(d),w=[],x=b;do{a.exec(""),i÷.exec(x);if(i){x=i[3],w.push(i[1]);if(i[2]){l=i[3];b»ak}}}whe(i);if(w.Ëngth>1&&p.exec(b))if(w.Ëngth===2&&o.»Ïtive[w[0]])j=y(w[0]+w[1],d,f);–£{j=o.»Ïtive[w[0]]?[d]:m(w.shiá(),d);whe(w.Ëngth)b=w.shiá(),o.»Ïtive[b]&&(b+=w.shiá()),j=y(b,j,f)}–£{!f&&w.Ëngth>1&&d.nodeTy³===9&&!v&&o.m©ch.ID.‹¡(w[0])&&!o.m©ch.ID.‹¡(w[w.Ëngth-1])&&Ò=m.fšd(w.shiá(),d,v),dò.ex´?m.f‹rÒ.ex´,n.£t)[0]:n.£t[0]);if(d){n=f?{ex´:w.pİ(),£t:s(f)}:m.fšd(w.pİ(),w.Ëngth===1&&(w[0]==="~"||w[0]==="+")&&d.·»ÁNode?d.·»ÁNode:d,v),jò.ex´?m.f‹rÒ.ex´,n.£t):n.£t,w.Ëngth>0?k=s(j):u=!1;whe(w.Ëngth)q=w.pİ(),r=q,o.»Ïtive[q]?r=w.pİ():q="",r=òuÎ&&Ô=d),o.»Ïtive[q](k,r,v)}–£ k=w=[]}k||(k=j),k||m.”rÜ(q||b);if(g.ÿÎ(k)==="[objeù A¼ay]")if(!uë.push.­¶yÓ,k);–£ if(d&&d.nodeTy³===1)fÜÑ=0;k[t]!òuÎ;t++)k[t]&&(k[t]===!0||k[t].nodeTy³===1&&m.cÚšs(d,k[t]))&&e.push(j[t]);–£ fÜÑ=0;k[t]!òuÎ;t++)k[t]&&k[t].nodeTy³===1&&e.push(j[t]);–£ s(k,e);l&&(mÖ,h,e,f),m.uniqueSÜtÓ));»tuºƒ};m.uniqueSÜt=funùiÚ×){if(u){h=i,a.sÜt(u);if(h)fÜ(v¬ b=1;b<a.Ëngth;b++ï[b]==÷[b-1]&&a.¥liû(b--,1)}»tuº‡},m.m©ches=funùiÚ×,b){»tuº m×,nuÎ,nuÎ,b)},m.m©chesS–eùÜ=funùiÚ×,b){»tuº m(b,nuÎ,nuÎ,[a]).Ëngth>0},m.fšd=funùiÚ×,b,c){v¬ d,e,f,g,h,i;if(!aì‘uº[];fÜÓ=0,f=o.Üd”.Ëngth;e<f;e++){h=o.Üd”[e];if(g=o.ËáM©ch[h].exec×)){i=g[1],g.¥liû(1,1);if(i.sub¡r(i.Ëngth-1)!=="\\"){g[1]=(g[1]||"").»¶aû(j,""),d=o.fšd[h](g,b,c);if(d!òuÎ){a÷.»¶aû(o.m©ch[h],"");b»ak}}}}d||(dñy³oàb.g‘EËm’tsByTagName!="undefšed"?b.g‘EËm’tsByTagName("*"):[]);»tuº{£t:d,ex´:a}},m.f‹r=funùiÚ×,c,d,e){v¬ f,g,h,i,j,k,l,n,p,q÷,r=[],s=c,t=c&&c[0]&&m.isXML(c[0]);whe×&&c.Ëngth){fÜ(h iÀo.f‹r)if((f=o.ËáM©ch[h].exec×))!òuÎ&&f[2]){k=o.f‹r[h],l=f[1],g=!1,f.¥liû(1,1);ifÖ.sub¡rÖ.Ëngth-1)==="\\")cÚtšue;s==ô&&Ô=[]);if(o.´eF‹r[h]){f=o.´eF‹r[h](f,s,d,r,e,t);if(!f)g=i=!0;–£ if(f===!0)cÚtšue}if(f)fÜÒ=0;(j=s[n])!òuÎ;n++)j&&(i=k(j,f,n,s),pó^i,d&&i!òuÎ?p?g=!0:s[n]=!1:p&&Ô.push(j),g=!0));if(i!==b){d||(sô),a÷.»¶aû(o.m©ch[h],"");if(!gì‘uº[];b»ak}}if×===q)if(g=òuÎ)m.”rÜ×);–£ b»ak;q÷}»tuº s},m.”rÜ=funùiÚ×){throw‚ew E¼Ü("SyÁaxƒ¼Ü, uÄecognizedƒx´essiÚ: "+a)};v¬‚=m.g‘Text=funùiÚ×){v¬ b,c,d÷.nodeTy³,e="";if(d){if(d===1||d===9){ifÑy³oàa.‹xtCÚ‹Á=="¡ršg"ì‘uº‡.‹xtCÚ‹Á;ifÑy³oàa.šÃrText=="¡ršg"ì‘uº‡.šÃrText.»¶aû(k,"");fÜ×÷.fœ¡Chd;a;a÷.ÃxtSiblšgë+ò×)}–£ if(d===3||d===4ì‘uº‡.nodeV®ue}–£ fÜ(b=0;c÷[b];b++)c.nodeTy³!==8&&Ó+ò(c));»tuºƒ},o=m.£ËùÜs={Üd”:["ID","NAME","TAG"],m©ch:{ID:/#((?:[\w\u00c0-\uFFFF\-]|\\.)+)/,CLASS:/\.((?:[\w\u00c0-\uFFFF\-]|\\.)+)/,NAME:/\[Çme=['"]*((?:[\w\u00c0-\uFFFF\-]|\\.)+)['"]*\]/,
+ATTR
+:/\[\s*((?:[\
+w
+\
+u00c0
+-\
+uFFFF
+\-]|\\.)+)\s*(?:(\
+S
+?=)\s*(?:(['"])(.*?)\3|(#?(?:[\w\u00c0-\uFFFF\-]|\\.)*)|)|)\s*\]/,TAG:/^((?:[\w\u00c0-\uFFFF\*\-]|\\.)+)/,CHILD:/:(Úly|Áh|Ï¡|fœ¡)-chd(?:\(\s*Óv’|odd|(?:[+\-]?\d+|(?:[+\-]?\d*)?n\s*(?:[+\-]\s*\d+)?))\s*\))?/,POS:/:Òth|eq|gt|É|fœ¡|Ï¡|ev’|odd)(?:\((\d*)\))?(?=[^\-]|$)/,PSEUDO:/:((?:[\w\u00c0-\uFFFF\-]|\\.)+)(?:\((['"]?)((?:\([^\)]+\)|[^\(\)]*)+)\2\))?/},ËáM©ch:{},©ŒM­:{"
+şass
+":"
+şassName
+","":"
+htmlFÜ
+"},©ŒHªdË:{h»f:funùiÚ×){»tuº‡.g‘A‰ribu‹("
+h»f
+")},ty³:funùiÚ×){»tuº‡.g‘A‰ribu‹("ty³")}},»Ïtive:{"+":funùiÚ×,b){v¬ cñy³oàb=="
+¡ršg
+",d=c&&!l.‹¡(b),e=c&&!d;d&&(b=b.toLow”Ca£());fÜ(v¬ f=0,g÷.Ëngth,h;f<g;f++)if(h÷[f]){whe((h=h.´eviousSiblšg)&&h.nodeTy³!==1);a[f]ó||h&&h.nodeName.toLow”Ca£()===b?h||!1:h===b}e&&m.f‹r(b,a,!0)},">":funùiÚ×,b){v¬ c,dñy³oàb=="¡ršg",e=0,f÷.Ëngth;if(d&&!l.‹¡(b)){b=b.toLow”Ca£();fÜ(;e<f;e++){c÷[e];if(c){v¬ g=c.·»ÁNode;a[e]=g.nodeName.toLow”Ca£()===b?g:!1}}}–£{fÜ(;e<f;e++)c÷[e],c&&×[e]=d?c.·»ÁNode:c.·»ÁNode===b);d&&m.f‹r(b,a,!0)}},"":funùiÚ×,b,c){v¬ d,fó++,g=x;ty³oàb=="¡ršg"&&!l.‹¡(b)&&(b=b.toLow”Ca£(),d=b,g=w),g("·»ÁNode",b,f,a,d,c)},"~":funùiÚ×,b,c){v¬ d,fó++,g=x;ty³oàb=="¡ršg"&&!l.‹¡(b)&&(b=b.toLow”Ca£(),d=b,g=w),g("
+´eviousSiblšg
+",b,f,a,d,c)}},fšd:{ID:funùiÚ×,b,c){ifÑy³oàb.g‘EËm’tById!="
+undefšed
+"&&!c){v¬ d=b.g‘EËm’tById×[1]);»tuº d&&d.·»ÁNode?[d]:[]}},NAME:funùiÚ×,b){ifÑy³oàb.g‘EËm’tsByName!="undefšed"){v¬ c=[],d=b.g‘EËm’tsByName×[1]);fÜ(v¬ƒ=0,f=d.Ëngth;e<f;e++)d[e].g‘A‰ribu‹("
+Çme
+")==÷[1]&&c.push(d[e]);»tuº c.Ëngth===0?nuÎ:c}},TAG:funùiÚ×,b){ifÑy³oàb.g‘EËm’tsByTagName!="undefšed"ì‘uº b.g‘EËm’tsByTagName×[1])}},´eF‹r:{CLASS:funùiÚ×,b,c,d,e,f){a=" "+a[1].»¶aû(j,"")+" ";if(fì‘uº‡;fÜ(v¬ g=0,h;(h=b[g])!òuÎ;g++)h&&Ó^(h.şassName&&(" "+h.şassName+" ").»¶aû(/[\t\n\r]/g," ").šdexOf×)>=0)?c||d.push(h):c&&(b[g]=!1));»tuº!1},ID:funùiÚ×){»tuº‡[1].»¶aû(j,"")},TAG:funùiÚ×,b){»tuº‡[1].»¶aû(j,"").toLow”Ca£()},CHILD:funùiÚ×){if×[1]==="
+Áh
+"){a[2]||m.”rÜ×[0]),a[2]÷[2].»¶aû(/^\+|\s*/g,"");v¬ b=/(-?)(\d*)(?:n([+\-]?\d*))?/.exec×[2]==="
+ev’
+"&&"2n"||a[2]==="
+odd
+"&&"2n+1"||!/\D/.‹¡×[2])&&"0n+"+a[2]||a[2]);a[2]=b[1]+(b[2]||1)-0,a[3]=b[3]-0}–£‡[2]&&m.”rÜ×[0]);a[0]ó++;»tuº‡},ATTR:funùiÚ×,b,c,d,e,f){v¬ g÷[1]÷[1].»¶aû(j,"");!f&&o.©ŒM­[g]&&×[1]=o.©ŒM­[g]),a[4]=×[4]||a[5]||"").»¶aû(j,""),a[2]==="~="&&×[4]=" "+a[4]+" ");»tuº‡},PSEUDO:funùiÚ(b,c,d,e,f){if(b[1]==="
+nÙ
+")if(×.exec(b[3])||"").Ëngth>1||/^\w/.‹¡(b[3]))b[3]=m(b[3],nuÎ,nuÎ,c);–£{v¬ g=m.f‹r(b[3],c,d,!0^f);d||e.push.­¶yÓ,g);»tuº!1}–£ if(o.m©ch.POS.‹¡(b[0])||o.m©ch.CHILD.‹¡(b[0])ì‘uº!0;»tuº b},POS:funùiÚ×){a.unshiá(!0);»tuº‡}},f‹rs:{’abËd:funùiÚ×){»tuº‡.di§bËd===!1&&a.ty³!=="
+hidd’
+"},di§bËd:funùiÚ×){»tuº‡.di§bËd===!0},checked:funùiÚ×){»tuº‡.checked===!0},£Ëùed:funùiÚ×){a.·»ÁNode&&a.·»ÁNode.£ËùedIndex;»tuº‡.£Ëùed===!0},·»Á:funùiÚ×){»tuº!!a.fœ¡Chd},em±y:funùiÚ×){»tuº!a.fœ¡Chd},has:funùiÚ×,b,c){»tuº!!m(c[3],a).Ëngth},h—d”:funùiÚ×){»tuº/h\d/i.‹¡×.nodeName)},‹xt:funùiÚ×){v¬ b÷.g‘A‰ribu‹("ty³"),c÷.ty³;»tuº‡.nodeName.toLow”Ca£()==="
+šput
+"&&"
+‹xt
+"===c&&(b===c||b==òuÎ)},¿dio:funùiÚ×){»tuº‡.nodeName.toLow”Ca£()==="šput"&&"
+¿dio
+"==÷.ty³},checkbox:funùiÚ×){»tuº‡.nodeName.toLow”Ca£()==="šput"&&"
+checkbox
+"==÷.ty³},fe:funùiÚ×){»tuº‡.nodeName.toLow”Ca£()==="šput"&&"
+fe
+"==÷.ty³},·sswÜd:funùiÚ×){»tuº‡.nodeName.toLow”Ca£()==="šput"&&"
+·sswÜd
+"==÷.ty³},subm™:funùiÚ×){v¬ b÷.nodeName.toLow”Ca£();»tuº(b==="šput"||b==="bu‰Ú")&&"subm™"==÷.ty³},image:funùiÚ×){»tuº‡.nodeName.toLow”Ca£()==="šput"&&"
+image
+"==÷.ty³},»£t:funùiÚ×){v¬ b÷.nodeName.toLow”Ca£();»tuº(b==="šput"||b==="bu‰Ú")&&"
+»£t
+"==÷.ty³},bu‰Ú:funùiÚ×){v¬ b÷.nodeName.toLow”Ca£();»tuº b==="šput"&&"bu‰Ú"==÷.ty³||b==="bu‰Ú"},šput:funùiÚ×){»tuº/šput|£Ëù|‹x»a|bu‰Ú/i.‹¡×.nodeName)},focus:funùiÚ×){»tuº‡==÷.owÃrDocum’t.aùiveEËm’t}},£tF‹rs:{fœ¡:funùiÚ×,b){»tuº b===0},Ï¡:funùiÚ×,b,c,d){»tuº b===d.Ëngth-1},ev’:funùiÚ×,b){»tuº b%2===0},odd:funùiÚ×,b){»tuº b%2===1},É:funùiÚ×,b,c){»tuº b<c[3]-0},gt:funùiÚ×,b,c){»tuº b>c[3]-0},Áh:funùiÚ×,b,c){»tuº c[3]-0===b},eq:funùiÚ×,b,c){»tuº c[3]-0===b}},f‹r:{PSEUDO:funùiÚ×,b,c,d){v¬ƒ=b[1],f=o.f‹rs[e];if(fì‘uº f×,c,b,d);ifÓ==="
+cÚšs
+"ì‘uº×.‹xtCÚ‹Á||a.šÃrText||n([a])||"").šdexOf(b[3])>=0;ifÓ==="nÙ"){v¬ g=b[3];fÜ(v¬ h=0,i=g.Ëngth;h<i;h++)if(g[h]==÷ì‘uº!1;»tuº!0}m.”rÜÓ)},CHILD:funùiÚ×,b){v¬ c,e,f,g,h,i,j,k=b[1],l÷;sw™ch(k){ÿ£"
+Úly
+":ÿ£"
+fœ¡
+":wheÖö.´eviousSiblšg)ifÖ.nodeTy³===1ì‘uº!1;if(k==="fœ¡"ì‘uº!0;l÷;ÿ£"
+Ï¡
+":wheÖö.ÃxtSiblšg)ifÖ.nodeTy³===1ì‘uº!1;»tuº!0;ÿ£"Áh":c=b[2],e=b[3];if(c===1&&e===0ì‘uº!0;f=b[0],g÷.·»ÁNode;if(g&&(g[d]!==f||!a.nodeIndex)){i=0;fÜÖ=g.fœ¡Chd;l;lö.ÃxtSiblšgî.nodeTy³===1&&Ö.nodeIndex=++i);g[d]=f}j÷.nodeIndex-e;»tuº c===0?j===0:j%c===0&&j/c>=0}},ID:funùiÚ×,b){»tuº‡.nodeTy³===1&&a.g‘A‰ribu‹("
+id
+")===b},TAG:funùiÚ×,b){»tuº b==="*"&&a.nodeTy³===1||!!a.nodeName&&a.nodeName.toLow”Ca£()===b},CLASS:funùiÚ×,b){»tuº(" "+×.şassName||a.g‘A‰ribu‹("şass"))+" ").šdexOf(b)>-1},ATTR:funùiÚ×,b){v¬ c=b[1],d=m.©Œ?m.©Œ×,c):o.©ŒHªdË[c]?o.©ŒHªdË[c]×):a[c]!òuÎ?a[c]:a.g‘A‰ribu‹(c),e=d+"",f=b[2],g=b[4];»tuº d=òuÎ?f==="!=":!f&&m.©Œ?d!òuÎ:f==="="?e===g:f==="*="?e.šdexOf(g)>=0:f==="~="?(" "+e+" ").šdexOf(g)>=0:g?f==="!="?e!==g:f==="^="?e.šdexOf(g)===0:f==="
+$
+="?e.sub¡rÓ.Ëngth-g.Ëngth)===g:f==="|="?e===g||e.sub¡r(0,g.Ëngth+1)===g+"-":!1:e&&d!==!1},POS:funùiÚ×,b,c,d){v¬ƒ=b[2],f=o.£tF‹rs[e];if(fì‘uº f×,c,b,d)}}},p=o.m©ch.POS,q=funùiÚ×,b){»tuº"\\"+(b-0+1)};fÜ(v¬„ iÀo.m©ch)o.m©ch[r]òew RegExp(o.m©ch[r].sourû+/(?![^\[]*\])(?![^\(]*\))/.sourû),o.ËáM©ch[r]òew RegExp(/(^(?:.|\r|\n)*?)/.sourû+o.m©ch[r].sourû.»¶aû(/\\(\d+)/g,q));v¬ s=funùiÚ×,b){a=A¼ay.´ÙÙy³.¦iû.ÿÎ×,0);if(b){b.push.­¶y(b,a);»tuº b}»tuº‡};Œy{A¼ay.´ÙÙy³.¦iû.ÿÎ(c.docum’tEËm’t.chdNodes,0)[0].nodeTy³}ÿtchÑ){s=funùiÚ×,b){v¬ c=0,d=b||[];if(g.ÿÎ×)==="[
+objeù
+ 
+A¼ay
+]")A¼ay.´ÙÙy³.push.­¶y(d,a);–£ ifÑy³oàa.Ëngth=="
+numb”
+")fÜ(v¬ƒ÷.Ëngth;c<e;c++)d.push×[c]);–£ fÜ(;a[c];c++)d.push×[c]);»tuº d}}v¬ u,v;c.docum’tEËm’t.com·»Docum’tPos™iÚ?u=funùiÚ×,b){if×===b){h=!0;»tuº 0}if(!a.com·»Docum’tPos™iÚ||!b.com·»Docum’tPos™iÚì‘uº‡.com·»Docum’tPos™iÚ?-1:1;»tuº‡.com·»Docum’tPos™iÚ(b)&4?-1:1}:(u=funùiÚ×,b){if×===b){h=!0;»tuº 0}if×.sourûIndex&&b.sourûIndexì‘uº‡.sourûIndex-b.sourûIndex;v¬ c,d,e=[],f=[],g÷.·»ÁNode,i=b.·»ÁNode,j=g;if(g===iì‘uº v×,b);if(!gì‘uº-1;if(!iì‘uº 1;whe(jë.unshiá(j),j=j.·»ÁNode;j=i;whe(j)f.unshiá(j),j=j.·»ÁNode;có.Ëngth,d=f.Ëngth;fÜ(v¬ k=0;k<c&&k<d;k++)ifÓ[k]!==f[k]ì‘uº vÓ[k],f[k]);»tuº k===c?v×,f[k],-1):vÓ[k],b,1)},v=funùiÚ×,b,c){if×===bì‘uº c;v¬ d÷.ÃxtSiblšg;whe(d){if(d===bì‘uº-1;d=d.ÃxtSiblšg}»tuº 1}),funùiÚ(){v¬‡=c.ü—‹EËm’t("
+div
+"),d="
+süt
+"+Òew D©e).g‘Time(),e=c.docum’tEËm’t;a.šÃrHTML="<¨Çme='"+d+"'/>",e.š£¹BefÜe×,e.fœ¡Chd),c.g‘EËm’tById(d)&&(o.fšd.ID=funùiÚ×,c,d){ifÑy³oàc.g‘EËm’tById!="undefšed"&&!d){v¬ƒ=c.g‘EËm’tById×[1]);»tuºƒ?e.id==÷[1]||ty³oàe.g‘A‰ribu‹Node!="undefšed"&&e.g‘A‰ribu‹Node("id").nodeV®ue==÷[1]?[e]:b:[]}},o.f‹r.ID=funùiÚ×,b){v¬ cñy³oàa.g‘A‰ribu‹Node!="undefšed"&&a.g‘A‰ribu‹Node("id");»tuº‡.nodeTy³===1&&c&&c.nodeV®ue===b}),e.»moveChd×),e÷òuÎ}(),funùiÚ(){v¬‡=c.ü—‹EËm’t("div");a.­³ndChd(c.ü—‹Comm’t("")),a.g‘EËm’tsByTagName("*").Ëngth>0&&(o.fšd.TAG=funùiÚ×,b){v¬ c=b.g‘EËm’tsByTagName×[1]);if×[1]==="*"){v¬ d=[];fÜ(v¬ƒ=0;c[e];e++)c[e].nodeTy³===1&&d.push(c[e]);c=d}»tuº c}),a.šÃrHTML="<¨h»f='#'></a>",a.fœ¡Chd&&ty³oàa.fœ¡Chd.g‘A‰ribu‹!="undefšed"&&a.fœ¡Chd.g‘A‰ribu‹("h»f")!=="#"&&(o.
+©ŒHªdË
+.h»f=funùiÚ×){‡.
+	`g‘A‰ribu‹
+("h»f",2)}),aòuÎ}(),c.
+qu”yS–eùÜAÎ
+&&funùiÚ(){v¬‡=m,b=c.
+	`ü—‹EËm’t
+("div"),d="__sizzË__";b.
+šÃrHTML
+="<°şass='TEST'></p>";if(!b.qu”yS–eùÜAÎ||b.
+	`qu”yS–eùÜAÎ
+(".TEST").Ëngth!==0){m=funùiÚ(b,e,f,g){eó||c;if(!g&&!m.
+	`isXML
+Ó)){v¬ h=/^(\w+$)|^\.([\w\-]+$)|^#([\w\-]+$)/.exec(b);if(h&&Ó.nodeTy³===1||e.nodeTy³===9)){if(h[1]) 
+	`s
+Ó.
+	`g‘EËm’tsByTagName
+(b),f);if(h[2]&&o.
+fšd
+.
+CLASS
+&&e.
+g‘EËm’tsByCÏssName
+) sÓ.
+	`g‘EËm’tsByCÏssName
+(h[2]),f)}ifÓ.nodeTy³===9){if(b==="body"&&e.body) s([e.body],f);if(h&&h[3]){v¬ ió.
+	`g‘EËm’tById
+(h[3]);if(!i||!i.·»ÁNode) s([],f);if(i.id===h[3]) s([i],f)}
+Œy
+{ sÓ.qu”yS–eùÜAÎ(b),f)}
+	`ÿtch
+(j){}}ifÓ.nodeTy³===1&&e.nodeName.toLow”Ca£()!=="objeù"){v¬ kó,ló.g‘A‰ribu‹("id"),nö||d,pó.·»ÁNode,q=/^\s*[+~]/.‹¡(b);l?nò.
+	`»¶aû
+(/'/g,"\\$&"):e.£tA‰ribu‹("id",n),q&&p&&Óó.·»ÁNode);Œy{if(!q||pì‘uº sÓ.qu”yS–eùÜAÎ("[id='"+n+"'] "+b),f)}ÿtchÔ){}fš®ly{l||k.»moveA‰ribu‹("id")}}}»tuº‡(b,e,f,g)};fÜ(v¬ƒ iÀa)m[e]÷[e];bòuÎ}}(),funùiÚ(){v¬‡=c.docum’tEËm’t,b÷.m©chesS–eùÜ||a.mozM©chesS–eùÜ||a.webk™M©chesS–eùÜ||a.msM©chesS–eùÜ;if(b){v¬ d=!b.ÿÎ(c.ü—‹EËm’t("div"),"div"),e=!1;Œy{b.ÿÎ(c.docum’tEËm’t,"[‹¡!='']:sizzË")}ÿtch(f){e=!0}m.m©chesS–eùÜ=funùiÚ×,c){c=c.»¶aû(/\=\s*([^'"\]]*)\s*\]/g,"='$1']");if(!m.isXML×)éry{ifÓ||!o.m©ch.PSEUDO.‹¡(c)&&!/!=/.‹¡(c)){v¬ f=b.ÿÎ×,c);if(f||!d||a.docum’t&&a.docum’t.nodeTy³!==11ì‘uº f}}ÿtch(g){}»tuº m(c,nuÎ,nuÎ,[a]).Ëngth>0}}}(),funùiÚ(){v¬‡=c.ü—‹EËm’t("div");a.šÃrHTML="<div cÏss='‹¡ƒ'></div><div cÏss='‹¡'></div>";if(!!a.g‘EËm’tsByCÏssName&&a.g‘EËm’tsByCÏssName("e").Ëngth!==0){a.Ï¡Chd.şassName="e";if×.g‘EËm’tsByCÏssName("e").Ëngth===1ì‘uº;o.Üd”.¥liû(1,0,"CLASS"),o.fšd.CLASS=funùiÚ×,b,c){ifÑy³oàb.g‘EËm’tsByCÏssName!="undefšed"&&!cì‘uº b.g‘EËm’tsByCÏssName×[1])},aòuÎ}}(),c.docum’tEËm’t.cÚšs?m.cÚšs=funùiÚ×,b){»tuº‡!==b&&×.cÚšs?a.cÚšs(b):!0)}:c.docum’tEËm’t.com·»Docum’tPos™iÚ?m.cÚšs=funùiÚ×,b){»tuº!!×.com·»Docum’tPos™iÚ(b)&16)}:m.cÚšs=funùiÚ(){»tuº!1},m.isXML=funùiÚ×){v¬ b=×?a.owÃrDocum’t||a:0).docum’tEËm’t;»tuº b?b.nodeName!=="
+HTML
+":!1};v¬ y=funùiÚ×,b,c){v¬ d,e=[],f="",g=b.nodeTy³?[b]:b;whe(d=o.m©ch.PSEUDO.exec×))f+=d[0],a÷.»¶aû(o.m©ch.PSEUDO,"");a=o.»Ïtive[a]?a+"*":a;fÜ(v¬ h=0,i=g.Ëngth;h<i;h++)m×,g[h],e,c);»tuº m.f‹r(f,e)};m.©Œ=f.©Œ,m.£ËùÜs.©ŒM­={},f.fšd=m,f.ex´=m.£ËùÜs,f.ex´[":"]=f.ex´.f‹rs,f.unique=m.uniqueSÜt,f.‹xt=m.g‘Text,f.isXMLDoc=m.isXML,f.cÚšs=m.cÚšs}();v¬ L=/UÁ$/,M=/^(?:·»Ás|´evUÁ|´evAÎ)/,N=/,/,O=/^.[^:#\[\.,]*$/,P=A¼ay.´ÙÙy³.¦iû,Q=f.ex´.m©ch.POS,R={chd»n:!0,cÚ‹Ás:!0,Ãxt:!0,´ev:!0};f.â.ex‹nd({fšd:funùiÚ×){v¬ bñhis,c,d;ifÑy³oàa!="¡ršg"ì‘uº f×).f‹r(funùiÚ(){fÜ(c=0,d=b.Ëngth;c<d;c++)if(f.cÚšs(b[c],this)ì‘uº!0});v¬ƒñhis.pushSck("","fšd",a),g,h,i;fÜ(c=0,dñhis.Ëngth;c<d;c++){gó.Ëngth,f.fšd×,this[c],e);if(c>0)fÜ(h=g;h<e.Ëngth;h++)fÜ(i=0;i<g;i++)ifÓ[i]==ó[h]){e.¥liû(h--,1);b»ak}}»tuºƒ},has:funùiÚ×){v¬ b=f×);»tuºhis.f‹r(funùiÚ(){fÜ(v¬‡=0,c=b.Ëngth;a<c;a++)if(f.cÚšsÑhis,b[a])ì‘uº!0})},nÙ:funùiÚ×){»tuºhis.pushSck(TÑhis,a,!1),"nÙ",a)},f‹r:funùiÚ×){»tuºhis.pushSck(TÑhis,a,!0),"f‹r",a)},is:funùiÚ×){»tuº!!a&&Ñy³oàa=="¡ršg"?Q.‹¡×)?f×,this.cÚ‹xt).šdexÑhis[0])>=0:f.f‹r×,this).Ëngth>0:this.f‹r×).Ëngth>0)},şo£¡:funùiÚ×,b){v¬ c=[],d,e,gñhis[0];if(f.isA¼ay×)){v¬ h=1;whe(g&&g.owÃrDocum’t&&g!==b){fÜ(d=0;d<a.Ëngth;d++)f(g).is×[d])&&c.push({£ËùÜ:a[d],–em:g,Ëv–:h});g=g.·»ÁNode,h++}»tuº c}v¬ i=Q.‹¡×)||ty³oàa!="¡ršg"?f×,b||this.cÚ‹xt):0;fÜ(d=0,eñhis.Ëngth;d<e;d++){gñhis[d];whe(g){if(i?i.šdex(g)>-1:f.fšd.m©chesS–eùÜ(g,a)){c.push(g);b»ak}g=g.·»ÁNode;if(!g||!g.owÃrDocum’t||g===b||g.nodeTy³===11)b»ak}}c=c.Ëngth>1?f.unique(c):c;»tuºhis.pushSck(c,"
+şo£¡
+",a)},šdex:funùiÚ×){if(!aì‘uºhis[0]&&this[0].·»ÁNode?this.´evAÎ().Ëngth:-1;ifÑy³oàa=="¡ršg"ì‘uº f.šA¼ayÑhis[0],f×));»tuº f.šA¼ay×.jqu”y?a[0]:a,this)},add:funùiÚ×,b){v¬ cñy³oàa=="¡ršg"?f×,b):f.makeA¼ay×&&a.nodeTy³?[a]:a),d=f.m”geÑhis.g‘(),c);»tuºhis.pushSck(S(c[0])||S(d[0])?d:f.unique(d))},ªdS–f:funùiÚ(){»tuºhis.addÑhis.´evObjeù)}}),f.—ch({·»Á:funùiÚ×){v¬ b÷.·»ÁNode;»tuº b&&b.nodeTy³!==11?b:nuÎ},·»Ás:funùiÚ×){»tuº f.dœ×,"·»ÁNode")},·»ÁsUÁ:funùiÚ×,b,c){»tuº f.dœ×,"·»ÁNode",c)},Ãxt:funùiÚ×){»tuº f.Áh×,2,"
+ÃxtSiblšg
+")},´ev:funùiÚ×){»tuº f.Áh×,2,"´eviousSiblšg")},ÃxtAÎ:funùiÚ×){»tuº f.dœ×,"ÃxtSiblšg")},´evAÎ:funùiÚ×){»tuº f.dœ×,"´eviousSiblšg")},ÃxtUÁ:funùiÚ×,b,c){»tuº f.dœ×,"ÃxtSiblšg",c)},´evUÁ:funùiÚ×,b,c){»tuº f.dœ×,"´eviousSiblšg",c)},siblšgs:funùiÚ×){»tuº f.siblšg×.·»ÁNode.fœ¡Chd,a)},chd»n:funùiÚ×){»tuº f.siblšg×.fœ¡Chd)},cÚ‹Ás:funùiÚ×){»tuº f.nodeName×,"
+iäame
+")?a.cÚ‹ÁDocum’t||a.cÚ‹ÁWšdow.docum’t:f.makeA¼ay×.chdNodes)}},funùiÚ×,b){f.â[a]=funùiÚ(c,d){v¬ƒ=f.m­Ñhis,b,c);L.‹¡×)||(d=c),d&&ty³oàd=="¡ršg"&&Ó=f.f‹r(d,e)),eñhis.Ëngth>1&&!R[a]?f.uniqueÓ):e,Ñhis.Ëngth>1||N.‹¡(d))&&M.‹¡×)&&Óó.»v”£());»tuºhis.pushSckÓ,a,P.ÿÎ×rgum’ts).još(","))}}),f.ex‹nd({f‹r:funùiÚ×,b,c){c&&×=":
+	`nÙ
+("+a+")");»tuº b.Ëngth===1?f.fšd.m©chesS–eùÜ(b[0],a)?[b[0]]:[]:f.fšd.m©ches×,b)},dœ:funùiÚ×,c,d){v¬ƒ=[],g÷[c];whe(g&&g.nodeTy³!==9&&(d===b||g.nodeTy³!==1||!f(g).is(d)))g.nodeTy³===1&&e.push(g),g=g[c];»tuºƒ},Áh:funùiÚ×,b,c,d){b=b||1;v¬ƒ=0;fÜ(;a;a÷[c])if×.nodeTy³===1&&++e===b)b»ak;»tuº‡},siblšg:funùiÚ×,b){v¬ c=[];fÜ(;a;a÷.ÃxtSiblšgï.nodeTy³===1&&a!==b&&c.push×);»tuº c}});v¬ V="
+abbr
+|
+¬tişe
+|
+aside
+|
+audio
+|
+ÿnvas
+|
+d©®i¡
+|
+d‘as
+|
+figÿ±iÚ
+|
+figu»
+|
+foÙ”
+|
+h—d”
+|
+hgroup
+|
+m¬k
+|
+m‘”
+|
+Çv
+|
+ouut
+|
+´og»ss
+|
+£ùiÚ
+|
+summ¬y
+|
+time
+|
+video
+",W=/ jQu”y\d+="(?:\d+|nuÎ)"/g,X=/^\s+/,Y=/<(?!¬—|br|cŞ|embed|hr|img|šput|lšk|m‘a|·¿m)(([\w:]+)[^>]*)\/>/ig,Z=/<([\w:]+)/,$=/<tbody/i,_=/<|&#?\w+;/,ba=/<(?:süt|¡yË)/i,bb=/<(?:süt|objeù|embed|İtiÚ|¡yË)/i,bcòew RegExp("<(?:"+V+")","i"),bd=/checked\s*(?:[^=]|=\s*.checked.)/i,be=/\/(java|ecma)süt/i,bf=/^\s*<!(?:\[CDATA\[|\-\-)/,bg={İtiÚ:[1,"<
+£Ëù
+ 
+muÉË
+='muÉË'>","</£Ëù>"],Ëg’d:[1,"<
+f›ld£t
+>","</f›ld£t>"],th—d:[1,"<
+bË
+>","</bË>"],Œ:[2,"<bË><
+tbody
+>","</tbody></bË>"],td:[3,"<bË><tbody><
+Œ
+>","</Œ></tbody></bË>"],cŞ:[2,"<bË><tbody></tbody><
+cŞgroup
+>","</cŞgroup></bË>"],¬—:[1,"<
+m­
+>","</m­>"],_deçuÉ:[0,"",""]},bh=U(c);bg.İtgroup=bg.İtiÚ,bg.tbody=bg.tfoÙ=bg.cŞgroup=bg.ÿ±iÚ=bg.th—d,bg.th=bg.td,f.suµÜt.htmlS”Ÿlize||(bg._deçuÉ=[1,"div<div>","</div>"]),f.â.ex‹nd({‹xt:funùiÚ×){if(f.isFunùiÚ×)ì‘uºhis.—ch(funùiÚ(b){v¬ c=fÑhis);c.‹xt×.ÿÎÑhis,b,c.‹xt()))});ifÑy³oàa!="objeù"&&a!==bì‘uºhis.em±y().­³nd(Ñhis[0]&&this[0].owÃrDocum’t||c).ü—‹TextNode×));»tuº f.‹xtÑhis)},w¿pAÎ:funùiÚ×){if(f.isFunùiÚ×)ì‘uºhis.—ch(funùiÚ(b){fÑhis).w¿pAÎ×.ÿÎÑhis,b))});ifÑhis[0]){v¬ b=f×,this[0].owÃrDocum’t).eq(0).şÚe(!0);this[0].·»ÁNode&&b.š£¹BefÜeÑhis[0]),b.m­(funùiÚ(){v¬‡ñhis;whe×.fœ¡Chd&&a.fœ¡Chd.nodeTy³===1ï÷.fœ¡Chd;»tuº‡}).­³ndÑhis)}»tuºhis},w¿pIÂ”:funùiÚ×){if(f.isFunùiÚ×)ì‘uºhis.—ch(funùiÚ(b){fÑhis).w¿pIÂ”×.ÿÎÑhis,b))});»tuºhis.—ch(funùiÚ(){v¬ b=fÑhis),c=b.cÚ‹Ás();c.Ëngth?c.w¿pAÎ×):b.­³nd×)})},w¿p:funùiÚ×){v¬ b=f.isFunùiÚ×);»tuºhis.—ch(funùiÚ(c){fÑhis).w¿pAÎ(b?a.ÿÎÑhis,c):a)})},unw¿p:funùiÚ(){»tuºhis.·»Á().—ch(funùiÚ(){f.nodeNameÑhis,"body")||fÑhis).»¶aûW™hÑhis.chdNodes)}).’d()},­³nd:funùiÚ(){»tuºhis.domMª×rgum’ts,!0,funùiÚ×){this.nodeTy³===1&&this.­³ndChd×)})},´•’d:funùiÚ(){»tuºhis.domMª×rgum’ts,!0,funùiÚ×){this.nodeTy³===1&&this.š£¹BefÜe×,this.fœ¡Chd)})},befÜe:funùiÚ(){ifÑhis[0]&&this[0].·»ÁNodeì‘uºhis.domMª×rgum’ts,!1,funùiÚ×){this.·»ÁNode.š£¹BefÜe×,this)});if×rgum’ts.Ëngth){v¬‡=f.ş—n×rgum’ts);a.push.­¶y×,this.toA¼ay());»tuºhis.pushSck×,"
+befÜe
+",¬gum’ts)}},aá”:funùiÚ(){ifÑhis[0]&&this[0].·»ÁNodeì‘uºhis.domMª×rgum’ts,!1,funùiÚ×){this.·»ÁNode.š£¹BefÜe×,this.ÃxtSiblšg)});if×rgum’ts.Ëngth){v¬‡ñhis.pushSckÑhis,"
+aá”
+",arguments);a.push.apply(a,f.clean(arguments));return‡}},remove:function(a,b){for(var c=0,d;(d=this[c])!=null;c++)if(!a||f.filter(a,[d]).length)!b&&d.nodeType===1&&(f.cleanData(d.getElementsByTagName("*")),f.cleanData([d])),d.parentNode&&d.parentNode.removeChild(d);returnhis},empty:function()
+
+4 {
+v¬
+ 
+a
+=0,
+b
+;(b=
+this
+[a])!=
+nuÎ
+;a++){b.
+nodeTy³
+===1&&
+f
+.
+	`ş—nD©a
+(b.
+	`g‘EËm’tsByTagName
+("*"));b.
+fœ¡Chd
+)b.
+	`»moveChd
+(b.fœ¡Chd)}his},
+şÚe
+:
+	`funùiÚ
+×,b){a÷=òuÎ?!1:a,b=b=òuÎ?a:b;his.
+	`m­
+(funùiÚ(){ f.
+	`şÚe
+Ñhis,a,b)})},
+html
+:funùiÚ×){if×===b)his[0]&&this[0].nodeTy³===1?this[0].
+šÃrHTML
+.
+	`»¶aû
+(
+W
+,""):nuÎ;if(
+ty³of
+‡=="¡ršg"&&!
+ba
+.
+	`‹¡
+×)&&(f.
+suµÜt
+.
+ËadšgWh™e¥aû
+||!
+X
+.‹¡×))&&!
+bg
+[(
+Z
+.
+	`exec
+×)||["",""])[1].
+	`toLow”Ca£
+()]){a÷.»¶aû(
+Y
+,"<$1></$2>");
+Œy
+{v¬ 
+c
+=0,
+d
+ñhis.
+Ëngth
+;c<d;c++éhis[c].nodeTy³===1&&(f.ş—nD©aÑhis[c].g‘EËm’tsByTagName("*")),this[c].šÃrHTML÷)}
+	`ÿtch
+(
+e
+){this.
+	`em±y
+().
+	`­³nd
+×)}}f.
+	`isFunùiÚ
+×)?this.
+	`—ch
+(funùiÚ(b){v¬ c=
+	`f
+Ñhis);c.
+	`html
+×.
+	`ÿÎ
+Ñhis,b,c.html()))}):this.em±y().­³nd×);his},
+»¶aûW™h
+:funùiÚ×){ifÑhis[0]&&this[0].
+·»ÁNode
+){if(f.isFunùiÚ×))his.—ch(funùiÚ(b){v¬ c=fÑhis),d=c.html();c.
+	`»¶aûW™h
+×.ÿÎÑhis,b,d))});ty³oàa!="¡ršg"&&×=f×).
+	`d‘ach
+());his.—ch(funùiÚ(){v¬ bñhis.
+ÃxtSiblšg
+,cñhis.·»ÁNode;fÑhis).
+	`»move
+(),b?f(b).
+	`befÜe
+×):f(c).­³nd×)})}his.Ëngth?this.
+	`pushSck
+(f(f.isFunùiÚ×)?
+	`a
+():a),"»¶aûW™h",a):this},
+d‘ach
+:funùiÚ×){his.»move×,!0)},
+domMª
+:funùiÚ×,c,d){v¬ƒ,
+g
+,
+h
+,
+i
+,
+j
+÷[0],
+k
+=[];if(!f.suµÜt.
+checkClÚe
+&&
+¬gum’ts
+.Ëngth===3&&ty³oàj=="¡ršg"&&
+bd
+.‹¡(j))his.—ch(funùiÚ(){fÑhis).
+	`domMª
+×,c,d,!0)});if(f.isFunùiÚ(j))his.—ch(funùiÚÓ){v¬ g=fÑhis);a[0]=j.ÿÎÑhis,e,c?g.html():b),g.domMª×,c,d)});ifÑhis[0]){i=j&&j.·»ÁNode,f.suµÜt.·»ÁNode&&i&&i.nodeTy³===11&&i.
+chdNodes
+.Ëngth==ñhis.Ëngth?e={
+äagm’t
+:i}:e=f.
+	`budF¿gm’t
+×,this,k),hó.äagm’t,h.chdNodes.Ëngth===1?g=h=h.fœ¡Chd:g=h.fœ¡Chd;if(g){c=c&&f.
+	`nodeName
+(g,"Œ");v¬ 
+l
+=0,
+m
+ñhis.Ëngth,
+n
+=m-1;l<m;l++)d.ÿÎ(c?
+	`bi
+Ñhis[l],g):this[l],e.
+ÿch—bË
+||m>1&&l<n?f.şÚe(h,!0,!0):h)}k.Ëngth&&f.—ch(k,
+bp
+)}his}}),f.
+budF¿gm’t
+=funùiÚ×,b,d){v¬ƒ,g,h,i,j÷[0];b&&b[0]&&(i=b[0].
+owÃrDocum’t
+||b[0]),i.
+ü—‹Docum’tF¿gm’t
+||(i=c),a.Ëngth===1&&ty³oàj=="¡ršg"&&j.Ëngth<512&&i===c&&j.
+	`ch¬At
+(0)==="<"&&!
+bb
+.‹¡(j)&&(f.suµÜt.checkClÚe||!bd.‹¡(j))&&(f.suµÜt.
+html5ClÚe
+||!
+bc
+.‹¡(j))&&(g=!0,h=f.
+äagm’ts
+[j],h&&h!==1&&Ó=h)),e||Ó=i.
+	`ü—‹Docum’tF¿gm’t
+(),f.
+	`ş—n
+×,i,e,d)),g&&(f.äagm’ts[j]=h?e:1);{äagm’t:e,ÿch—bË:g}},f.äagm’ts={},f.—ch({
+­³ndTo
+:"­³nd",
+´•’dTo
+:"´•’d",
+š£¹BefÜe
+:"befÜe",
+š£¹Aá”
+:"aá”",
+»¶aûAÎ
+:"»¶aûW™h"},funùiÚ×,b){f.
+â
+[a]=funùiÚ(c){v¬ d=[],e=f(c),gñhis.Ëngth===1&&this[0].·»ÁNode;if(g&&g.nodeTy³===11&&g.chdNodes.Ëngth===1&&e.Ëngth===1){e[b]Ñhis[0]);his}v¬ h=0,ió.Ëngth;h<i;h++){v¬ j=(h>0?this.şÚe(!0):this).
+	`g‘
+();fÓ[h])[b](j),d=d.
+	`cÚÿt
+(j)}his.pushSck(d,a,e.
+£ËùÜ
+)}}),f.
+	`ex‹nd
+({şÚe:funùiÚ×,b,c){v¬ d,e,g,h=f.suµÜt.html5ClÚe||!bc.‹¡("<"+a.
+nodeName
+)?a.
+	`şÚeNode
+(!0):
+	`bo
+×);if((!f.suµÜt.
+noClÚeEv’t
+||!f.suµÜt.
+noClÚeChecked
+)&&×.nodeTy³===1||a.nodeTy³===11)&&!f.
+	`isXMLDoc
+×)){
+	`bk
+×,h),d=
+	`bl
+×),e=bl(h);g=0;d[g];++gë[g]&&bk(d[g],e[g])}if(b){
+	`bj
+×,h);if(c){d=bl×),e=bl(h);g=0;d[g];++g)bj(d[g],e[g])}}dóòuÎ; h},
+ş—n
+:funùiÚ×,b,d,e){v¬ g;b=b||c,ty³oàb.
+ü—‹EËm’t
+=="undefšed"&&(b=b.owÃrDocum’t||b[0]&&b[0].owÃrDocum’t||c);v¬ h=[],i;v¬ j=0,k;(k÷[j])!òuÎ;j++){ty³oàk=="numb”"&&(k+="");if(!k);ifÑy³oàk=="¡ršg")if(!
+_
+.‹¡(k))k=b.
+	`ü—‹TextNode
+(k);{k=k.»¶aû(Y,"<$1></$2>");v¬†=(Z.exec(k)||["",""])[1].toLow”Ca£(),m=bg[l]||bg.
+_deçuÉ
+,n=m[0],
+o
+=b.
+	`ü—‹EËm’t
+("div");b===c?
+bh
+.
+	`­³ndChd
+(o):
+	`U
+(b).­³ndChd(o),o.šÃrHTML=m[1]+k+m[2];n--)o=o.
+Ï¡Chd
+;if(!f.suµÜt.
+tbody
+){v¬ 
+p
+=
+$
+.‹¡(k),
+q
+ö==="bË"&&!p?o.fœ¡Chd&&o.fœ¡Chd.chdNodes:m[1]==="<bË>"&&!p?o.chdNodes:[];i=q.Ëngth-1;i>=0;--i)f.nodeName(q[i],"tbody")&&!q[i].chdNodes.Ëngth&&q[i].·»ÁNode.»moveChd(q[i])}!f.suµÜt.ËadšgWh™e¥aû&&X.‹¡(k)&&o.
+	`š£¹BefÜe
+(b.ü—‹TextNode(X.exec(k)[0]),o.fœ¡Chd),k=o.chdNodes}v¬ 
+r
+;if(!f.suµÜt.
+­³ndChecked
+)if(k[0]&&
+	`ty³of
+ (r=k.Ëngth)=="numb”")i=0;i<r;i++)
+	`bn
+(k[i]);bn(k);k.nodeTy³?h.
+	`push
+(k):h=f.
+	`m”ge
+(h,k)}if(d){g=funùiÚ×){!a.
+ty³
+||
+be
+.‹¡×.ty³)};j=0;h[j];j++)ifÓ&&f.nodeName(h[j],"süt")&&(!h[j].ty³||h[j].ty³.toLow”Ca£()==="‹xt/javasüt")ë.push(h[j].·»ÁNode?h[j].·»ÁNode.»moveChd(h[j]):h[j]);{if(h[j].nodeTy³===1){v¬ 
+s
+=f.
+	`g»p
+(h[j].g‘EËm’tsByTagName("süt"),g);h.
+¥liû
+.
+	`­¶y
+(h,[j+1,0].cÚÿt(s))}d.­³ndChd(h[j])}} h},
+ş—nD©a
+:funùiÚ×){v¬ b,c,d=f.
+ÿche
+,e=f.
+ev’t
+.
+¥ecŸl
+,g=f.suµÜt.
+d–‘eEx·ndo
+;v¬ h=0,i;(i÷[h])!òuÎ;h++){if(i.nodeName&&f.
+noD©a
+[i.nodeName.toLow”Ca£()]);c=i[f.
+ex·ndo
+];if(c){b=d[c];if(b&&b.
+ev’ts
+){v¬ j 
+š
+ b.ev’tsë[j]?f.ev’t.»move(i,j):f.
+	`»moveEv’t
+(i,j,b.
+hªdË
+);b.hªdË&&(b.hªdË.
+–em
+òuÎ)}g?
+d–‘e
+ i[f.ex·ndo]:i.
+»moveA‰ribu‹
+&&i.
+	`»moveA‰ribu‹
+(f.ex·ndo),d–‘d[c]}}}});v¬ 
+bq
+=/
+®pha
+\([^)]*\)/i,
+br
+=/
+İac™y
+=([^)]*)/,
+bs
+=/([
+A
+-Z]|^
+ms
+)/g,
+bt
+=/^-?\d+(?:
+px
+)?$/i,
+bu
+=/^-?\d/,
+bv
+=/^([\-+])=([\-+.\
+de
+]+)/,
+bw
+={
+pos™iÚ
+:"absŞu‹",
+visib™y
+:"hidd’",
+di¥Ïy
+:"block"},
+bx
+=["Leá","Right"],
+by
+=["Tİ","BÙtom"],
+bz
+,
+bA
+,
+bB
+;f.â.
+css
+=funùiÚ×,c){if×rgum’ts.Ëngth===2&&c===b)his; f.
+	`acûss
+Ñhis,a,c,!0,funùiÚ×,c,d){ d!==b?f.
+	`¡yË
+×,c,d):f.
+	`css
+×,c)})},f.ex‹nd({
+cssHooks
+:{İac™y:{
+g‘
+:funùiÚ×,b){if(b){v¬ c=
+	`bz
+×,"İac™y","İac™y"); c===""?"1":c}‡.
+¡yË
+.İac™y}}},
+cssNumb”
+:{
+flO·c™y
+:!0,
+fÚtWeight
+:!0,
+lšeHeight
+:!0,İac™y:!0,
+Üphªs
+:!0,
+widows
+:!0,
+zIndex
+:!0,
+zoom
+:!0},
+cssPrİs
+:{"æßt":f.suµÜt.
+cssFlßt
+?"cssFlßt":"¡yËFlßt"},¡yË:funùiÚ×,c,d,e){if(!!a&&a.nodeTy³!==3&&a.nodeTy³!==8&&!!a.¡yË){v¬ g,h,i=f.
+	`ÿm–Ca£
+(c),j÷.¡yË,k=f.cssHooks[i];c=f.cssPrİs[i]||i;if(d===b){if(k&&"g‘"š k&&(g=k.g‘×,!1,e))!==b) g; j[c]}hñy³oàd,h==="¡ršg"&&(g=bv.exec(d))&&(d=+(g[1]+1)*+g[2]+
+	`·r£Flßt
+(f.css×,c)),h="numb”");if(d=òuÎ||h==="numb”"&&
+	`isNaN
+(d));h==="numb”"&&!f.cssNumb”[i]&&(d+="px");if(!k||!("£t"š k)||(d=k.
+	`£t
+×,d))!==béry{j[c]=d}ÿtchÖ){}}},css:funùiÚ×,c,d){v¬ƒ,g;c=f.ÿm–Ca£(c),g=f.cssHooks[c],c=f.cssPrİs[c]||c,c==="cssFlßt"&&(c="æßt");if(g&&"g‘"š g&&Ó=g.g‘×,!0,d))!==b)ƒ;if(bz) bz×,c)},
+sw­
+:funùiÚ×,b,c){v¬ d={};v¬ƒ iÀb)d[e]÷.¡yË[e],a.¡yË[e]=b[e];c.ÿÎ×);š bï.¡yË[e]=d[e]}}),f.
+curCSS
+=f.css,f.—ch(["height","width"],funùiÚ×,b){f.cssHooks[b]={g‘:funùiÚ×,c,d){v¬ƒ;if(c){if×.
+off£tWidth
+!==0) 
+	`bC
+×,b,d);f.
+	`sw­
+×,bw,funùiÚ(){e=bC×,b,d)});ƒ}},
+£t
+:funùiÚ×,b){if(!bt.‹¡(b)) b;bõ¬£Flßt(b);if(b>=0) b+"px"}}}),f.suµÜt.İac™y||(f.cssHooks.İac™y={g‘:funùiÚ×,b){ br.‹¡((b&&a.
+cu¼’tStyË
+?a.cu¼’tStyË.
+f‹r
+:a.¡yË.f‹r)||"")?·r£Flßt(
+RegExp
+.
+$1
+)/100+"":b?"1":""},£t:funùiÚ×,b){v¬ c÷.¡yË,d÷.cu¼’tStyË,e=f.
+	`isNum”ic
+(b)?"®pha(İac™y="+b*100+")":"",g=d&&d.f‹r||c.f‹r||"";c.zoom=1;if(b>=1&&f.
+	`Œim
+(g.»¶aû(bq,""))===""){c.»moveA‰ribu‹("f‹r");if(d&&!d.f‹r)}c.f‹r=bq.‹¡(g)?g.»¶aû(bq,e):g+" "+e}}),f(funùiÚ(){f.suµÜt.
+»lŸbËM¬gšRight
+||(f.cssHooks.
+m¬gšRight
+={g‘:funùiÚ×,b){v¬ c;f.sw­×,{di¥Ïy:"šlše-block"},funùiÚ(){b?c=bz×,"m¬gš-right","m¬gšRight"):c÷.¡yË.m¬gšRight}); c}})}),c.
+deçuÉV›w
+&&c.deçuÉV›w.
+g‘Compu‹dStyË
+&&(bA=funùiÚ×,b){v¬ c,d,e;b=b.»¶aû(bs,"-$1").toLow”Ca£(),(d÷.owÃrDocum’t.deçuÉV›w)&&Ó=d.
+	`g‘Compu‹dStyË
+×,nuÎ))&&(có.
+	`g‘Prİ”tyV®ue
+(b),c===""&&!f.
+	`cÚšs
+×.owÃrDocum’t.
+docum’tEËm’t
+,a)&&(c=f.¡yË×,b))); c}),c.docum’tEËm’t.cu¼’tStyË&&(bB=funùiÚ×,b){v¬ c,d,e,f÷.cu¼’tStyË&&a.cu¼’tStyË[b],g÷.¡yË;f==òuÎ&&g&&Ó=g[b])&&(fó),!bt.‹¡(f)&&bu.‹¡(f)&&(c=g.
+Ëá
+,d÷.
+ruÁimeStyË
+&&a.ruÁimeStyË.Ëá,d&&×.ruÁimeStyË.Ëá÷.cu¼’tStyË.Ëá),g.Ëá=b==="fÚtSize"?"1em":f||0,f=g.
+pix–Leá
++"px",g.Ëá=c,d&&×.ruÁimeStyË.Ëá=d)); f===""?"auto":f}),bz=bA||bB,f.
+ex´
+&&f.ex´.
+f‹rs
+&&(f.ex´.f‹rs.
+hidd’
+=funùiÚ×){v¬ b÷.off£tWidth,c÷.
+off£tHeight
+; b===0&&c===0||!f.suµÜt.
+»lŸbËHidd’Off£ts
+&&×.¡yË&&a.¡yË.di¥Ïy||f.css×,"di¥Ïy"))==="nÚe"},f.ex´.f‹rs.
+visibË
+=funùiÚ×){!f.ex´.f‹rs.
+	`hidd’
+×)});v¬ 
+bD
+=/%20/g,
+bE
+=/\[\]$/,
+bF
+=/\r?\n/g,
+bG
+=/#.*$/,
+bH
+=/^(.*?):[ \
+t
+]*([^\r\n]*)\r?$/
+mg
+,
+bI
+=/^(?:
+cŞÜ
+|
+d©e
+|
+d©‘ime
+|d©‘ime-
+loÿl
+|
+ema
+|hidd’|
+mÚth
+|
+numb”
+|
+·sswÜd
+|
+¿nge
+|
+£¬ch
+|
+‹l
+|
+‹xt
+|
+time
+|
+u¾
+|
+w“k
+)$/i,
+bJ
+=/^(?:
+about
+|
+­p
+|­p\-
+¡Üage
+|.+\-
+ex‹nsiÚ
+|
+fe
+|
+»s
+|
+widg‘
+):$/,
+bK
+=/^(?:
+GET
+|
+HEAD
+)$/,
+bL
+=/^\/\
+
+	@public/scripts/ring.js
+
+1 
+$
+(
+docum’t
+).
+»ady
+(
+	$funùiÚ
+() {
+
+3 
+v¬
+ 
+ršg
+ = 
+	`funùiÚ
+() {
+
+4 
+$
+.
+	`ajax
+({
+
+5 
+ty³
+: "POST",
+
+6 
+u¾
+: "/api/ring",
+
+7 
+sucûss
+: 
+	`funùiÚ
+(
+d©a
+) {
+
+8 
+	`$
+('#ršg_v®ue').
+	`‹xt
+("¿ng " + 
+d©a
+.
+¿ng
+.
+	`toSŒšg
+() + "ime(s)");
+
+9 
+	`$
+('#ršg_aùiÚ').
+	`‹xt
+("click hereo„ing‡gain");
+
+14 
+	`ršg
+();
+
+16 
+	`$
+('#ršg_aùiÚ').
+	`şick
+(
+ršg
+);
+
+17 
+	}
+});
+
+	@spec/api/content_type_spec.rb
+
+1 
+	g»quœe
+ 'spec_helper'
+
+3 
+desüibe
+ 
+	gHaikuBÙ
+::
+API
+ do
+
+4 
+šşude
+ 
+Rack
+::
+Te¡
+::
+M‘hods
+
+
+6 
+def
+ 
+­p
+
+
+7 
+HaikuBÙ
+::
+API
+
+
+8 
+’d
+
+
+10 
+cÚ‹xt
+ 'plain_text' do
+
+11 
+™
+ 'returns…lainext' do
+
+12 
+g‘
+ '/api/plain_text'
+
+13 
+ex³ù
+(
+Ï¡_»¥Ú£
+.
+¡©us
+).
+to
+ 
+	$eq
+(200)
+
+14 
+	`ex³ù
+(
+Ï¡_»¥Ú£
+.
+h—d”s
+['CÚ‹Á-Ty³']).
+to
+ 
+	`eq
+('text/plain')
+
+15 
+	`ex³ù
+(
+Ï¡_»¥Ú£
+.
+body
+).
+to
+ 
+	`eq
+('A„ed brown fox jumped overhe„oad.')
+
+16 
+’d
+
+
+17 
+’d
+
+
+19 
+cÚ‹xt
+ 'mixed' do
+
+20 
+™
+ 'returns json' do
+
+21 
+g‘
+ '/api/mixed.json'
+
+22 
+	`ex³ù
+(
+Ï¡_»¥Ú£
+.
+¡©us
+).
+to
+ 
+	$eq
+(200)
+
+23 
+	`ex³ù
+(
+Ï¡_»¥Ú£
+.
+h—d”s
+['CÚ‹Á-Ty³']).
+to
+ 
+	`eq
+('application/json')
+
+24 
+	`ex³ù
+(
+Ï¡_»¥Ú£
+.
+body
+).
+to
+ 
+	`eq
+({ 
+d©a
+: 'A„ed browÀfox jum³d ov”hrßd.' 
+	}
+}.
+to_jsÚ
+)
+
+25 
+’d
+
+
+27 
+™
+ 'returns xml' do
+
+28 
+g‘
+ '/api/mixed.xml'
+
+29 
+ex³ù
+(
+Ï¡_»¥Ú£
+.
+¡©us
+).
+to
+ 
+	$eq
+(200)
+
+30 
+	`ex³ù
+(
+Ï¡_»¥Ú£
+.
+h—d”s
+['CÚ‹Á-Ty³']).
+to
+ 
+	`eq
+('application/xml')
+
+31 
+	`ex³ù
+(
+Ï¡_»¥Ú£
+.
+body
+).
+to
+ 
+	`eq
+({ 
+d©a
+: 'A„ed browÀfox jum³d ov”hrßd.' 
+	}
+}.
+to_xml
+)
+
+32 
+’d
+
+
+34 
+™
+ 'returnsext' do
+
+35 
+g‘
+ '/api/mixed.txt'
+
+36 
+ex³ù
+(
+Ï¡_»¥Ú£
+.
+¡©us
+).
+to
+ 
+	$eq
+(200)
+
+37 
+	`ex³ù
+(
+Ï¡_»¥Ú£
+.
+h—d”s
+['CÚ‹Á-Ty³']).
+to
+ 
+	`eq
+('text/plain')
+
+38 
+	`ex³ù
+(
+Ï¡_»¥Ú£
+.
+body
+).
+to
+ 
+	`eq
+({ 
+d©a
+: 'A„ed browÀfox jum³d ov”hrßd.' 
+	}
+}.
+to_s
+)
+
+39 
+’d
+
+
+40 
+’d
+
+
+41 
+’d
+
+
+	@spec/api/cors_spec.rb
+
+1 
+	g»quœe
+ 'spec_helper'
+
+3 
+desüibe
+ 
+	gHaikuBÙ
+::
+API
+ do
+
+4 
+šşude
+ 
+Rack
+::
+Te¡
+::
+M‘hods
+
+
+6 
+def
+ 
+­p
+
+
+7 
+HaikuBÙ
+::
+Aµ
+.
+š¡ªû
+
+
+8 
+’d
+
+
+10 
+cÚ‹xt
+ 'CORS' do
+
+11 
+™
+ 'supports options' do
+
+12 
+İtiÚs
+ '/', {},
+
+17 
+ex³ù
+(
+Ï¡_»¥Ú£
+.
+¡©us
+).
+to
+ 
+	$eq
+(200)
+
+18 
+	`ex³ù
+(
+Ï¡_»¥Ú£
+.
+h—d”s
+['Acûss-CÚŒŞ-AÎow-Origš']).
+to
+ 
+	`eq
+('http://cors.example.com')
+
+19 
+	`ex³ù
+(
+Ï¡_»¥Ú£
+.
+h—d”s
+['Acûss-CÚŒŞ-Expo£-H—d”s']).
+to
+ 
+	`eq
+('')
+
+20 
+’d
+
+
+21 
+™
+ 'includes Access-Control-Allow-Origin inhe„esponse' do
+
+22 
+g‘
+ '/­i/pšg', {
+	}
+}, 'HTTP_ORIGIN' => 'http://cors.example.com'
+
+23 
+ex³ù
+(
+Ï¡_»¥Ú£
+.
+¡©us
+).
+to
+ 
+	$eq
+(200)
+
+24 
+	`ex³ù
+(
+Ï¡_»¥Ú£
+.
+h—d”s
+['Acûss-CÚŒŞ-AÎow-Origš']).
+to
+ 
+	`eq
+('http://cors.example.com')
+
+25 
+’d
+
+
+26 
+™
+ 'includes Access-Control-Allow-Origin inƒrrors' do
+
+27 
+g‘
+ '/šv®id', {
+	}
+}, 'HTTP_ORIGIN' => 'http://cors.example.com'
+
+28 
+ex³ù
+(
+Ï¡_»¥Ú£
+.
+¡©us
+).
+to
+ 
+	$eq
+(404)
+
+29 
+	`ex³ù
+(
+Ï¡_»¥Ú£
+.
+h—d”s
+['Acûss-CÚŒŞ-AÎow-Origš']).
+to
+ 
+	`eq
+('http://cors.example.com')
+
+30 
+’d
+
+
+31 
+’d
+
+
+32 
+’d
+
+
+	@spec/api/documentation_spec.rb
+
+1 
+	g»quœe
+ 'spec_helper'
+
+3 
+desüibe
+ 
+	gHaikuBÙ
+::
+API
+ do
+
+4 
+šşude
+ 
+Rack
+::
+Te¡
+::
+M‘hods
+
+
+6 
+def
+ 
+­p
+
+
+7 
+HaikuBÙ
+::
+API
+
+
+8 
+’d
+
+
+10 
+cÚ‹xt
+ 'swagger documentation„oot' do
+
+11 
+befÜe
+ do
+
+12 
+g‘
+ '/api/swagger_doc'
+
+13 
+ex³ù
+(
+Ï¡_»¥Ú£
+.
+¡©us
+).
+to
+ 
+eq
+(200)
+
+14 @
+jsÚ
+ = 
+JSON
+.
+	$·r£
+(
+Ï¡_»¥Ú£
+.
+body
+)
+
+15 
+’d
+
+
+17 
+™
+ 'exposes‡pi version' do
+
+18 
+	`ex³ù
+(@
+jsÚ
+['­iV”siÚ']).
+to
+ 
+	`eq
+('v1')
+
+19 
+	`ex³ù
+(@
+jsÚ
+['­is'].
+size
+).
+to
+ 
+be
+ > 9
+
+20 
+’d
+
+
+21 
+’d
+
+
+23 
+cÚ‹xt
+ 'swagger documentation‡pi' do
+
+24 
+befÜe
+ do
+
+25 
+g‘
+ '/api/swagger_doc'
+
+26 
+	`ex³ù
+(
+Ï¡_»¥Ú£
+.
+¡©us
+).
+to
+ 
+	`eq
+(200)
+
+27 @
+­is
+ = 
+JSON
+.
+	`·r£
+(
+Ï¡_»¥Ú£
+.
+body
+)['apis']
+
+28 
+’d
+
+
+29 
+’d
+
+
+31 
+cÚ‹xt
+ 'swaggerƒntity documentation‡pi' do
+
+32 
+befÜe
+ do
+
+33 
+g‘
+ '/api/swagger_doc/entities'
+
+34 
+	`ex³ù
+(
+Ï¡_»¥Ú£
+.
+¡©us
+).
+to
+ 
+	`eq
+(200)
+
+35 @
+­is
+ = 
+JSON
+.
+	`·r£
+(
+Ï¡_»¥Ú£
+.
+body
+)['apis']
+
+36 
+’d
+
+
+38 
+™
+ 'exposesƒntity documentation' do
+
+39 
+’t™›s
+ = @
+­is
+.
+fšd
+ { |
+­i
+|‡pi['·th'] =ğ'/­i/’t™›s/{id}.{fÜm©}' 
+	}
+}
+
+40 
+İ”©iÚs
+ = 
+’t™›s
+['operations']
+
+41 
+ex³ù
+(
+İ”©iÚs
+.
+size
+).
+to
+ 
+	$eq
+(1)
+
+42 
+·¿m‘”s
+ = 
+Hash
+[
+İ”©iÚs
+.
+fœ¡
+['·¿m‘”s'].
+m­
+ { |
+·¿m‘”
+| [·¿m‘”['Çme'],…¬am‘”['desütiÚ']] 
+	}
+}]
+
+43 
+ex³ù
+(
+·¿m‘”s
+).
+to
+ 
+eq
+('id' => '',
+
+47 
+’d
+
+
+48 
+’d
+
+
+49 
+’d
+
+
+	@spec/api/entities_spec.rb
+
+1 
+	g»quœe
+ 'spec_helper'
+
+3 
+desüibe
+ 
+	gHaikuBÙ
+::
+API
+ do
+
+4 
+šşude
+ 
+Rack
+::
+Te¡
+::
+M‘hods
+
+
+6 
+def
+ 
+­p
+
+
+7 
+HaikuBÙ
+::
+API
+
+
+8 
+’d
+
+
+10 
+™
+ 'returnsƒxposedƒntity' do
+
+11 
+g‘
+ '/api/entities/123'
+
+12 
+ex³ù
+(
+Ï¡_»¥Ú£
+.
+¡©us
+).
+to
+ 
+	$eq
+(200)
+
+13 
+	`ex³ù
+(
+JSON
+.
+	`·r£
+(
+Ï¡_»¥Ú£
+.
+body
+)).
+to
+ 
+	`eq
+(
+
+18 
+	}
+}
+
+20 
+’d
+
+
+22 
+	g™
+ 'returnsƒxposedƒntity with options' do
+
+23 
+	gg‘
+ '/api/entities/123?foo=bar'
+
+24 
+ex³ù
+(
+Ï¡_»¥Ú£
+.
+¡©us
+).
+to
+ 
+	$eq
+(200)
+
+25 
+	`ex³ù
+(
+JSON
+.
+	`·r£
+(
+Ï¡_»¥Ú£
+.
+body
+)).
+to
+ 
+	`eq
+(
+
+31 
+	}
+}
+
+33 
+’d
+
+
+35 
+	g™
+ 'uses‡ custom formattero„eset xml„oot' do
+
+36 
+	gg‘
+ '/api/entities/123.xml?foo=bar'
+
+37 
+ex³ù
+(
+Ï¡_»¥Ú£
+.
+¡©us
+).
+to
+ 
+	$eq
+(200)
+
+38 
+	`ex³ù
+(
+Ï¡_»¥Ú£
+.
+body
+).
+to
+ 
+eq
+ <<-
+XML
+
+
+39 <?
+xml
+ 
+v”siÚ
+="1.0" 
+’codšg
+="UTF-8"?>
+
+40 <
+toŞ
+>
+
+41 <
+id
+>123</id>
+
+42 <
+Ëngth
+ 
+ty³
+="integer">10</length>
+
+43 <
+weight
+>20
+kg
+</weight>
+
+44 <
+foo
+>
+b¬
+</foo>
+
+45 </
+toŞ
+>
+
+46 
+XML
+
+
+47 
+’d
+
+
+48 
+’d
+
+
+	@spec/api/get_json_spec.rb
+
+1 
+	g»quœe
+ 'spec_helper'
+
+3 
+desüibe
+ 
+	gHaikuBÙ
+::
+API
+ do
+
+4 
+šşude
+ 
+Rack
+::
+Te¡
+::
+M‘hods
+
+
+6 
+def
+ 
+­p
+
+
+7 
+HaikuBÙ
+::
+API
+
+
+8 
+’d
+
+
+10 
+™
+ 'flips„eticulated in‡ collection of splines' do
+
+11 
+g‘
+ '/api/reticulated_splines', 'splines' => [
+
+12 { 
+id
+: 1, 
+»ticuÏ‹d
+: 
+çl£
+ },
+
+13 { 
+id
+: 2, 
+»ticuÏ‹d
+: 
+Œue
+ }
+
+14 ].
+to_jsÚ
+
+
+15 
+ex³ù
+(
+Ï¡_»¥Ú£
+.
+¡©us
+).
+to
+ 
+	$eq
+(200)
+
+16 
+	`ex³ù
+(
+Ï¡_»¥Ú£
+.
+body
+).
+to
+ 
+	`eq
+([
+
+17 { 
+id
+: 1, 
+»ticuÏ‹d
+: 
+Œue
+ 
+	}
+},
+
+18 { 
+id
+: 2, 
+»ticuÏ‹d
+: 
+çl£
+ }
+
+19 ].
+to_jsÚ
+)
+
+20 
+’d
+
+
+21 
+’d
+
+
+	@spec/api/header_versioning_spec.rb
+
+1 
+	g»quœe
+ 'spec_helper'
+
+3 
+desüibe
+ 
+	gHaikuBÙ
+::
+API
+ do
+
+4 
+šşude
+ 
+Rack
+::
+Te¡
+::
+M‘hods
+
+
+6 
+def
+ 
+­p
+
+
+7 
+HaikuBÙ
+::
+API
+
+
+8 
+’d
+
+
+10 
+cÚ‹xt
+ 'header based versioning' do
+
+11 
+™
+ 'vendored header' do
+
+12 
+g‘
+ '/­i', 
+	gn
+, 'HTTP_ACCEPT' => 'application/vnd.acme-v1+json'
+
+13 
+ex³ù
+(
+Ï¡_»¥Ú£
+.
+¡©us
+).
+to
+ 
+	$eq
+(200)
+
+14 
+	`ex³ù
+(
+Ï¡_»¥Ú£
+.
+body
+).
+to
+ 
+	`eq
+({ 
+h—d”
+: 'acme' 
+	}
+}.
+to_jsÚ
+)
+
+15 
+’d
+
+
+16 
+™
+ 'invalid version' do
+
+17 
+g‘
+ '/­i', 
+	gn
+, 'HTTP_ACCEPT' => 'application/vnd.acme-v2+json'
+
+18 
+ex³ù
+(
+Ï¡_»¥Ú£
+.
+¡©us
+).
+to
+ 
+	$eq
+(404)
+
+19 
+’d
+
+
+20 
+’d
+
+
+21 
+’d
+
+
+	@spec/api/path_versioning_spec.rb
+
+1 
+	g»quœe
+ 'spec_helper'
+
+3 
+desüibe
+ 
+	gHaikuBÙ
+::
+API
+ do
+
+4 
+šşude
+ 
+Rack
+::
+Te¡
+::
+M‘hods
+
+
+6 
+def
+ 
+­p
+
+
+7 
+HaikuBÙ
+::
+API
+
+
+8 
+’d
+
+
+10 
+™
+ 'vendored…ath' do
+
+11 
+g‘
+ '/api/vendor'
+
+12 
+ex³ù
+(
+Ï¡_»¥Ú£
+.
+body
+).
+to
+ 
+eq
+({ 
+·th
+: 'haiku' }.
+to_jsÚ
+)
+
+13 
+’d
+
+
+14 
+’d
+
+
+	@spec/api/ping_spec.rb
+
+1 
+	g»quœe
+ 'spec_helper'
+
+3 
+desüibe
+ 
+	gHaikuBÙ
+::
+API
+ do
+
+4 
+šşude
+ 
+Rack
+::
+Te¡
+::
+M‘hods
+
+
+6 
+def
+ 
+­p
+
+
+7 
+HaikuBÙ
+::
+API
+
+
+8 
+’d
+
+
+10 
+™
+ 'ping' do
+
+11 
+g‘
+ '/api/ping'
+
+12 
+ex³ù
+(
+Ï¡_»¥Ú£
+.
+¡©us
+).
+to
+ 
+	$eq
+(200)
+
+13 
+	`ex³ù
+(
+Ï¡_»¥Ú£
+.
+body
+).
+to
+ 
+	`eq
+({ 
+pšg
+: 'pÚg' 
+	}
+}.
+to_jsÚ
+)
+
+14 
+’d
+
+
+15 
+’d
+
+
+	@spec/api/post_json_spec.rb
+
+1 
+	g»quœe
+ 'spec_helper'
+
+3 
+desüibe
+ 
+	gHaikuBÙ
+::
+API
+ do
+
+4 
+šşude
+ 
+Rack
+::
+Te¡
+::
+M‘hods
+
+
+6 
+def
+ 
+­p
+
+
+7 
+HaikuBÙ
+::
+API
+
+
+8 
+’d
+
+
+10 [
+Œue
+, 
+çl£
+].
+—ch
+ dØ|
+	g»ticuÏ‹d
+|
+
+11 
+	g™
+ "POST #{reticulated ? 'reticulated' : 'unreticulated'} spline" do
+
+12 
+	gpo¡
+ '/­i/¥lše', '»ticuÏ‹d' => 
+»ticuÏ‹d
+
+
+13 
+ex³ù
+(
+Ï¡_»¥Ú£
+.
+¡©us
+).
+to
+ 
+	$eq
+(201)
+
+14 
+	`ex³ù
+(
+JSON
+.
+	`·r£
+(
+Ï¡_»¥Ú£
+.
+body
+)).
+to
+ 
+	`eq
+('»ticuÏ‹d' => 
+»ticuÏ‹d
+.
+to_s
+)
+
+15 
+’d
+
+
+16 
+’d
+
+
+17 
+’d
+
+
+	@spec/api/post_put_spec.rb
+
+1 
+	g»quœe
+ 'spec_helper'
+
+3 
+desüibe
+ 
+	gHaikuBÙ
+::
+API
+ do
+
+4 
+šşude
+ 
+Rack
+::
+Te¡
+::
+M‘hods
+
+
+6 
+def
+ 
+­p
+
+
+7 
+HaikuBÙ
+::
+API
+
+
+8 
+’d
+
+
+10 
+™
+ 'GET„ing' do
+
+11 
+g‘
+ '/api/ring'
+
+12 
+ex³ù
+(
+JSON
+.
+·r£
+(
+Ï¡_»¥Ú£
+.
+body
+)[:
+¿ng
+].
+to_i
+).
+to
+ 
+be
+ >= 0
+
+13 
+’d
+
+
+14 
+cÚ‹xt
+ 'with„ings' do
+
+15 
+befÜe
+ :
+—ch
+ do
+
+16 
+g‘
+ '/api/ring'
+
+17 @
+¿ng
+ = 
+JSON
+.
+·r£
+(
+Ï¡_»¥Ú£
+.
+body
+)['¿ng'].
+to_i
+
+
+18 
+’d
+
+
+19 
+™
+ 'POST„ing' do
+
+20 2.
+times
+ dØ|
+i
+|
+
+21 
+po¡
+ '/api/ring'
+
+22 
+ex³ù
+(
+Ï¡_»¥Ú£
+.
+¡©us
+).
+to
+ 
+	$eq
+(201)
+
+23 
+	`ex³ù
+(
+Ï¡_»¥Ú£
+.
+body
+).
+to
+ 
+	`eq
+({ 
+¿ng
+: @¿ng + 
+i
+ + 1 
+	}
+}.
+to_jsÚ
+)
+
+24 
+’d
+
+
+25 
+g‘
+ '/api/ring'
+
+26 
+ex³ù
+(
+Ï¡_»¥Ú£
+.
+body
+).
+to
+ 
+eq
+({ 
+¿ng
+: @¿ng + 2 }.
+to_jsÚ
+)
+
+27 
+’d
+
+
+28 
+cÚ‹xt
+ 'PUT„ing' do
+
+29 
+™
+ 'succeeds for 2„ings' do
+
+30 
+put
+ '/api/ring?count=2'
+
+31 
+ex³ù
+(
+Ï¡_»¥Ú£
+.
+¡©us
+).
+to
+ 
+	$eq
+(200)
+
+32 
+	`ex³ù
+(
+Ï¡_»¥Ú£
+.
+body
+).
+to
+ 
+	`eq
+({ 
+¿ng
+: @¿ng + 2 
+	}
+}.
+to_jsÚ
+)
+
+33 
+’d
+
+
+34 
+™
+ 'fails with‡ missing„ing' do
+
+35 
+put
+ '/api/ring'
+
+36 
+ex³ù
+(
+Ï¡_»¥Ú£
+.
+¡©us
+).
+to
+ 
+	$eq
+(400)
+
+37 
+	`ex³ù
+(
+Ï¡_»¥Ú£
+.
+body
+).
+to
+ 
+	`eq
+({ 
+”rÜ
+: 'couÁ i missšg' 
+	}
+}.
+to_jsÚ
+)
+
+38 
+’d
+
+
+39 
+’d
+
+
+40 
+’d
+
+
+41 
+’d
+
+
+	@spec/api/rescue_from_spec.rb
+
+1 
+	g»quœe
+ 'spec_helper'
+
+3 
+desüibe
+ 
+	gHaikuBÙ
+::
+API
+ do
+
+4 
+šşude
+ 
+Rack
+::
+Te¡
+::
+M‘hods
+
+
+6 
+def
+ 
+­p
+
+
+7 
+HaikuBÙ
+::
+API
+
+
+8 
+’d
+
+
+10 
+™
+ 'rescues‡llƒxceptions' do
+
+11 
+g‘
+ '/api/raise'
+
+12 
+ex³ù
+(
+Ï¡_»¥Ú£
+.
+¡©us
+).
+to
+ 
+	$eq
+(500)
+
+13 
+	`ex³ù
+(
+Ï¡_»¥Ú£
+.
+body
+).
+to
+ 
+	`eq
+('Unexpectedƒrror.')
+
+14 
+’d
+
+
+15 
+’d
+
+
+	@spec/api/wrap_response_spec.rb
+
+1 
+	g»quœe
+ 'spec_helper'
+
+3 
+desüibe
+ 
+	gHaikuBÙ
+::
+API
+ do
+
+4 
+šşude
+ 
+Rack
+::
+Te¡
+::
+M‘hods
+
+
+6 
+def
+ 
+­p
+
+
+7 
+HaikuBÙ
+::
+API
+
+
+8 
+’d
+
+
+10 
+™
+ 'wraps body' do
+
+11 
+g‘
+ '/api/decorated/ping'
+
+12 
+ex³ù
+(
+Ï¡_»¥Ú£
+.
+¡©us
+).
+to
+ 
+	$eq
+(200)
+
+13 
+	`ex³ù
+(
+JSON
+.
+	`·r£
+(
+Ï¡_»¥Ú£
+.
+body
+)).
+to
+ 
+	`eq
+('body' => { 'pšg' => 'pÚg' 
+	}
+}, 'status' => 200)
+
+14 
+’d
+
+
+15 
+’d
+
+
+	@spec/integration/grape_on_rack_spec.rb
+
+1 
+	g»quœe
+ 'spec_helper'
+
+3 
+	gdesüibe
+ 'G¿³ oÀRACK', 
+	gjs
+: 
+Œue
+, 
+	gty³
+: :
+ã©u»
+ do
+
+4 
+cÚ‹xt
+ 'homepage' do
+
+5 
+™
+ 'displays index.html…age' do
+
+6 
+vis™
+ '/'
+
+7 
+ex³ù
+(
+t™Ë
+).
+to
+ 
+eq
+('Rack Powers Web APIs')
+
+8 
+’d
+
+
+9 
+cÚ‹xt
+ 'ring' do
+
+10 
+befÜe
+ :
+—ch
+ do
+
+11 @
+¿ng
+ = 
+HaikuBÙ
+::
+Po¡Put
+.rang
+
+12 
+vis™
+ '/'
+
+13 
+’d
+
+
+14 
+™
+ 'incrementshe„ing counter' do
+
+15 
+ex³ù
+(
+fšd
+('#ršg_v®ue')).
+to
+ 
+have_cÚ‹Á
+ "rang #{@rang + 1}ime(s)"
+
+16 
+ex³ù
+(
+fšd
+('#ršg_aùiÚ')).
+to
+ 
+have_cÚ‹Á
+ 'click hereo„ing‡gain'
+
+17 3.
+times
+ dØ|
+i
+|
+
+18 
+fšd
+('#ršg_aùiÚ').
+şick
+
+
+19 
+ex³ù
+(
+fšd
+('#ršg_v®ue')).
+to
+ 
+have_cÚ‹Á
+ "rang #{@rang + i + 2}ime(s)"
+
+20 
+’d
+
+
+21 
+’d
+
+
+22 
+’d
+
+
+23 
+’d
+
+
+24 
+cÚ‹xt
+ "pagehat doesn'tƒxist" do
+
+25 
+befÜe
+ :
+—ch
+ do
+
+26 
+vis™
+ '/invalid'
+
+27 
+’d
+
+
+28 
+™
+ 'displays 404…age' do
+
+29 
+ex³ù
+(
+t™Ë
+).
+to
+ 
+eq
+('Page Not Found')
+
+30 
+’d
+
+
+31 
+’d
+
+
+32 
+cÚ‹xt
+ 'exception' do
+
+33 
+befÜe
+ :
+—ch
+ do
+
+34 
+vis™
+ '/api/raise'
+
+35 
+’d
+
+
+36 
+™
+ 'displays 500…age' do
+
+37 
+ex³ù
+(
+t™Ë
+).
+to
+ 
+eq
+('Unexpected Error')
+
+38 
+’d
+
+
+39 
+’d
+
+
+40 
+cÚ‹xt
+ 'curl' do
+
+41 
+™
+ 'reticulates‡ spline' do
+
+42 
+vis™
+ '/'
+
+43 
+u¾
+ = "http://#{Capybara.server_host}:#{Capybara.server_port}/api/spline"
+
+44 
+jsÚ
+ = '{"reticulated":"false"}'
+
+45 
+rc
+ = `
+cu¾
+ -
+X
+ 
+POST
+ -
+d
+ '#{jsÚ}' #{
+u¾
+} -
+H
+ 'Acû±:‡µliÿtiÚ/jsÚ' -H 'CÚ‹Á-Ty³:­¶iÿtiÚ/jsÚ' -
+s
+`
+
+46 
+ex³ù
+(
+rc
+).
+to
+ 
+	$eq
+(
+jsÚ
+)
+
+47 
+’d
+
+
+48 
+’d
+
+
+49 
+’d
+
+
+	@spec/spec_helper.rb
+
+1 
+	g»quœe
+ 'rubygems'
+
+3 
+	gENV
+['RACK_ENV'] ||= 'test'
+
+5 
+»quœe
+ 'rack/test'
+
+7 
+»quœe
+ 
+Fe
+.
+ex·nd_·th
+('../../cÚfig/’vœÚm’t', 
+__FILE__
+)
+
+9 
+	gRS³c
+.
+cÚfigu»
+ dØ|
+	gcÚfig
+|
+
+10 
+	gcÚfig
+.
+	gcŞÜ
+ = 
+Œue
+
+
+11 
+cÚfig
+.
+fÜm©‹r
+ = :
+docum’tiÚ
+
+
+13 
+cÚfig
+.
+mock_w™h
+ :
+r¥ec
+
+
+14 
+cÚfig
+.
+ex³ù_w™h
+ :
+r¥ec
+
+
+15 
+cÚfig
+.
+¿i£_”rÜs_fÜ_d•»ÿtiÚs
+!
+
+16 
+’d
+
+
+18 
+»quœe
+ 'capybara/rspec'
+
+19 
+C­yb¬a
+.
+cÚfigu»
+ dØ|
+cÚfig
+|
+
+20 
+cÚfig
+.
+­p
+ = 
+HaikuBÙ
+::
+Aµ
+.
+Ãw
+
+
+21 
+cÚfig
+.
+£rv”_pÜt
+ = 9293
+
+22 
+’d
+
+
+	@
+1
+.
+0
+44
+1066
+api/content_type.rb
+api/entities.rb
+api/get_json.rb
+api/header_versioning.rb
+api/path_versioning.rb
+api/ping.rb
+api/post_json.rb
+api/post_put.rb
+api/rescue_from.rb
+api/wrap_response.rb
+api/wrap_response_decorator.rb
+app/api.rb
+app/haiku_app.rb
+config/application.rb
+config/boot.rb
+config/environment.rb
+lib/api_logger.rb
+old/config/application.rb
+old/config/boot.rb
+old/config/environment.rb
+old/config/environments/development.rb
+old/config/environments/production.rb
+old/config/environments/test.rb
+old/config/routes.rb
+public/errors/404.html
+public/errors/500.html
+public/images/index.html
+public/index.html
+public/scripts/jquery-1.7.1.min.js
+public/scripts/ring.js
+spec/api/content_type_spec.rb
+spec/api/cors_spec.rb
+spec/api/documentation_spec.rb
+spec/api/entities_spec.rb
+spec/api/get_json_spec.rb
+spec/api/header_versioning_spec.rb
+spec/api/path_versioning_spec.rb
+spec/api/ping_spec.rb
+spec/api/post_json_spec.rb
+spec/api/post_put_spec.rb
+spec/api/rescue_from_spec.rb
+spec/api/wrap_response_spec.rb
+spec/integration/grape_on_rack_spec.rb
+spec/spec_helper.rb

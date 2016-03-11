@@ -1,0 +1,54 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+API	api/entities.rb	/^    class API < Grape::API$/;"	c	class:HaikuBot.Entities
+API	app/api.rb	/^  class API < Grape::API$/;"	c	class:HaikuBot
+ApiLogger	lib/api_logger.rb	/^module ApiLogger$/;"	m
+App	app/haiku_app.rb	/^  class App$/;"	c	class:HaikuBot
+ContentType	api/content_type.rb	/^  class ContentType < Grape::API$/;"	c	class:HaikuBot
+Entities	api/entities.rb	/^  module Entities$/;"	m	class:HaikuBot
+GetJson	api/get_json.rb	/^  class GetJson < Grape::API$/;"	c	class:HaikuBot
+HaikuBot	api/content_type.rb	/^module HaikuBot$/;"	m
+HaikuBot	api/entities.rb	/^module HaikuBot$/;"	m
+HaikuBot	api/get_json.rb	/^module HaikuBot$/;"	m
+HaikuBot	api/header_versioning.rb	/^module HaikuBot$/;"	m
+HaikuBot	api/path_versioning.rb	/^module HaikuBot$/;"	m
+HaikuBot	api/ping.rb	/^module HaikuBot$/;"	m
+HaikuBot	api/post_json.rb	/^module HaikuBot$/;"	m
+HaikuBot	api/post_put.rb	/^module HaikuBot$/;"	m
+HaikuBot	api/rescue_from.rb	/^module HaikuBot$/;"	m
+HaikuBot	api/wrap_response.rb	/^module HaikuBot$/;"	m
+HaikuBot	api/wrap_response_decorator.rb	/^module HaikuBot$/;"	m
+HaikuBot	app/api.rb	/^module HaikuBot$/;"	m
+HaikuBot	app/haiku_app.rb	/^module HaikuBot$/;"	m
+HaikuBot	old/config/application.rb	/^module HaikuBot$/;"	m
+HeaderVersioning	api/header_versioning.rb	/^  class HeaderVersioning < Grape::API$/;"	c	class:HaikuBot
+PathVersioning	api/path_versioning.rb	/^  class PathVersioning < Grape::API$/;"	c	class:HaikuBot
+Ping	api/ping.rb	/^  class Ping < Grape::API$/;"	c	class:HaikuBot
+PostJson	api/post_json.rb	/^  class PostJson < Grape::API$/;"	c	class:HaikuBot
+PostPut	api/post_put.rb	/^  class PostPut < Grape::API$/;"	c	class:HaikuBot
+RescueFrom	api/rescue_from.rb	/^  class RescueFrom < Grape::API$/;"	c	class:HaikuBot
+Tool	api/entities.rb	/^    class Tool < Grape::Entity$/;"	c	class:HaikuBot.Entities
+WrapResponse	api/wrap_response.rb	/^  class WrapResponse < Grape::API$/;"	c	class:HaikuBot
+WrapResponseDecorator	api/wrap_response_decorator.rb	/^  class WrapResponseDecorator$/;"	c	class:HaikuBot
+app	spec/api/content_type_spec.rb	/^  def app$/;"	f
+app	spec/api/cors_spec.rb	/^  def app$/;"	f
+app	spec/api/documentation_spec.rb	/^  def app$/;"	f
+app	spec/api/entities_spec.rb	/^  def app$/;"	f
+app	spec/api/get_json_spec.rb	/^  def app$/;"	f
+app	spec/api/header_versioning_spec.rb	/^  def app$/;"	f
+app	spec/api/path_versioning_spec.rb	/^  def app$/;"	f
+app	spec/api/ping_spec.rb	/^  def app$/;"	f
+app	spec/api/post_json_spec.rb	/^  def app$/;"	f
+app	spec/api/post_put_spec.rb	/^  def app$/;"	f
+app	spec/api/rescue_from_spec.rb	/^  def app$/;"	f
+app	spec/api/wrap_response_spec.rb	/^  def app$/;"	f
+call	api/wrap_response_decorator.rb	/^    def call(env)$/;"	f	class:HaikuBot.WrapResponseDecorator
+call	app/haiku_app.rb	/^    def call(env)$/;"	f	class:HaikuBot.App.instance
+initialize	api/wrap_response_decorator.rb	/^    def initialize(app)$/;"	f	class:HaikuBot.WrapResponseDecorator
+initialize	app/haiku_app.rb	/^    def initialize$/;"	f	class:HaikuBot.App
+instance	app/haiku_app.rb	/^    def self.instance$/;"	F	class:HaikuBot.App
+log_request	lib/api_logger.rb	/^  def log_request$/;"	f	class:ApiLogger
