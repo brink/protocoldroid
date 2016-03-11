@@ -45,9 +45,10 @@ module HaikuBot
         "hello #{params[:From]}!"
       end
 
-      twiml = Twilio::TwiML::Response.new do |r|
-         r.Message msg
-       end
+      message_provider = HaikuBot::ProtocolDroid.generate_message_provider(params[:Body])
+      transport = HaikuBot::ProtocolDroid.generate_transport(params[:Body])
+
+      transport.send_message_from message_provider
     end
 
 

@@ -7,6 +7,7 @@
 ./api/post_json.rb
 ./api/post_put.rb
 ./api/rescue_from.rb
+./api/sms.rb
 ./api/wrap_response.rb
 ./api/wrap_response_decorator.rb
 ./app/api.rb
@@ -22,6 +23,7 @@
 ./old/config/environments/production.rb
 ./old/config/environments/test.rb
 ./old/config/routes.rb
+./old/spec/ping_spec.rb
 ./public/errors/404.html
 ./public/errors/500.html
 ./public/images/index.html
@@ -39,6 +41,7 @@
 ./spec/api/post_json_spec.rb
 ./spec/api/post_put_spec.rb
 ./spec/api/rescue_from_spec.rb
+./spec/api/sms_spec.rb
 ./spec/api/wrap_response_spec.rb
 ./spec/integration/grape_on_rack_spec.rb
 ./spec/spec_helper.rb

@@ -8,16 +8,17 @@ Bundler.require :default, ENV['RACK_ENV']
 preload = [
   # './config/initializers/*.rb',
   '../../lib/**/*.rb',
-  '../../api/*.rb'
+  '../../api/*.rb',
+  '../../app/**/*.rb'
 ]
 
 preload.each do |dir|
-  Dir[dir].each { |f| require f }
+  Dir[File.expand_path(dir, __FILE__)].each { |f| require f }
 end
 
-Dir[File.expand_path('../../api/*.rb', __FILE__)].each do |f|
-  require f
-end
+# Dir[File.expand_path('../../api/*.rb', __FILE__)].each do |f|
+#   require f
+# end
 
 require 'api'
 require 'haiku_app'

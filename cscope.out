@@ -1,4 +1,4 @@
-cscope 15 $HOME/workspace/protocol-droid -q 0000001028 0000090100
+cscope 15 $HOME/workspace/protocol-droid -q 0000001072 0000092216
 	@api/content_type.rb
 
 1 
@@ -877,6 +877,277 @@ g‘
 ’d
 
 
+	@api/sms.rb
+
+1 
+moduË
+ 
+HaikuBÙ
+
+
+2 
+þass
+ 
+	gSMS
+ < 
+	gG¿³
+::
+API
+
+
+3 
+fÜm©
+ :
+xml
+
+
+5 
+·¿ms
+ do
+
+6 
+»quœes
+ :
+Body
+, :
+From
+, 
+	gty³
+: 
+SŒšg
+
+
+7 
+’d
+
+
+9 
+g‘
+ '/sms' do
+
+10 #ToCouÁry=
+US
+&
+
+11 #ToS‹=
+WA
+&
+
+12 #SmsMes§geSid=
+SMf1588819460184c08bed6a3fç8c1dac
+&
+
+14 #ToC™y=
+RENTON
+&
+
+16 #SmsSid=
+SMf1588819460184c08bed6a3fç8c1dac
+&
+
+17 #FromS‹=
+WA
+&
+
+18 #SmsStus=
+»ûived
+
+
+19 #&
+FromC™y
+=
+ISSAQUAH
+
+
+20 #&
+Body
+=
+High
+
+
+21 #&
+FromCouÁry
+=
+US
+
+
+22 #&
+To
+=%2B14255288067
+
+23 #&
+ToZ
+=98055
+
+24 #&
+NumSegm’ts
+=1
+
+25 #&
+Mes§geSid
+=
+SMf1588819460184c08bed6a3fç8c1dac
+
+
+26 #&
+AccouÁSid
+=
+ACec18569bf54e0346289426105e9bcde1
+
+
+27 #&
+From
+=%2B14253943058
+
+28 #&
+ApiV”siÚ
+=2010-04-01
+
+29 
+cÚ‹Á_ty³
+ 'text/xml'
+
+30 #@
+twžio_numb”
+ = 
+ENV
+['TWILIO_NUMBER']
+
+31 #@
+þ›Á
+ = 
+Twžio
+::
+REST
+::
+Cl›Á
+.
+Ãw
+ 
+ENV
+['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
+
+32 #
+#mes§gð@
+þ›Á
+.
+accouÁ
+.
+mes§ges
+.
+ü—‹
+(
+
+34 #:
+äom
+ => @
+twžio_numb”
+,
+
+35 #:
+to
+ => 
+phÚe_numb”
+,
+
+36 #:
+body
+ => 
+®”t_mes§ge
+,
+
+37 ## 
+US
+ 
+phÚe
+ 
+numb”s
+ 
+ÿn
+ 
+make
+ 
+u£
+ 
+of
+ 
+ª
+ 
+image
+ 
+as
+ 
+w–l
+.
+
+38 ## :
+medŸ_u¾
+ => 
+image_u¾
+
+
+40 #put 
+mes§ge
+.
+to
+
+
+42 
+msg
+ = 
+·¿ms
+[:
+Body
+].
+m©ch
+ /
+buÂy
+/
+i
+
+
+46 
+’d
+
+
+48 
+twiml
+ = 
+Twžio
+::
+TwiML
+::
+Re¥Ú£
+.
+Ãw
+ dØ|
+r
+|
+
+49 
+r
+.
+Mes§ge
+ 
+msg
+
+
+50 
+’d
+
+
+51 
+’d
+
+
+55 
+’d
+
+
+56 
+’d
+
+
 	@api/wrap_response.rb
 
 1 
@@ -1066,37 +1337,39 @@ API
 
 
 3 
-´efix
- 'api'
+»scue_äom
+ :
+®l
+ dØ|
+e
+|
 
 4 
-fÜm©
- :
-jsÚ
+Rack
+::
+Re¥Ú£
+.
+Ãw
+([
+e
+.
+mes§ge
+], 500, 'CÚ‹Á-ty³' => '‹xt/”rÜ').
+fšish
 
 
 5 
-mouÁ
- ::
-HaikuBÙ
-::
-Pšg
+’d
 
 
 6 
-mouÁ
- ::
-HaikuBÙ
-::
-RescueFrom
-
+´efix
+ 'api'
 
 7 
-mouÁ
- ::
-HaikuBÙ
-::
-P©hV”siÚšg
+fÜm©
+ :
+jsÚ
 
 
 8 
@@ -1104,7 +1377,7 @@ mouÁ
  ::
 HaikuBÙ
 ::
-H—d”V”siÚšg
+Pšg
 
 
 9 
@@ -1112,7 +1385,7 @@ mouÁ
  ::
 HaikuBÙ
 ::
-Po¡Put
+SMS
 
 
 10 
@@ -1120,7 +1393,7 @@ mouÁ
  ::
 HaikuBÙ
 ::
-W¿pRe¥Ú£
+RescueFrom
 
 
 11 
@@ -1128,7 +1401,7 @@ mouÁ
  ::
 HaikuBÙ
 ::
-Po¡JsÚ
+P©hV”siÚšg
 
 
 12 
@@ -1136,7 +1409,7 @@ mouÁ
  ::
 HaikuBÙ
 ::
-G‘JsÚ
+H—d”V”siÚšg
 
 
 13 
@@ -1144,10 +1417,42 @@ mouÁ
  ::
 HaikuBÙ
 ::
-CÚ‹ÁTy³
+Po¡Put
 
 
 14 
+mouÁ
+ ::
+HaikuBÙ
+::
+W¿pRe¥Ú£
+
+
+15 
+mouÁ
+ ::
+HaikuBÙ
+::
+Po¡JsÚ
+
+
+16 
+mouÁ
+ ::
+HaikuBÙ
+::
+G‘JsÚ
+
+
+17 
+mouÁ
+ ::
+HaikuBÙ
+::
+CÚ‹ÁTy³
+
+
+18 
 mouÁ
  ::
 HaikuBÙ
@@ -1157,17 +1462,17 @@ EÁ™›s
 API
 
 
-15 
+19 
 add_swagg”_docum’tiÚ
  
 ­i_v”siÚ
 : 'v1'
 
-16 
+21 
 ’d
 
 
-17 
+22 
 ’d
 
 
@@ -1507,36 +1812,76 @@ BundËr
 ENV
 ['RACK_ENV']
 
-9 
+8 
+´–ßd
+ = [
+
+9 #'./
+cÚfig
+/
+š™Ÿliz”s
+
+
+10  *.
+rb
+',
+
+14 
+´–ßd
+.
+—ch
+ dØ|
+dœ
+|
+
+15 
+Dœ
+[
+dœ
+].
+—ch
+ { |
+f
+| 
+»quœe
+ f 
+	}
+}
+
+16 
+’d
+
+
+18 
 Dœ
 [
 Fže
 .
-	`ex·nd_·th
+ex·nd_·th
 ('../../­i/*.rb', 
 __FILE__
 )].
 —ch
  dØ|
-f
+	gf
 |
 
-10 
+19 
 »quœe
  
 f
 
 
-11 
+20 
 ’d
 
 
-13 
-»quœe
+22 
+	g»quœe
  'api'
 
-14 
-»quœe
+23 
+	g»quœe
  'haiku_app'
 
 	@config/boot.rb
@@ -2750,6 +3095,44 @@ Dœeùs
 admš
 /
 ´oduùs
+
+
+	@old/spec/ping_spec.rb
+
+1 
+	g»quœe
+ "spec_helper"
+
+3 
+desüibe
+ 
+	gHaiku
+::
+HkBÙ
+ do
+
+5 
+™
+ "Respondso /ping/" do
+
+8 
+ex³ù
+(
+»¥Ú£
+.
+¡©us
+).
+to
+ 
+	$eq
+(200)
+
+10 
+’d
+
+
+13 
+’d
 
 
 	@public/errors/404.html
@@ -7210,6 +7593,90 @@ to
 ’d
 
 
+	@spec/api/sms_spec.rb
+
+1 
+	g»quœe
+ 'spec_helper'
+
+3 
+desüibe
+ 
+	gHaikuBÙ
+::
+SMS
+ do
+
+4 
+šþude
+ 
+Rack
+::
+Te¡
+::
+M‘hods
+
+
+6 
+def
+ 
+­p
+
+
+7 
+HaikuBÙ
+::
+API
+
+
+8 
+’d
+
+
+10 
+™
+ 'responds with xml' do
+
+11 
+g‘
+ '/­i/sms', :
+Body
+ => 'h–lo', :
+From
+ => '222'
+
+13 
+ex³ù
+(
+Ï¡_»¥Ú£
+.
+¡©us
+).
+to
+ 
+	$eq
+(200)
+
+14 
+	`ex³ù
+(
+Ï¡_»¥Ú£
+.
+cÚ‹Á_ty³
+).
+to
+ 
+	`eq
+("text/xml")
+
+15 
+’d
+
+
+18 
+’d
+
+
 	@spec/api/wrap_response_spec.rb
 
 1 
@@ -7682,8 +8149,8 @@ cÚfig
 1
 .
 0
-44
-1066
+47
+1120
 api/content_type.rb
 api/entities.rb
 api/get_json.rb
@@ -7693,6 +8160,7 @@ api/ping.rb
 api/post_json.rb
 api/post_put.rb
 api/rescue_from.rb
+api/sms.rb
 api/wrap_response.rb
 api/wrap_response_decorator.rb
 app/api.rb
@@ -7708,6 +8176,7 @@ old/config/environments/development.rb
 old/config/environments/production.rb
 old/config/environments/test.rb
 old/config/routes.rb
+old/spec/ping_spec.rb
 public/errors/404.html
 public/errors/500.html
 public/images/index.html
@@ -7725,6 +8194,7 @@ spec/api/ping_spec.rb
 spec/api/post_json_spec.rb
 spec/api/post_put_spec.rb
 spec/api/rescue_from_spec.rb
+spec/api/sms_spec.rb
 spec/api/wrap_response_spec.rb
 spec/integration/grape_on_rack_spec.rb
 spec/spec_helper.rb

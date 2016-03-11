@@ -14,5 +14,10 @@ describe HaikuBot::SMS do
     expect(last_response.content_type).to eq("text/xml")
   end
 
-  
+  it 'uses an SMS transport' do
+    expect(HaikuBot::ProtocolDroid::MessageTransport.any_instance).to be_kind_of(HaikuBot::ProtocolDroid::SMSTransport)
+    get '/api/sms', :Body => 'hello', :From => '222'
+
+  end
+
 end

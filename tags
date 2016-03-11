@@ -20,6 +20,7 @@ HaikuBot	api/ping.rb	/^module HaikuBot$/;"	m
 HaikuBot	api/post_json.rb	/^module HaikuBot$/;"	m
 HaikuBot	api/post_put.rb	/^module HaikuBot$/;"	m
 HaikuBot	api/rescue_from.rb	/^module HaikuBot$/;"	m
+HaikuBot	api/sms.rb	/^module HaikuBot$/;"	m
 HaikuBot	api/wrap_response.rb	/^module HaikuBot$/;"	m
 HaikuBot	api/wrap_response_decorator.rb	/^module HaikuBot$/;"	m
 HaikuBot	app/api.rb	/^module HaikuBot$/;"	m
@@ -31,6 +32,7 @@ Ping	api/ping.rb	/^  class Ping < Grape::API$/;"	c	class:HaikuBot
 PostJson	api/post_json.rb	/^  class PostJson < Grape::API$/;"	c	class:HaikuBot
 PostPut	api/post_put.rb	/^  class PostPut < Grape::API$/;"	c	class:HaikuBot
 RescueFrom	api/rescue_from.rb	/^  class RescueFrom < Grape::API$/;"	c	class:HaikuBot
+SMS	api/sms.rb	/^  class SMS < Grape::API$/;"	c	class:HaikuBot
 Tool	api/entities.rb	/^    class Tool < Grape::Entity$/;"	c	class:HaikuBot.Entities
 WrapResponse	api/wrap_response.rb	/^  class WrapResponse < Grape::API$/;"	c	class:HaikuBot
 WrapResponseDecorator	api/wrap_response_decorator.rb	/^  class WrapResponseDecorator$/;"	c	class:HaikuBot
@@ -45,6 +47,7 @@ app	spec/api/ping_spec.rb	/^  def app$/;"	f
 app	spec/api/post_json_spec.rb	/^  def app$/;"	f
 app	spec/api/post_put_spec.rb	/^  def app$/;"	f
 app	spec/api/rescue_from_spec.rb	/^  def app$/;"	f
+app	spec/api/sms_spec.rb	/^  def app$/;"	f
 app	spec/api/wrap_response_spec.rb	/^  def app$/;"	f
 call	api/wrap_response_decorator.rb	/^    def call(env)$/;"	f	class:HaikuBot.WrapResponseDecorator
 call	app/haiku_app.rb	/^    def call(env)$/;"	f	class:HaikuBot.App.instance
